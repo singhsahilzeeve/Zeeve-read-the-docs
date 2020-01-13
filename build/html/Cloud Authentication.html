@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cloud Authentication &mdash; Zeeve 1.5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Zeeve
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">Zeeve User Manual</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Zeeve</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Cloud Authentication</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Cloud Authentication.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cloud-authentication">
+<h1>Cloud Authentication<a class="headerlink" href="#cloud-authentication" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p><strong><a class="reference external" href="https://www.zeeve.io/">Zeeve</a></strong> Account</p>
+<div class="section" id="zeeve-support-multiple-clouds">
+<h3>Zeeve support multiple clouds:-<a class="headerlink" href="#zeeve-support-multiple-clouds" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>AWS(Amazon Web Service)</p></li>
+<li><p>Microsoft Azure</p></li>
+</ol>
+</div>
+<div class="section" id="to-authenticate-the-cloud-account">
+<h3>To authenticate the cloud account:<a class="headerlink" href="#to-authenticate-the-cloud-account" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="simple">
+<li><p>Hover on <strong>profile</strong></p></li>
+</ol>
+<p><img alt="_images/profile.png" src="_images/profile.png" /></p>
+<p>2. Click on <strong>Edit Profile</strong></p>
+<p>![](images/profile\ menu.png)
+  3. Click on your cloud authentication(e.g. for AWS account, click on <strong>AWS Authentication</strong>, for Azure account, click on <strong>Azure
+Authentication</strong> )</p>
+<p>![](images/edit\ profile.png)</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="aws-authentication">
+<h2>AWS Authentication<a class="headerlink" href="#aws-authentication" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>You need to generate AWS Access Key and AWS Access Secret Key, after that you can authenticate your AWS account with Zeeve.</p>
+</div></blockquote>
+<p>![](images/aws\ login.png)</p>
+</div>
+<div class="section" id="azure-authentication">
+<h2>Azure Authentication<a class="headerlink" href="#azure-authentication" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pre-condition">
+<h3>Pre-condition<a class="headerlink" href="#pre-condition" title="Permalink to this headline">¶</a></h3>
+<p>1. User must have an account with global admin role
+  2. Source should be an azure active directory
+  3. Login from this account in Azure portal(if hasn’t been logged before)
+  4. User must have enough permissions to write subscription Id</p>
+<p>Azure authentication will redirect you to Microsoft Azure login page, you can login with Microsoft credentials, once login successful, Zeeve will be connected to your Azure account.</p>
+</div>
+<p>![](images/azure\ login.png)</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sankalp Sharma
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

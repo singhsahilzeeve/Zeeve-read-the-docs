@@ -1,0 +1,19 @@
+# SignUp Process
+
+Get started with **Zeeve** with few steps, and experience the ease of deploying a node on a protocol and cloud of your choice.
+
+Click the **Sign-Up** button and move ahead with certain details. 
+
+![](images/SignUpPage.JPG)
+
+## Sign-In Page
+
+ Here user can sign-in with valid email **ID** and **Password**, then click on the **Login** button, it will be redirected on the **Welcome Page.**
+
+![](images/SignInPage.JPG)
+
+## Welcome Page
+
+   After successfully login get the **Welcome Page**, where user can choose available cloud service. After choosing the cloud, it will be redirected to the **Cloud Authentication Page.**
+
+![](images/sample.JPG)
