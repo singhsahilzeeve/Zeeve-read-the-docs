@@ -1,12 +1,10 @@
-####                                                                                                                                                                                                                                                                                         
-
 # How to create my first Network
 
 With a handful of steps using [Zeeve](https://zeeve.io), it has become so easy to create your own blockchain network. There are certain blockchain options, based upon the requirements, available for the user. 
 
 Currently we have restricted for below mentioned [[Blockchain Options|blockchain platforms]] with which user can create the Blockchain network. Initially you should choose your blockchain platform
 
-> *   [Hyperledger Sawtooth](./Sawtooth.md)
+> *   [Hyperledger Sawtooth](./HyperledgerSawtooth.md)
 > *   [Hyperledger Fabric](./HyperledgerFabric.md)
 > *   [Ethereum](./Ethereum.md)
 > *   [Credits](./Credits.md)
