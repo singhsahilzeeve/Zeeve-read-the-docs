@@ -7,7 +7,8 @@ Welcome to Zeeve's documentation!
 =================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :glob:
 
    ../Zeeve User Manual.md
    ../ZeeveOverview.md
@@ -26,11 +27,4 @@ Welcome to Zeeve's documentation!
    ../Glossary.md
    ../Releases.md
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   
