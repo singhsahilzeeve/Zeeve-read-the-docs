@@ -11,8 +11,9 @@ Welcome to Zeeve's documentation!
    :glob:
 
    ../Zeeve User Manual.md
+   ../AccountCreation.md
+   ../cloud_authorization.md
    ../ZeeveOverview.md
-   ../SignupProcess.md
    ../Howtocreatemyfirstnetwork.md
    ../BlockchainOptions.md
    ../HyperledgerSawtooth.md
@@ -21,7 +22,6 @@ Welcome to Zeeve's documentation!
    ../Credits.md
    ../ProductOption.md
    ../NetworkScalability.md
-   ../CloudAuthentication.md
    ../PerformanceMetrics.md
    ../References.md
    ../Glossary.md

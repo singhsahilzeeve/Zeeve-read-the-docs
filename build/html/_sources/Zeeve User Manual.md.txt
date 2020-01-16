@@ -10,7 +10,7 @@ Some basic needs for blockchain solutions are:-
 * **Heterogeneous Cloud networks.** A Blockchain network might have some nodes running on one Cloud, while some nodes on another. This is important for the next big point which is,
 * **Ability to create consortiums easily.** Building consortium is the toughest challenge for the industry. Zeeve targets technical side of this challenge and intends for users to extend their consortium to others through simple UI based interractions.
 * **Making your deployments production grade.** Blockchain industry is full of complex protocols. A single left out variable of which may cause some pretty huge consequences. Zeeve helps standardize your deployments. Deploy you network the same manner everyone else does.
-* **Monitor/Scale/Optimize your deployments.**  
+* **Monitor/Scale/Optimize your deployments.** Scaling your network in count of nodes and monitor and look out for any red flags is vital to any distributed network, but its also something hard to come by as every protocol is unique in their own manner.
 * **Reach your customers easily through marketplace.** Zeeve allows users to list their product in marketplace which could if fully configured can be bought and started in a matter of minutes.
 
 This documement will help user to understand different operations onto zeeve and understand its functioning. Welcome! 
