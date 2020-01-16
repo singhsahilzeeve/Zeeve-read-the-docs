@@ -12,7 +12,7 @@ Zeeve supports a list of cloud for you to chcoose from. You can authorize multip
 
 
 ---
-***FACT:** Zeeve doesn't use blockchain services of these clouds, hence is not dependent on any cloud for the level of features it can provide for a protocol. It does use, at times, services like kubernetes and others so as to allow that protocol to exist itself.*
+***FACT:** Zeeve doesn't use blockchain services of any of the clouds, hence is not dependent on any cloud for the level of features it can provide for a protocol. It does use, at times, services like kubernetes and others so as to allow that protocol to exist itself.*
 
 ---
 
