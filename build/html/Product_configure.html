@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Zeeve 1.5.0 documentation</title>
+  <title>Product Configurations &mdash; Zeeve 1.5.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Development Practices" href="DevelopmentPractices.html" />
+    <link rel="prev" title="Credits" href="Credits.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -62,7 +63,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -79,7 +80,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">Zeeve</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
@@ -90,7 +91,17 @@
 <li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Product Configurations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-a-product">Configuring a Product</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publishing-as-an-idea">Publishing as an idea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-as-a-product">Configuring as a product</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#deployment">Deployment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
@@ -145,12 +156,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Product Configurations</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/Product_configure.md.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -162,24 +175,56 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="product-configurations">
+<h1>Product Configurations<a class="headerlink" href="#product-configurations" title="Permalink to this headline">¶</a></h1>
+<p>Zeeve allows the user to configure their projects onto the platform, which comes with in-built CI-CD pipelines and let Zeeve do the heavy lifting to make a network compatible for your product. This is ensured with some practices developer shall do in order to make the deployments one click based(mentioned later). There are some benefits to configure your product through Zeeve:</p>
+<ul class="simple">
+<li><p>Allow automated deployments without having to configure any web servers or domain endpoints.</p></li>
+<li><p>Form CI-CD pipelines. Authorizing your git account and configuring you git repository to a product.</p></li>
+<li><p>List your product onto marketplace to reach customers. You can either keep your products private or you can list them or marketplace as fully configured one click deployment products or as just an idea.</p></li>
+</ul>
+<p>Following section defines how to set-up your product on the platform:</p>
+<div class="section" id="configuring-a-product">
+<h2>Configuring a Product<a class="headerlink" href="#configuring-a-product" title="Permalink to this headline">¶</a></h2>
+<p>Configuring a product allows you to do one click deployments for your product in any cloud. It is based on configuring your git repo to a product and making sure certain configuration files are utilized in a standard manner such that Zeeve can automate it to 100%.</p>
+<p>To configure a product make sure you have seen the development practices for the relevant blockchain protocol.</p>
+<ul class="simple">
+<li><p>For Hyperledger Fabric</p></li>
+<li><p>For Hyperledger Sawtooth</p></li>
+</ul>
+<p>You can choose to keep a product private to you once you have configured it, or you can choose to list it in marketplace.</p>
+<div class="section" id="publishing-as-an-idea">
+<h3>Publishing as an idea<a class="headerlink" href="#publishing-as-an-idea" title="Permalink to this headline">¶</a></h3>
+<p>A product can be listed as an idea or as full deployable solution. Listing it as an idea allows the user to present it to marketplace before even the product is ready or has been implemented. Listing it as idea doesn’t require any git authorizations or development practices to worry about.</p>
+<p>GIF HERE</p>
+</div>
+<div class="section" id="configuring-as-a-product">
+<h3>Configuring as a product<a class="headerlink" href="#configuring-as-a-product" title="Permalink to this headline">¶</a></h3>
+<p>GIF</p>
+<p>A product can be configured such that it is available to the public as a free or as a paid product. Once authrized the party can themselves deploy the product anytime they want.</p>
+<p>Zeeve will make use of the default git branch for setting up the CI-CD piepline for the project.</p>
+<div class="section" id="deployment">
+<h4>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h4>
+<p>Once configured, you can deploy a network and choose to deploy this product on it.</p>
+</div>
+</div>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="DevelopmentPractices.html" class="btn btn-neutral float-right" title="Development Practices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Credits.html" class="btn btn-neutral float-left" title="Credits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -212,14 +257,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Zeeve 1.5.0 documentation</title>
+  <title>Hyperledger Fabric’s Application Development Practices &mdash; Zeeve 1.5.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hyperledger Sawtooth’s Application Development Practices" href="developmentSawtooth.html" />
+    <link rel="prev" title="Development Practices" href="DevelopmentPractices.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -62,7 +63,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -79,7 +80,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">Zeeve</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
@@ -92,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hyperledger Fabric’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ProductOption.html">Product Deployment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Network Scalability</a></li>
@@ -145,12 +146,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Hyperledger Fabric’s Application Development Practices</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/developmentHLF.md.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -162,24 +165,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="hyperledger-fabric-s-application-development-practices">
+<h1>Hyperledger Fabric’s Application Development Practices<a class="headerlink" href="#hyperledger-fabric-s-application-development-practices" title="Permalink to this headline">¶</a></h1>
+<p>Certain practices can help developer create application which are one click deployable on Zeeve. They are:-</p>
+<ul class="simple">
+<li><p>For packaging your product to be automated by Zeeve, you will need to <a class="reference external" href="https://docs.docker.com/engine/examples/">dockerize</a> you project’s services by creating Dockerfiles for them.</p></li>
+<li><p>Make use of <code class="docutils literal notranslate"><span class="pre">network-config.yaml</span></code>(connections profiles) and <code class="docutils literal notranslate"><span class="pre">org.yaml</span></code>s(if required) for all blockchain related configurations. At the time of deployment of a network, Zeeve creates a these files and allows developer to download them along with the other artifacts. You can consider this file to develop your applications. All other apllicational config shall be part of the Docker image itself.</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">docker-compose-build.yaml</span></code> file creating images of all services that your application requires. This will help Zeeve to create relevant images and push it to the container-registry and later use it.</p></li>
+<li><p>Create a kuberenetes file <code class="docutils literal notranslate"><span class="pre">k8_application.yaml</span></code> and keep it at your root project folder. The file needs to keep following points in account:-</p></li>
+</ul>
+<p>…</p>
+<ul class="simple">
+<li><p>While uploading the project attach some supporting documents to explain the organisation names and other details that shall be put while creating networks for the product. These documents will help users to create and deploy networks and products on their own.</p></li>
+</ul>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="developmentSawtooth.html" class="btn btn-neutral float-right" title="Hyperledger Sawtooth’s Application Development Practices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="DevelopmentPractices.html" class="btn btn-neutral float-left" title="Development Practices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -212,14 +226,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

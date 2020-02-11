@@ -20,6 +20,10 @@ Welcome to Zeeve's documentation!
    ../HyperledgerFabric.md
    ../Ethereum.md
    ../Credits.md
+   ../Product_configure.md
+   ../DevelopmentPractices.md
+   ../developmentHLF.md
+   ../developmentSawtooth.md
    ../ProductOption.md
    ../NetworkScalability.md
    ../PerformanceMetrics.md
