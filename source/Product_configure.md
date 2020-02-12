@@ -47,7 +47,7 @@ Zeeve will make use of the default git branch for setting up the CI-CD piepline 
 
 To configure as a product, select configure product option. It will ask for github authorization and ask you to select one of the projects. Make sure you have followed [development practices](./DevelopmentPractices.md) if you want to make your product deployable in matter of clicks. 
 
-![](./images/github_authorisation.png)
+![](./images/github-zeeve.png)
 
 **Deployment**
 
