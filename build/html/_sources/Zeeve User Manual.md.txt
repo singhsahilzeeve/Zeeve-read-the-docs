@@ -16,16 +16,15 @@ Some basic needs for blockchain solutions are:-
 This documement will help user to understand different operations onto zeeve and understand its functioning. Welcome! 
 
 *   [Zeeve Overview](./ZeeveOverview.md)
-*   [SignUp Process](./SignupProcess.md)
+*   [SignUp Process](./AccountCreation.md)
 *   [How to create my first network|How to create my first network](./Howtocreatemyfirstnetwork.md)
     *   [Blockchain Options](./BlockchainOptions.md)
         *   [Hyperledger Sawtooth](./HyperledgerSawtooth.md)
         *   [Hyperledger Fabric](./HyperledgerFabric.md)
         *   [Ethereum](./Ethereum.md)
         *   [Credits](./Credits.md)
-    *   [Product Option](./ProductOption.md)
     *   [Network Scaling](./NetworkScalability.md) 
-*   [Cloud Authorizations](./CloudAuthentication.md)
+*   [Cloud Authorizations](./cloud_authorization.md)
 *   [Product Deployments](./Product_configure.md)   
 *   [Development Practices](./DevelopmentPractices.md)
    *    [Hyperledger Fabric Development Practices](./developmentHLF.md)

@@ -11,3 +11,10 @@ Certain practices can help developer create application which are one click depl
 * Create a `docker-compose-zeeve.yaml` file and keep it at your root project folder. The file shall have references to the image names mentioned in the docker-compose-build.yaml. There is no need to mention any built contexts for images here, image name shall do.
 
 * All ports utlized by sawtooth services are curently set to default, so make sure you applications are configured to use default host machine's ports.
+
+* Create an .env file at root of your project and mention you domain-prefix and port-number on host machine to expose. For example:-
+
+```
+EXT_EXPOSED_SERVICES=("balancetranfer:3500" "another_service:3400")
+```
+This will create a domain like `balancetransfer.xxxxxx.zeeve.net` & `another_service.xxxxxx.zeeve.net` which will map to 3500 & 3400 ports respectively.

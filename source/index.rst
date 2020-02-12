@@ -24,7 +24,6 @@ Welcome to Zeeve's documentation!
    ../DevelopmentPractices.md
    ../developmentHLF.md
    ../developmentSawtooth.md
-   ../ProductOption.md
    ../NetworkScalability.md
    ../PerformanceMetrics.md
    ../References.md
