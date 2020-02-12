@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Product Deployment" href="ProductOption.html" />
+    <link rel="next" title="Network Scalability" href="NetworkScalability.html" />
     <link rel="prev" title="Hyperledger Fabric’s Application Development Practices" href="developmentHLF.html" /> 
 </head>
 
@@ -95,7 +95,6 @@
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Hyperledger Sawtooth’s Application Development Practices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ProductOption.html">Product Deployment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Network Scalability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PerformanceMetrics.html">Performance Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
@@ -174,7 +173,12 @@
 <li><p>Make sure all the config that your application needs are pre-created in the Docker image itself.</p></li>
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">docker-compose-zeeve.yaml</span></code> file and keep it at your root project folder. The file shall have references to the image names mentioned in the docker-compose-build.yaml. There is no need to mention any built contexts for images here, image name shall do.</p></li>
 <li><p>All ports utlized by sawtooth services are curently set to default, so make sure you applications are configured to use default host machine’s ports.</p></li>
+<li><p>Create an .env file at root of your project and mention you domain-prefix and port-number on host machine to expose. For example:-</p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXT_EXPOSED_SERVICES</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;balancetranfer:3500&quot;</span> <span class="s2">&quot;another_service:3400&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will create a domain like <code class="docutils literal notranslate"><span class="pre">balancetransfer.xxxxxx.zeeve.net</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">another_service.xxxxxx.zeeve.net</span></code> which will map to 3500 &amp; 3400 ports respectively.</p>
 </div>
 
 
@@ -185,7 +189,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ProductOption.html" class="btn btn-neutral float-right" title="Product Deployment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="NetworkScalability.html" class="btn btn-neutral float-right" title="Network Scalability" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="developmentHLF.html" class="btn btn-neutral float-left" title="Hyperledger Fabric’s Application Development Practices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

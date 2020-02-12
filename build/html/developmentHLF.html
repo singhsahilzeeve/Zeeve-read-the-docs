@@ -95,7 +95,6 @@
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Hyperledger Fabric’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ProductOption.html">Product Deployment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Network Scalability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PerformanceMetrics.html">Performance Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
@@ -167,15 +166,157 @@
             
   <div class="section" id="hyperledger-fabric-s-application-development-practices">
 <h1>Hyperledger Fabric’s Application Development Practices<a class="headerlink" href="#hyperledger-fabric-s-application-development-practices" title="Permalink to this headline">¶</a></h1>
-<p>Certain practices can help developer create application which are one click deployable on Zeeve. They are:-</p>
+<p>Refer to <a class="reference external" href="https://github.com/sanyam-gupta583/balance-transfer-zeeve">Sample Project</a></p>
+<p>Certain practices can help the developer create applications which are one click deployable on Zeeve. They are:-</p>
+<ul>
+<li><p>For packaging your product to be automated by Zeeve, you will need to <a class="reference external" href="https://docs.docker.com/engine/examples/">dockerize</a> your project’s services by creating <code class="docutils literal notranslate"><span class="pre">Dockerfiles</span></code> for them.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FROM</span> <span class="n">node</span><span class="p">:</span><span class="mf">8.9</span><span class="o">.</span><span class="mi">0</span>
+
+<span class="n">WORKDIR</span> <span class="o">/</span><span class="n">balance</span><span class="o">-</span><span class="n">transfer</span>
+
+<span class="n">COPY</span> <span class="o">.</span> <span class="o">.</span>
+<span class="n">ENV</span> <span class="n">PORT</span><span class="o">=</span><span class="mi">4000</span>
+<span class="n">RUN</span> <span class="n">npm</span> <span class="n">install</span>
+<span class="n">CMD</span> <span class="n">node</span> <span class="n">app</span>
+</pre></div>
+</div>
+</li>
+<li><p>Make use of <code class="docutils literal notranslate"><span class="pre">network-config.yaml</span></code> (connections profiles) and <code class="docutils literal notranslate"><span class="pre">org.yaml</span></code> (if required) for all blockchain related configurations. At the time of deployment for a network, Zeeve creates these files and allows the developer to download them along with the other artifacts. You can consider this file to develop your applications. All other application configs should be part of the Docker image itself.</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">.env</span></code> file containing an array of domain prefixes corrosponding to Ingress resource definitions. The syntax should be of the form:
+<code class="docutils literal notranslate"><span class="pre">(&quot;&lt;domain_prefix_1&gt;:&lt;ingress_resource_name_1&gt;&quot;</span> <span class="pre">&quot;&lt;domain_prefix_2&gt;:&lt;ingress_resource_name_2&gt;</span> <span class="pre">...&quot;)</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXT_EXPOSED_SERVICES</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;balancetranfer:balance-transfer-ingress&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">docker-compose-build.yaml</span></code> file for creating images of all services that your application requires. This will help Zeeve create relevant images, push them to the container-registry and later use them.</p>
 <ul class="simple">
-<li><p>For packaging your product to be automated by Zeeve, you will need to <a class="reference external" href="https://docs.docker.com/engine/examples/">dockerize</a> you project’s services by creating Dockerfiles for them.</p></li>
-<li><p>Make use of <code class="docutils literal notranslate"><span class="pre">network-config.yaml</span></code>(connections profiles) and <code class="docutils literal notranslate"><span class="pre">org.yaml</span></code>s(if required) for all blockchain related configurations. At the time of deployment of a network, Zeeve creates a these files and allows developer to download them along with the other artifacts. You can consider this file to develop your applications. All other apllicational config shall be part of the Docker image itself.</p></li>
-<li><p>Create a <code class="docutils literal notranslate"><span class="pre">docker-compose-build.yaml</span></code> file creating images of all services that your application requires. This will help Zeeve to create relevant images and push it to the container-registry and later use it.</p></li>
-<li><p>Create a kuberenetes file <code class="docutils literal notranslate"><span class="pre">k8_application.yaml</span></code> and keep it at your root project folder. The file needs to keep following points in account:-</p></li>
+<li><p>Each service definition whose container image would be created needs to have an <code class="docutils literal notranslate"><span class="pre">image</span></code> keyword, the associated value needs to same as that of image name (Deployment.contianers.spec.containers.image) in k8_application.yaml.template.</p></li>
 </ul>
-<p>…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span>
+
+<span class="n">services</span><span class="p">:</span>
+  <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="p">:</span>
+    <span class="n">build</span><span class="p">:</span>
+      <span class="n">context</span><span class="p">:</span> <span class="o">.</span>
+      <span class="n">dockerfile</span><span class="p">:</span> <span class="n">Dockerfile</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="p">:</span><span class="n">latest</span>
+    <span class="n">container_name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="o">-</span><span class="n">default</span>
+    <span class="n">ports</span><span class="p">:</span>
+      <span class="o">-</span> <span class="s1">&#39;4000:4000&#39;</span>
+    <span class="n">command</span><span class="p">:</span> <span class="o">|</span>
+      <span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;PORT=4000 node app&quot;</span>
+    <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a yaml file <code class="docutils literal notranslate"><span class="pre">k8_application.yaml.template</span></code> and keep it at your project’s root folder.
+The file needs to keep the following points in account:-</p>
 <ul class="simple">
+<li><p>The image name for containers needs to adhere to the guideline outlined in the step above.</p></li>
+<li><p>Define an <code class="docutils literal notranslate"><span class="pre">imagePullSecrets</span></code> named container-registry-cred. Creation and updation of this secret is handled by Zeeve, but the definition is developers responsibility.</p></li>
+<li><p>For mounting relevant crypto data and channel artifacts in a deployment, Zeeve will create secrets and mount them on <code class="docutils literal notranslate"><span class="pre">/crypto-data</span></code> path. The deployment/s on which this mounting takes place is identified by special character string <code class="docutils literal notranslate"><span class="pre">&#64;&#64;replace_my_crypto_artifacts&#64;&#64;</span></code>.</p></li>
+<li><p>Host for each Ingress resource will be an amalgamation of information specified in .env file and domain assigned to your Kubernetes cluster.</p></li>
+<li><p>Take special care to mount relevant persistent volumes as pods will be recreated whenever there is an application update.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
+<span class="n">kind</span><span class="p">:</span> <span class="n">Service</span>
+<span class="n">metadata</span><span class="p">:</span>
+  <span class="n">name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="o">-</span><span class="n">svc</span>
+<span class="n">spec</span><span class="p">:</span>
+  <span class="nb">type</span><span class="p">:</span> <span class="n">ClusterIP</span>
+  <span class="n">ports</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">port</span><span class="p">:</span> <span class="mi">4000</span>
+      <span class="n">targetPort</span><span class="p">:</span> <span class="mi">4000</span>
+      <span class="n">protocol</span><span class="p">:</span> <span class="n">TCP</span>
+  <span class="n">selector</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="o">-</span><span class="n">dep</span>
+
+ <span class="o">---</span>
+<span class="n">apiVersion</span><span class="p">:</span> <span class="n">apps</span><span class="o">/</span><span class="n">v1</span>
+<span class="n">kind</span><span class="p">:</span> <span class="n">Deployment</span>
+<span class="n">metadata</span><span class="p">:</span>
+  <span class="n">name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="o">-</span><span class="n">dep</span>
+<span class="n">spec</span><span class="p">:</span>
+  <span class="n">replicas</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">selector</span><span class="p">:</span>
+    <span class="n">matchLabels</span><span class="p">:</span>
+      <span class="n">name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span>
+  <span class="n">template</span><span class="p">:</span>
+    <span class="n">metadata</span><span class="p">:</span>
+      <span class="n">labels</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span>
+    <span class="n">spec</span><span class="p">:</span>
+      <span class="n">volumes</span><span class="p">:</span>
+        <span class="c1">#- name: balance-transfer-data</span>
+        <span class="c1">#  persistentVolumeClaim:</span>
+        <span class="c1">#    claimName: balance-transfer-data-pvc</span>
+            <span class="o">@</span><span class="nd">@replace_my_crypto_artifacts</span><span class="o">@@</span>
+      <span class="n">imagePullSecrets</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">container</span><span class="o">-</span><span class="n">registry</span><span class="o">-</span><span class="n">cred</span>
+      <span class="n">containers</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span>
+          <span class="n">image</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="p">:</span><span class="mi">12</span>
+          <span class="n">imagePullPolicy</span><span class="p">:</span> <span class="n">Always</span>
+          <span class="n">ports</span><span class="p">:</span>
+            <span class="o">-</span> <span class="n">containerPort</span><span class="p">:</span> <span class="mi">4000</span>
+              <span class="n">protocol</span><span class="p">:</span> <span class="n">TCP</span>
+          <span class="c1">#livenessProbe:</span>
+          <span class="c1">#  httpGet:</span>
+          <span class="c1">#    path: /</span>
+          <span class="c1">#    port: 4000</span>
+          <span class="n">command</span><span class="p">:</span>
+            <span class="o">-</span> <span class="n">bash</span>
+            <span class="o">-</span> <span class="o">-</span><span class="n">c</span>
+            <span class="o">-</span> <span class="o">|</span>
+              <span class="n">echo</span> <span class="s2">&quot;installing GO&quot;</span> 
+              <span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
+              <span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">go</span><span class="o">/</span><span class="n">go1</span><span class="o">.</span><span class="mf">10.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+              <span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">go1</span><span class="o">.</span><span class="mf">10.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+              <span class="n">echo</span> <span class="s2">&quot;export PATH=$PATH:/usr/local/go/bin&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">bashrc</span>
+              <span class="n">source</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">bashrc</span>
+
+              <span class="n">echo</span> <span class="s2">&quot;configuring application&quot;</span>
+              <span class="n">mkdir</span> <span class="o">/</span><span class="n">application</span>
+              <span class="n">cd</span> <span class="o">/</span><span class="n">application</span>
+              <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="o">/*</span> <span class="o">./</span>
+              <span class="n">cp</span> <span class="o">-</span><span class="n">Lr</span> <span class="o">/</span><span class="n">crypto</span><span class="o">-</span><span class="n">data</span><span class="o">/*</span> <span class="o">./</span><span class="n">artifacts</span><span class="o">/</span>
+              <span class="c1">#npm install</span>
+              <span class="n">node</span> <span class="n">app</span>
+          <span class="n">volumeMounts</span><span class="p">:</span>
+            <span class="c1">#- mountPath: /application</span>
+            <span class="c1">#  name: balance-transfer-data</span>
+              <span class="o">@</span><span class="nd">@replace_my_crypto_artifacts</span><span class="o">@@</span>
+<span class="o">---</span>
+<span class="n">kind</span><span class="p">:</span> <span class="n">PersistentVolumeClaim</span>
+<span class="n">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
+<span class="n">metadata</span><span class="p">:</span>
+  <span class="n">name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">pvc</span>
+<span class="n">spec</span><span class="p">:</span>
+  <span class="n">accessModes</span><span class="p">:</span>
+    <span class="o">-</span> <span class="s2">&quot;ReadWriteOnce&quot;</span>
+  <span class="n">resources</span><span class="p">:</span>
+    <span class="n">requests</span><span class="p">:</span>
+      <span class="n">storage</span><span class="p">:</span> <span class="s2">&quot;5Gi&quot;</span>
+
+<span class="o">---</span>
+<span class="n">apiVersion</span><span class="p">:</span> <span class="n">extensions</span><span class="o">/</span><span class="n">v1beta1</span>
+<span class="n">kind</span><span class="p">:</span> <span class="n">Ingress</span>
+<span class="n">metadata</span><span class="p">:</span>
+  <span class="n">name</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="o">-</span><span class="n">ingress</span>
+  <span class="n">annotations</span><span class="p">:</span>
+    <span class="n">kubernetes</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ingress</span><span class="o">.</span><span class="n">class</span><span class="p">:</span> <span class="n">nginx</span>
+    <span class="n">nginx</span><span class="o">.</span><span class="n">ingress</span><span class="o">.</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">backend</span><span class="o">-</span><span class="n">protocol</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span>
+<span class="n">spec</span><span class="p">:</span>
+  <span class="n">rules</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">host</span><span class="p">:</span> 
+      <span class="n">http</span><span class="p">:</span>
+        <span class="n">paths</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">backend</span><span class="p">:</span>
+            <span class="n">serviceName</span><span class="p">:</span> <span class="n">balance</span><span class="o">-</span><span class="n">transfer</span><span class="o">-</span><span class="n">svc</span>
+            <span class="n">servicePort</span><span class="p">:</span> <span class="mi">4000</span>
+</pre></div>
+</div>
+</li>
 <li><p>While uploading the project attach some supporting documents to explain the organisation names and other details that shall be put while creating networks for the product. These documents will help users to create and deploy networks and products on their own.</p></li>
 </ul>
 </div>
