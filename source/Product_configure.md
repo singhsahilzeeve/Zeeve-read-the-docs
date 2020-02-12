@@ -19,12 +19,12 @@ To configure a product fully as click based deployment make sure you have seen t
 
 ### Steps:-
 
-* Go to `Marketplace -> Your products -> Add product`.
+* Go to `Marketplace -> My products -> Add product`.
 * Provide title and Add team members to your product.
 * Select the blockchain protocol your product is built upon.
 * Add a small description and logo (if any) to your product.
 
-![Product Upload](./images/products_upload-1.png)
+![Product Upload](./images/product-add-team.gif)
 
 * Provide supporting documents( could be presentation, white paper or architecture document) for the people to understand the idea behind the product.
 
@@ -36,7 +36,7 @@ You can choose to keep a product private to you once you have configured it, or 
 
 A product can be listed as an idea or as full deployable solution. Listing it as an idea allows the user to present it to marketplace before even the product is ready or has been implemented. Listing it as idea doesn't require any git authorizations or development practices to worry about.
 
-To publish as an idea, simply select option `Publish as an idea`.
+To publish as an idea, simply select option `Publish my idea`.
 
 
 **Configuring as a Product**
