@@ -19,11 +19,11 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'Zeeve'
-copyright = '2020, Sankalp Sharma'
+copyright = '2020, Zeeve'
 author = 'Sankalp Sharma'
 
 # The full version, including alpha/beta/rc tags
-release = '1.5.0'
+release = '1.6.0'
 
 
 # -- General configuration ---------------------------------------------------

@@ -14,7 +14,7 @@ Following section defines how to set-up your product on the platform:
 Configuring a product allows you to do one click deployments for your product in any cloud. It is based on configuring your git repo to a product and making sure certain configuration files are utilized in a standard manner such that Zeeve can automate it to 100%.
 
 To configure a product fully as click based deployment make sure you have seen the development practices for the relevant blockchain protocol.
-- [For Hyperledger Favric](./developmentHLF.md)
+- [For Hyperledger Fabric](./developmentHLF.md)
 - [For Hyperledger Sawtooth](./developmentSawtooth.md)
 
 ### Steps:-
