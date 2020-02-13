@@ -1,4 +1,4 @@
-# Sawtooth
+# Sawtooth Deployment
 
 Sawtooth is a modular platform for building, deploying, and running [[Glossary|distributed ledgers]]. Provide a digital record (such as asset ownership) that is maintained without a central authority or implementation.
 Sawtooth is an open source project under Hyper ledger umbrella. Sawtooth is also highly modular. This modularity enables enterprises and consortia to make policy decisions that they are best equipped to make. [Ref.](https://sawtooth.hyperledger.org/docs/core/releases/1.0/introduction.html)

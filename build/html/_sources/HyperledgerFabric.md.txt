@@ -1,4 +1,4 @@
-# ![](images/fabric.png) Hyperledger Fabric
+# ![](images/fabric.png) Hyperledger Fabric Deployment
 
 [Hyperldger Fabric](Glossary.md) is an open-source enterprise-grade permissioned [[Glossary|distributed ledger]] technology (DLT) platform, designed for use in enterprise contexts, that delivers some key differentiating capabilities over other popular distributed ledger or blockchain platforms.
 
