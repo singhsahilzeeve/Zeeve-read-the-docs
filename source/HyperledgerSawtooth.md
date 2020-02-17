@@ -1,14 +1,9 @@
-# Sawtooth Deployment
+# Sawtooth Deployment Specifications
 
 Sawtooth is a modular platform for building, deploying, and running [[Glossary|distributed ledgers]]. Provide a digital record (such as asset ownership) that is maintained without a central authority or implementation.
 Sawtooth is an open source project under Hyper ledger umbrella. Sawtooth is also highly modular. This modularity enables enterprises and consortia to make policy decisions that they are best equipped to make. [Ref.](https://sawtooth.hyperledger.org/docs/core/releases/1.0/introduction.html)
 
-While creating a network, we are suppose to select one of the blockchain platform to be deployed over the network. Sawtooth is one of them which is readily available over [Zeeve](https://zeeve.io) platform.
-
-> ![](images/CreateNetworkPage.JPG)
-
-Once you are done with the selection of Sawtooth above, then platform will ask for further Sawtooth specific configuration.
-> ![](images/sawtooth_config.PNG)
+> ![](./images/network-creation-sawtooth.gif)
 
 In order to be specific about the parameters which need your attention, we would like to brief about the parameters which need your input for creating a network
 

@@ -19,6 +19,7 @@ Welcome to Zeeve's documentation!
    ../HyperledgerFabric.md
    ../Ethereum.md
    ../Credits.md
+   ../Corda.md
    ../Product_configure.md
    ../DevelopmentPractices.md
    ../developmentHLF.md
