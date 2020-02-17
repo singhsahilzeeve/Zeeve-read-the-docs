@@ -1,35 +1,55 @@
 # ![](images/fabric.png) Hyperledger Fabric Deployment Specifications
 
-[Hyperldger Fabric](Glossary.md) is an open-source enterprise-grade permissioned [[Glossary|distributed ledger]] technology (DLT) platform, designed for use in enterprise contexts, that delivers some key differentiating capabilities over other popular distributed ledger or blockchain platforms.
+
+Hyperledger Fabric has one of the most exhaustive set of available configuration parameters. 
+<br/>
+This page would help you a lot to achieve a highly customised fabric network.
+Fabric network creation is spread across 3 sections. Please read further to know about each of them. 
 
 > ![](images/network-creation-fabric.gif)
 
-<ins>Certain steps which helps in configuring a network are based upon the selections of the parameters</ins>
 
-## **Step 1** : Passing the values for the Orderer Service and Organization under Topology section
+
+
+
+
+<!-- <ins>Certain steps which helps in configuring a network are based upon the selections of the parameters</ins> -->
+
+## **Step 1** : Configuring Consortium (Organizations) under Topology Section
 
 > ![](images/fabric_topology_1.PNG)
 
-### **Orderer Service**
+### **Consortium**
 
-**Orderers** are considered as the special nodes, which are helping each peer nodes to have consistent ledger by enabling the interaction of peer nodes and applications participating in the network. So based upon the requirement, you need to specify the number of orderers.
+A fabric network is made up of a group of organizations wherein an organization is a mere stakeholder(participant) of the network, this group is called as a consortium. You can add an organization by pressing the add button alongside the organization keyword and after that add a name for this organization.
 
-**Kafka** is a message handling system which uses Publish-Subscribe model. Consumers subscribe to the topic to receive new messages, that are published by a Producer. Topics are nothing but messages, so when they become huge in number, then they are split into partitions, and Kafka guarantees that all messages inside a partition are sequentially ordered. Hyperledger Fabric ordering service nodes (OSNs) use the Kafka cluster and provide an ordering service to your blockchain network. Kafka is permissioned voting based consensus type, here leader does the ordering, only in-sync can be voted as leader. 
 
-**Zookeeper** is a distributed key-value store, most commonly used to store metadata and handle the mechanics of clustering. It allows clients of the service (the Kafka brokers) to subscribe and have changes sent to them once they happen. This is how brokers know when to switch partition leaders. Zookeeper is also extremely fault-tolerant as it ought to be, since Kafka heavily depends on it.
+Each organization participate in the network via a few fabric specific pillars namely [orderer](./Glossary.html#orderer), [peer](./Glossary.html#peer) and certificate Authority(./Glossary.html#certificate-authority).
 
-### **Organization**
+#### CA 
+    
+Certificate Authority can be configured just by providing the admin user name and password under the selected organization.
 
-**Number of Nodes** indicates the number of peers in the blockchain network. There are different roles defined for the peers involved in the network. One of the role is " **Anchor peer** "
-Anchor peer's role is to broadcast the block, created by orderer node, to other peers inside the organization. It is the one who is directly interacting with Orderer node. Number of Anchor peer should be greater than zero.
+#### Ordering Service
 
-## **Step 2** : Configuring CSR section which is Optional
+ Zeeve supports all the three types of ordering service, which are provided by HL Fabric namely <strong>Solo</strong> (Single Orderer Network), <strong>[Kafka](./Glossary.html#kafka)</strong> and <strong>[Raft](./Glossary.html#raft)</strong>. So based upon the requirement, select the type of ordering service and just specify the number of orderers. Making it one of the best tools for fabric based production networks. 
+
+
+ #### Peer Service
+
+ A peer can be added to the organization by using the add button under the peer tab of the organization section. You just need to choose the type of peer service for each peer you want to go with, it can be levelDb based or a couchDb based.
+
+<!-- 
+One of the role is " **Anchor peer** "
+Anchor peer's role is to broadcast the block, created by orderer node, to other peers inside the organization. It is the one who is directly interacting with Orderer node. Number of Anchor peer should be greater than zero. -->
+
+## **Step 2** : Configuring CSR section (Optional)
 
 > ![](images/fabric_csr.PNG)
 
 CSR is Certificate Signing Request. [Ref.](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#fabric-ca-server)
 
-## **Step 3** : Configuring the Channel details
+## **Step 3** : Configuring the Channel Details
 
 > ![](images/fabric_channel.PNG)
 

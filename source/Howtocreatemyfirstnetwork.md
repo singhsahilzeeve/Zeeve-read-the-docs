@@ -9,32 +9,35 @@ With a handful of steps using [Zeeve](https://zeeve.io), it has become so easy t
 
 ### Selecting A Blockchain Protocol
 
-So to go ahead with the network creation, you first need to decide and pick one blockchain protocol out of these major ones, which looks the best fit for your usecase:
-
+So to go ahead with the network creation, you first need to decide and pick one out of the major blockchain protocols out there, This decision might be driven majorly by the needs of your usecase. We have something for you [here](./Blockchain_Protocols.md) which might help you to get started.
+<!-- 
 > *   [Hyperledger Sawtooth](./Glossary.html#hyperledger-sawtooth)
 > *   [Hyperledger Fabric](./Glossary.html#hyperledger-fabric)
 > *   [Ethereum](./Glossary.html#ethereum)
 > *   [Credits](./Glossary.html#credits)
-> *   [Corda](./Glossary.html#corda)
+> *   [Corda](./Glossary.html#corda) -->
 
 ![](images/CreateNetworkPage.JPG)
 
-After selecting the protocol just configure your network as per the desired network parameters and then you are good to go. To see protocol specific configuration parameters please refer to the detailed deployment spec using the following links.
+After selecting the protocol just configure your network as per the desired network parameters and then you are good to go. To see protocol specific configuration parameters please refer to the detailed deployment spec using the following links:
 <!-- These are the logs coming while creating a [network](./Glossary.md) -->
 
 > *   [Hyperledger Sawtooth Deployment Specifications](./HyperledgerSawtooth.md)
 > *   [Hyperledger Fabric Deployment Specifications](./HyperledgerFabric.md)
 > *   [Ethereum  Deployment Specifications](./Ethereum.md)
-> *   [Credits Deployment Specifications](./Credits.md)
 > *   [Corda Deployment Specifications](./Corda.md)
+> *   [Credits Deployment Specifications](./Credits.md)
 
-## Cloud Configuration
+
+## Selecting A Cloud For The Network
+
+The next step is to specify the cloud via which you wish to deploy your network.
 
 <!--   Here multiple cloud network available users can choose the cloud as per choice. -->
   Choose a cloud* to deploy the network and configure the following settings :
 
-> *   **Name of Network**
-> *   **Location**
+> *   **Name of Network** : In order to uniquely identify your network, this field requires a unique name for it. Unique over here is in terms of the account in which you are creating your network. In case you have created some network earlier, and now you are trying to create with the same name, then the [Zeeve](https://zeeve.io) platform won't allow you to create it.
+> *   **Location** : It indicates the region of cloud service viz., AWS or Azure. These regions are the geographic locations where your network instances are going to be hosted. In case of AWS each of its Region has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. [Ref.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
 > *   **Type of Instance**
 > *   **Number of Instances**
 

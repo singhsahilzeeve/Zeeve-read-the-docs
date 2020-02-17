@@ -26,6 +26,7 @@ Welcome to Zeeve's documentation!
    ../developmentSawtooth.md
    ../NetworkScalability.md
    ../PerformanceMetrics.md
+   ../Blockchain_Protocols.md
    ../References.md
    ../Glossary.md
    ../Releases.md
