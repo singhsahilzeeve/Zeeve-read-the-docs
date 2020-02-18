@@ -19,3 +19,7 @@ All of the networks created by you get listed in the dropdown.
 Now just fill in the node details and then just configure the cloud details just like you did while creating the network and now in just a few time you will see the requested node joining your network.
 
 If you are scaling a fabric network then you can also specify the type of service node you want to add.
+
+  ![](./images/network_scaling_fabric.gif)
+
+
