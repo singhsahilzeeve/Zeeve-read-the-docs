@@ -11,11 +11,10 @@ Welcome to Zeeve's documentation!
    :glob:
 
    ../Zeeve User Manual.md
+   ../ZeeveOverview.md
    ../AccountCreation.md
    ../cloud_authorization.md
-   ../ZeeveOverview.md
    ../Howtocreatemyfirstnetwork.md
-   ../BlockchainOptions.md
    ../HyperledgerSawtooth.md
    ../HyperledgerFabric.md
    ../Ethereum.md

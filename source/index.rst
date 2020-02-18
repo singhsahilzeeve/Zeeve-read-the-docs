@@ -11,14 +11,14 @@ Welcome to Zeeve's documentation!
    :glob:
 
    ../Zeeve User Manual.md
+   ../ZeeveOverview.md
    ../AccountCreation.md
    ../cloud_authorization.md
-   ../ZeeveOverview.md
    ../Howtocreatemyfirstnetwork.md
-   ../BlockchainOptions.md
    ../HyperledgerSawtooth.md
    ../HyperledgerFabric.md
    ../Ethereum.md
+   ../Corda.md
    ../Credits.md
    ../Product_configure.md
    ../DevelopmentPractices.md
@@ -26,6 +26,7 @@ Welcome to Zeeve's documentation!
    ../developmentSawtooth.md
    ../NetworkScalability.md
    ../PerformanceMetrics.md
+   ../Blockchain_Protocols.md
    ../References.md
    ../Glossary.md
    ../Releases.md

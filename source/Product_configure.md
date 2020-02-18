@@ -14,7 +14,7 @@ Following section defines how to set-up your product on the platform:
 Configuring a product allows you to do one click deployments for your product in any cloud. It is based on configuring your git repo to a product and making sure certain configuration files are utilized in a standard manner such that Zeeve can automate it to 100%.
 
 To configure a product fully as click based deployment make sure you have seen the development practices for the relevant blockchain protocol.
-- [For Hyperledger Favric](./developmentHLF.md)
+- [For Hyperledger Fabric](./developmentHLF.md)
 - [For Hyperledger Sawtooth](./developmentSawtooth.md)
 
 ### Steps:-
@@ -32,15 +32,14 @@ To configure a product fully as click based deployment make sure you have seen t
 
 You can choose to keep a product private to you once you have configured it, or you can choose to list it in marketplace.
 
-**Publishing as an idea**
+* Select the type:- Product or Idea.
 
+**Publishing as an idea**
 A product can be listed as an idea or as full deployable solution. Listing it as an idea allows the user to present it to marketplace before even the product is ready or has been implemented. Listing it as idea doesn't require any git authorizations or development practices to worry about.
 
 To publish as an idea, simply select option `Publish my idea`.
 
-
 **Configuring as a Product**
-
 A product can be configured such that it is available to the public as a free or as a paid product. Once authrized the party can themselves deploy the product anytime they want. To configure as a product you would need to 
 
 Zeeve will make use of the default git branch for setting up the CI-CD piepline for the project.
@@ -48,8 +47,6 @@ Zeeve will make use of the default git branch for setting up the CI-CD piepline 
 To configure as a product, select configure product option. It will ask for github authorization and ask you to select one of the projects. Make sure you have followed [development practices](./DevelopmentPractices.md) if you want to make your product deployable in matter of clicks. 
 
 ![](./images/github-zeeve.png)
-
-**Deployment**
 
 Once configured, you can deploy a network and choose to deploy this product on it.
 
