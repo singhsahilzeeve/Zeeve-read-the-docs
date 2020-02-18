@@ -20,6 +20,12 @@
 
 * * *
 
+#### Certificate Authority
+
+> Certificate Authority accorss this documentation refers to HyperLedger Fabric's key component. This component is responsible for issuing identification material like certificates and keys for an organization. 
+
+* * *
+
 #### Cloud
 
 * * *
