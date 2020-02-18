@@ -18,8 +18,8 @@ Welcome to Zeeve's documentation!
    ../HyperledgerSawtooth.md
    ../HyperledgerFabric.md
    ../Ethereum.md
-   ../Credits.md
    ../Corda.md
+   ../Credits.md
    ../Product_configure.md
    ../DevelopmentPractices.md
    ../developmentHLF.md
