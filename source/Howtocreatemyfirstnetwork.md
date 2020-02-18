@@ -38,8 +38,8 @@ The next step is to specify the cloud via which you wish to deploy your network.
 
 > *   **Name of Network** : In order to uniquely identify your network, this field requires a unique name for it. Unique over here is in terms of the account in which you are creating your network. In case you have created some network earlier, and now you are trying to create with the same name, then the [Zeeve](https://zeeve.io) platform won't allow you to create it.
 > *   **Location** : It indicates the region of cloud service viz., AWS or Azure. These regions are the geographic locations where your network instances are going to be hosted. In case of AWS each of its Region has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. [Ref.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
-> *   **Type of Instance**
-> *   **Number of Instances**
+> *   **Type of Instance** : It defines the combination of CPU cores and memory. Choose the one which could handle the loads of your network. This parameter is useful for scaling up the network.
+> *   **Number of Instances** : It defines the number of instances. This parameter is useful for scaling out the network.
 
 <i><small>(*Make sure you have authorized Zeeve to connect to your desired cloud account. Not done it yet? Head to [Cloud Authorizations](./cloud_authorization).)</small></i>
 
