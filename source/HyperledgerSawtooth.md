@@ -1,4 +1,4 @@
-# Sawtooth Deployment Specifications
+# Hyperledger Sawtooth Deployment Specifications
 
 > ![](./images/network-creation-sawtooth.gif)
 

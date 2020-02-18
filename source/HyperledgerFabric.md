@@ -38,7 +38,7 @@ So based upon the requirement, select the type of ordering service and just add 
 
  #### Peer Service
 
- A peer can be added to the organization by using the add button under the peer tab of the organization section. You just need to choose the type of peer service for each peer you want to go with, it can be either levelDb based or a couchDb based.
+ A peer can be added to the organization by using the add button under the peer tab of the organization section. You just need to choose the type of peer service for each peer you want to go with, it can be either levelDb or couchDb based and specify whether you want to have a persistent volume for the same.
 
 <!-- 
 One of the role is " **Anchor peer** "
