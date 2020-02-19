@@ -1,6 +1,6 @@
-# Network Scalability
+# Scaling Networks
 
-Zeeve allows you to scale up your network after it has been bootstrapped. Astonished? Well you will get used to such surprises with Zeeve.
+Zeeve allows you to scale your network after it has been bootstrapped. Astonished? Well you will get used to such surprises with Zeeve.
 
 So to start scaling your networks just head to the dashboard and then hit the Launch Node Button.
 
