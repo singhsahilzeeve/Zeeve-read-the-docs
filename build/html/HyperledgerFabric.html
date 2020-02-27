@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Hyperledger Fabric Deployment &mdash; Zeeve 1.6.0 documentation</title>
+  <title>Hyperledger Fabric Deployment Specifications &mdash; Zeeve 1.6.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Ethereum Deployment" href="Ethereum.html" />
-    <link rel="prev" title="Sawtooth Deployment" href="HyperledgerSawtooth.html" /> 
+    <link rel="next" title="Ethereum Deployment Specifications" href="Ethereum.html" />
+    <link rel="prev" title="Hyperledger Sawtooth Deployment Specifications" href="HyperledgerSawtooth.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,33 +81,40 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">Zeeve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">What is Zeeve?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Sawtooth Deployment</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#"> Hyperledger Fabric Deployment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#step-1-passing-the-values-for-the-orderer-service-and-organization-under-topology-section"><strong>Step 1</strong> : Passing the values for the Orderer Service and Organization under Topology section</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#orderer-service"><strong>Orderer Service</strong></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#organization"><strong>Organization</strong></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#step-2-configuring-csr-section-which-is-optional"><strong>Step 2</strong> : Configuring CSR section which is Optional</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-3-configuring-the-channel-details"><strong>Step 3</strong> : Configuring the Channel details</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#channel-details"><strong>Channel Details</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Hyperledger Sawtooth Deployment Specifications</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"> Hyperledger Fabric Deployment Specifications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-configuring-consortium-organizations-under-topology-section"><strong>Step 1</strong> : Configuring Consortium (Organizations) under Topology Section</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#consortium">Consortium</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#certificate-authority">Certificate Authority</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ordering-service">Ordering Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#peer-service">Peer Service</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-configuring-csr-optional"><strong>Step 2</strong> : Configuring CSR (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-configuring-the-channel-details"><strong>Step 3</strong> : Configuring the Channel Details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-channel">System Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#application-channel-optional">Application Channel (Optional)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Network Scalability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PerformanceMetrics.html">Performance Metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Releases.html">Releases</a></li>
@@ -156,7 +163,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li> Hyperledger Fabric Deployment</li>
+      <li> Hyperledger Fabric Deployment Specifications</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,45 +182,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="hyperledger-fabric-deployment">
-<h1><img alt="_images/fabric.png" src="_images/fabric.png" /> Hyperledger Fabric Deployment<a class="headerlink" href="#hyperledger-fabric-deployment" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="Glossary.html"><span class="doc">Hyperldger Fabric</span></a> is an open-source enterprise-grade permissioned [[Glossary|distributed ledger]] technology (DLT) platform, designed for use in enterprise contexts, that delivers some key differentiating capabilities over other popular distributed ledger or blockchain platforms.</p>
+  <div class="section" id="hyperledger-fabric-deployment-specifications">
+<h1><img alt="_images/fabric.png" src="_images/fabric.png" /> Hyperledger Fabric Deployment Specifications<a class="headerlink" href="#hyperledger-fabric-deployment-specifications" title="Permalink to this headline">¶</a></h1>
+<p>Hyperledger Fabric has one of the most exhaustive set of available configuration parameters.
+<br/>
+This page would help you a lot to achieve a highly customised fabric network.
+Fabric network creation is spread across 3 sections. Please read further to know about each of them.</p>
 <blockquote>
-<div><p><img alt="_images/fabric_conf.PNG" src="_images/fabric_conf.PNG" /></p>
+<div><p><img alt="_images/network-creation-fabric.gif" src="_images/network-creation-fabric.gif" /></p>
 </div></blockquote>
-<p><ins>Certain steps which helps in configuring a network are based upon the selections of the parameters</ins></p>
-<div class="section" id="step-1-passing-the-values-for-the-orderer-service-and-organization-under-topology-section">
-<h2><strong>Step 1</strong> : Passing the values for the Orderer Service and Organization under Topology section<a class="headerlink" href="#step-1-passing-the-values-for-the-orderer-service-and-organization-under-topology-section" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p><img alt="_images/fabric_topology_1.PNG" src="_images/fabric_topology_1.PNG" /></p>
-</div></blockquote>
-<div class="section" id="orderer-service">
-<h3><strong>Orderer Service</strong><a class="headerlink" href="#orderer-service" title="Permalink to this headline">¶</a></h3>
-<p><strong>Orderers</strong> are considered as the special nodes, which are helping each peer nodes to have consistent ledger by enabling the interaction of peer nodes and applications participating in the network. So based upon the requirement, you need to specify the number of orderers.</p>
-<p><strong>Kafka</strong> is a message handling system which uses Publish-Subscribe model. Consumers subscribe to the topic to receive new messages, that are published by a Producer. Topics are nothing but messages, so when they become huge in number, then they are split into partitions, and Kafka guarantees that all messages inside a partition are sequentially ordered. Hyperledger Fabric ordering service nodes (OSNs) use the Kafka cluster and provide an ordering service to your blockchain network. Kafka is permissioned voting based consensus type, here leader does the ordering, only in-sync can be voted as leader.</p>
-<p><strong>Zookeeper</strong> is a distributed key-value store, most commonly used to store metadata and handle the mechanics of clustering. It allows clients of the service (the Kafka brokers) to subscribe and have changes sent to them once they happen. This is how brokers know when to switch partition leaders. Zookeeper is also extremely fault-tolerant as it ought to be, since Kafka heavily depends on it.</p>
+<!-- <ins>Certain steps which helps in configuring a network are based upon the selections of the parameters</ins> --><div class="section" id="step-1-configuring-consortium-organizations-under-topology-section">
+<h2><strong>Step 1</strong> : Configuring Consortium (Organizations) under Topology Section<a class="headerlink" href="#step-1-configuring-consortium-organizations-under-topology-section" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/fabric_topology_1.PNG" src="_images/fabric_topology_1.PNG" /></p>
+<div class="section" id="consortium">
+<h3>Consortium<a class="headerlink" href="#consortium" title="Permalink to this headline">¶</a></h3>
+<p>A fabric network is made up of a group of organizations wherein an organization is a mere stakeholder(participant) of the network, this group is called as a consortium. You can add an organization by pressing the add button alongside the organization keyword and after that add a name for this organization.</p>
+<p>Each organization participate in the network via a few fabric specific pillars namely <a class="reference external" href="./Glossary.html#orderer">orderer</a>, <a class="reference external" href="./Glossary.html#peer">peer</a> and <a class="reference external" href="./Glossary.html#certificate-authority">certificate authority</a>.</p>
+<div class="section" id="certificate-authority">
+<h4>Certificate Authority<a class="headerlink" href="#certificate-authority" title="Permalink to this headline">¶</a></h4>
+<p>CA(Certificate Authority) can be configured just by providing the admin user name and password under the selected organization.</p>
 </div>
-<div class="section" id="organization">
-<h3><strong>Organization</strong><a class="headerlink" href="#organization" title="Permalink to this headline">¶</a></h3>
-<p><strong>Number of Nodes</strong> indicates the number of peers in the blockchain network. There are different roles defined for the peers involved in the network. One of the role is “ <strong>Anchor peer</strong> “
-Anchor peer’s role is to broadcast the block, created by orderer node, to other peers inside the organization. It is the one who is directly interacting with Orderer node. Number of Anchor peer should be greater than zero.</p>
+<div class="section" id="ordering-service">
+<h4>Ordering Service<a class="headerlink" href="#ordering-service" title="Permalink to this headline">¶</a></h4>
+<p>Zeeve supports all the three types of ordering service, which are provided by HL Fabric namely <strong>Solo</strong> (Single Orderer Network), <strong><a class="reference external" href="./Glossary.html#kafka">Kafka</a></strong> and <strong><a class="reference external" href="./Glossary.html#raft">Raft</a></strong>. Making it one of the best tools for deploying fabric based production networks.</p>
+<p>So based upon the requirement, select the type of ordering service and just add the number of orderers using the Add Orderer button under the orderer tab of the organization section.</p>
+<p><strong>Not To Forget:</strong> Zeeve provides you with decentralized ordering service out of the box; allowing each organization to have their own orderering service which ends the need of keeping extra orderer organizations. Go ahead and try creating a network with multiple organizations each having a number of orderers.</p>
+</div>
+<div class="section" id="peer-service">
+<h4>Peer Service<a class="headerlink" href="#peer-service" title="Permalink to this headline">¶</a></h4>
+<p>A peer can be added to the organization by using the add button under the peer tab of the organization section. You just need to choose the type of peer service for each peer you want to go with, it can be either levelDb or couchDb based and specify whether you want to have a persistent volume for the same.</p>
+<!-- 
+One of the role is " **Anchor peer** "
+Anchor peer's role is to broadcast the block, created by orderer node, to other peers inside the organization. It is the one who is directly interacting with Orderer node. Number of Anchor peer should be greater than zero. --></div>
 </div>
 </div>
-<div class="section" id="step-2-configuring-csr-section-which-is-optional">
-<h2><strong>Step 2</strong> : Configuring CSR section which is Optional<a class="headerlink" href="#step-2-configuring-csr-section-which-is-optional" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-2-configuring-csr-optional">
+<h2><strong>Step 2</strong> : Configuring CSR (Optional)<a class="headerlink" href="#step-2-configuring-csr-optional" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p><img alt="_images/fabric_csr.PNG" src="_images/fabric_csr.PNG" /></p>
 </div></blockquote>
 <p>CSR is Certificate Signing Request. <a class="reference external" href="https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#fabric-ca-server">Ref.</a></p>
 </div>
 <div class="section" id="step-3-configuring-the-channel-details">
-<h2><strong>Step 3</strong> : Configuring the Channel details<a class="headerlink" href="#step-3-configuring-the-channel-details" title="Permalink to this headline">¶</a></h2>
+<h2><strong>Step 3</strong> : Configuring the Channel Details<a class="headerlink" href="#step-3-configuring-the-channel-details" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p><img alt="_images/fabric_channel.PNG" src="_images/fabric_channel.PNG" /></p>
 </div></blockquote>
-<div class="section" id="channel-details">
-<h3><strong>Channel Details</strong><a class="headerlink" href="#channel-details" title="Permalink to this headline">¶</a></h3>
-<p><strong>Channel Name</strong> indicates the name uniqueness with which it is known in the architecture.</p>
+<div class="section" id="system-channel">
+<h3>System Channel<a class="headerlink" href="#system-channel" title="Permalink to this headline">¶</a></h3>
 <p><strong>Batch Timeout</strong> is the amount of time to wait after receiving first transaction, in order to receive more transactions before cutting a block. In case if we decrease this value then we get lower latency but decreasing too much will result in the decrease of throughput, as block will not fill to its maximum capacity. <a class="reference external" href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/config_update.html">Ref.</a></p>
 <blockquote>
 <div><p>As indicated in the above screenshot <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">&quot;timeout&quot;:</span> <span class="pre">&quot;2s&quot;</span> <span class="pre">}</span></code></p>
@@ -224,6 +240,11 @@ Also, if we look into <strong>Absolute Maximum Bytes</strong> field, then it ind
 <div><p>As indicated in the above screen
 <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">&quot;absolute_max_bytes&quot;:</span> <span class="pre">103809024,</span> <span class="pre">&quot;max_message_count&quot;:</span> <span class="pre">10,</span> <span class="pre">&quot;preferred_max_bytes&quot;:</span> <span class="pre">524288</span> <span class="pre">}</span></code></p>
 </div></blockquote>
+</div>
+<div class="section" id="application-channel-optional">
+<h3>Application Channel (Optional)<a class="headerlink" href="#application-channel-optional" title="Permalink to this headline">¶</a></h3>
+<p>You have an option to create an application channel and make all the peers defined in the topology section join the same.</p>
+<p><strong>Channel Name</strong> indicates the name uniqueness with which it is known in the architecture.</p>
 </div>
 </div>
 </div>
@@ -236,10 +257,10 @@ Also, if we look into <strong>Absolute Maximum Bytes</strong> field, then it ind
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Ethereum.html" class="btn btn-neutral float-right" title="Ethereum Deployment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Ethereum.html" class="btn btn-neutral float-right" title="Ethereum Deployment Specifications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="HyperledgerSawtooth.html" class="btn btn-neutral float-left" title="Sawtooth Deployment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="HyperledgerSawtooth.html" class="btn btn-neutral float-left" title="Hyperledger Sawtooth Deployment Specifications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

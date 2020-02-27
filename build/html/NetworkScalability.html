@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Network Scalability &mdash; Zeeve 1.6.0 documentation</title>
+  <title>Scaling Networks &mdash; Zeeve 1.6.0 documentation</title>
   
 
   
@@ -81,23 +81,29 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">Zeeve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">What is Zeeve?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BlockchainOptions.html">Blockchain Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Sawtooth</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Hyperledger Sawtooth Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Network Scalability</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scaling Networks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-choose-the-network"><strong>Step 1</strong> : Choose the network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-configure-the-node"><strong>Step 2</strong> : Configure the node</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="PerformanceMetrics.html">Performance Metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve_Support.html">Zeeve Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Releases.html">Releases</a></li>
 </ul>
@@ -145,7 +151,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Network Scalability</li>
+      <li>Scaling Networks</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -164,8 +170,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="network-scalability">
-<h1>Network Scalability<a class="headerlink" href="#network-scalability" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="scaling-networks">
+<h1>Scaling Networks<a class="headerlink" href="#scaling-networks" title="Permalink to this headline">¶</a></h1>
+<p>Zeeve allows you to scale your network after it has been bootstrapped. Astonished? Well you will get used to such surprises with Zeeve.</p>
+<p>So to start scaling your networks just head to the dashboard and then hit the Launch Node Button.</p>
+<p><img alt="_images/network-scaling.gif" src="_images/network-scaling.gif" /></p>
+<p>Scaling a network using Zeeve is also just as hassle free as it is to create a network. It is again just a 2 step process.</p>
+<div class="section" id="step-1-choose-the-network">
+<h2><strong>Step 1</strong> : Choose the network<a class="headerlink" href="#step-1-choose-the-network" title="Permalink to this headline">¶</a></h2>
+<p>All of the networks created by you get listed in the dropdown.
+Choose the one you want to scale.</p>
+</div>
+<div class="section" id="step-2-configure-the-node">
+<h2><strong>Step 2</strong> : Configure the node<a class="headerlink" href="#step-2-configure-the-node" title="Permalink to this headline">¶</a></h2>
+<p>Now just fill in the node details and then just configure the cloud details just like you did while creating the network and now in just a few time you will see the requested node joining your network.</p>
+<p>If you are scaling a fabric network then you can also specify the type of service node you want to add.</p>
+<p><img alt="_images/network_scaling_fabric.gif" src="_images/network_scaling_fabric.gif" /></p>
+</div>
 </div>
 
 

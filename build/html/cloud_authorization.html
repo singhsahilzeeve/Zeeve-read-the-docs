@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview" href="ZeeveOverview.html" />
+    <link rel="next" title="How to create my first Network?" href="Howtocreatemyfirstnetwork.html" />
     <link rel="prev" title="Account Creation" href="AccountCreation.html" /> 
 </head>
 
@@ -81,27 +81,31 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">Zeeve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">What is Zeeve?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Cloud Authorizations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#aws-authorization">AWS Authorization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#azure-authorization">Azure Authorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#digital-ocean-authorization">Digital Ocean Authorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ibm-cloud-authorization">IBM Cloud Authorization</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BlockchainOptions.html">Blockchain Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Sawtooth</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Hyperledger Sawtooth Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Network Scalability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Scaling Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PerformanceMetrics.html">Performance Metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve_Support.html">Zeeve Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Releases.html">Releases</a></li>
 </ul>
@@ -170,20 +174,26 @@
             
   <div class="section" id="cloud-authorizations">
 <h1>Cloud Authorizations<a class="headerlink" href="#cloud-authorizations" title="Permalink to this headline">¶</a></h1>
-<p>Zeeve allows you to authorize multiple cloud accounts of yours so as to create networks in the cloud of your choice. You may choose to deploy a some nodes of network on one cloud and extend some nodes of the same on another. This cross cloud deployment maybe a major requirement for your usecase or clients especially for creating/expanding consortiums.</p>
-<p>Zeeve supports a list of cloud for you to chcoose from. You can authorize multiple clouds and choose between them at the time of creating networks or nodes. List of supported clouds currently:-</p>
+<p>Zeeve allows you to authorize multiple cloud accounts of yours so as to create networks in the cloud of your choice. You may choose to deploy some nodes of network on one cloud and extend some nodes of the same on another. This cross cloud deployment maybe a major requirement for your usecase or clients especially for creating/expanding consortiums.</p>
+<p>Zeeve supports a list of cloud for you to choose from. You can authorize multiple clouds and choose between them at the time of creating networks or nodes. Following is the list of currently supported clouds:-</p>
 <ol class="simple">
 <li><p>AWS</p></li>
 <li><p>Azure</p></li>
 <li><p>Digital Ocean</p></li>
-<li><p>Google Cloud</p></li>
 <li><p>IBM Cloud</p></li>
 </ol>
 <hr class="docutils" />
-<p><em><strong>FACT:</strong> Zeeve doesn’t use blockchain services of any of the clouds, hence is not dependent on any cloud for the level of features it can provide for a protocol. It does use, at times, services like kubernetes and others so as to allow that protocol to exist itself.</em></p>
+<p><em><strong>INTERESTING FACT:</strong> Zeeve doesn’t use <strong>blockchain services</strong> of any of the supported cloud platforms, and hence is not restricted for the level of features it can provide for a protocol on any cloud.</em></p>
 <hr class="docutils" />
 <div class="section" id="aws-authorization">
 <h2>AWS Authorization<a class="headerlink" href="#aws-authorization" title="Permalink to this headline">¶</a></h2>
+<p>Before you authorize your AWS account with Zeeve, you’ll need following permissions to deploy a network:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Permission to create VPC, Elastic Ips, EC2 instance, Security group, Internet gateway and Route tables.</p></li>
+<li><p>For Fabric, you need additional permissions to read/write EKS, CloudFormation and to create and pass any Role in IAM.</p></li>
+</ul>
+</div></blockquote>
 <p>To authorize your AWS account on Zeeve:-</p>
 <ol>
 <li><p>Hover on <strong>profile</strong></p>
@@ -192,10 +202,10 @@
 <li><p>Click on <strong>Edit Profile</strong></p>
 <p><img alt="_images/profilemenu.png" src="_images/profilemenu.png" /></p>
 </li>
-<li><p>Click on your cloud authentication for AWS account, click on <strong>AWS Authentication</strong>.</p>
+<li><p>Click on your cloud authentication for AWS account, click on <strong>Authorize Aws</strong>.</p>
 <p><img alt="_images/editprofile.png" src="_images/editprofile.png" /></p>
 </li>
-<li><p>You need to generate AWS Access Key and AWS Access Secret Key, after that you can authenticate your AWS account with Zeeve.</p>
+<li><p>You will need AWS Access Key and AWS Access Secret Key, to authenticate your AWS account with Zeeve.</p>
 <p><img alt="_images/awslogin.png" src="_images/awslogin.png" /></p>
 </li>
 </ol>
@@ -203,6 +213,33 @@
 <div class="section" id="azure-authorization">
 <h2>Azure Authorization<a class="headerlink" href="#azure-authorization" title="Permalink to this headline">¶</a></h2>
 <p>To authorize your Azure account on Zeeve you’ll need to ensure certain things:-</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>User must have an account with <strong>Global Admin</strong> Role</p></li>
+<li><p>Source should be an azure <strong>Active Directory</strong></p></li>
+<li><p>Login from this account in Azure portal(if hasn’t been logged before)</p></li>
+<li><p>User must have enough permissions to write Subscription Id, create Resource group and to add any Enterprise Application into Azure Active Directory.</p></li>
+</ul>
+</div></blockquote>
+<p>After ensuring these, follow the given steps:-</p>
+<ol>
+<li><p>Hover on <strong>profile</strong></p>
+<p><img alt="_images/profile.png" src="_images/profile.png" /></p>
+</li>
+<li><p>Click on <strong>Edit Profile</strong></p>
+<p><img alt="_images/profilemenu.png" src="_images/profilemenu.png" /></p>
+</li>
+<li><p>Click on your cloud authentication for Azure account, click on <strong>Authorize Azure</strong>.</p>
+<p><img alt="_images/editprofile.png" src="_images/editprofile.png" /></p>
+</li>
+<li><p>Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.</p>
+<p><img alt="_images/azurelogin.png" src="_images/azurelogin.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="digital-ocean-authorization">
+<h2>Digital Ocean Authorization<a class="headerlink" href="#digital-ocean-authorization" title="Permalink to this headline">¶</a></h2>
+<p>To authorize your Digital Ocean account on Zeeve you’ll need to ensure certain things:-</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>User must have an account with global admin role</p></li>
@@ -219,10 +256,37 @@
 <li><p>Click on <strong>Edit Profile</strong></p>
 <p><img alt="_images/profilemenu.png" src="_images/profilemenu.png" /></p>
 </li>
-<li><p>Click on your cloud authentication for Azure account, click on <strong>Azure Authentication</strong>.</p>
+<li><p>Click on your cloud authentication for Azure account, click on <strong>Authorize Azure</strong>.</p>
 <p><img alt="_images/editprofile.png" src="_images/editprofile.png" /></p>
 </li>
-<li><p>Azure authentication will redirect you to Microsoft Azure login page, you can login with Microsoft credentials, once login successful, Zeeve will be connected to your Azure account.</p>
+<li><p>Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.</p>
+<p><img alt="_images/azurelogin.png" src="_images/azurelogin.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="ibm-cloud-authorization">
+<h2>IBM Cloud Authorization<a class="headerlink" href="#ibm-cloud-authorization" title="Permalink to this headline">¶</a></h2>
+<p>To authorize your IBM account on Zeeve you’ll need to ensure certain things:-</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>User must have an account with global admin role</p></li>
+<li><p>Source should be an azure active directory</p></li>
+<li><p>Login from this account in Azure portal(if hasn’t been logged before)</p></li>
+<li><p>User must have enough permissions to write subscription Id</p></li>
+</ul>
+</div></blockquote>
+<p>After which on Zeeve do following steps:-</p>
+<ol>
+<li><p>Hover on <strong>profile</strong></p>
+<p><img alt="_images/profile.png" src="_images/profile.png" /></p>
+</li>
+<li><p>Click on <strong>Edit Profile</strong></p>
+<p><img alt="_images/profilemenu.png" src="_images/profilemenu.png" /></p>
+</li>
+<li><p>Click on your cloud authentication for Azure account, click on <strong>Authorize Azure</strong>.</p>
+<p><img alt="_images/editprofile.png" src="_images/editprofile.png" /></p>
+</li>
+<li><p>Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.</p>
 <p><img alt="_images/azurelogin.png" src="_images/azurelogin.png" /></p>
 </li>
 </ol>
@@ -237,7 +301,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ZeeveOverview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Howtocreatemyfirstnetwork.html" class="btn btn-neutral float-right" title="How to create my first Network?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="AccountCreation.html" class="btn btn-neutral float-left" title="Account Creation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

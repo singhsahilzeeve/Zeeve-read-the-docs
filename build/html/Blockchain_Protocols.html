@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Ethereum Deployment Specifications &mdash; Zeeve 1.6.0 documentation</title>
+  <title>Major Blockchain Protocols &mdash; Zeeve 1.6.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Corda Deployment Specifications" href="Corda.html" />
-    <link rel="prev" title="Hyperledger Fabric Deployment Specifications" href="HyperledgerFabric.html" /> 
+    <link rel="next" title="References" href="References.html" />
+    <link rel="prev" title="Performance Metrics" href="PerformanceMetrics.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,7 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Hyperledger Sawtooth Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment Specifications</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Ethereum Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
@@ -97,7 +97,14 @@
 <li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Network Scalability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PerformanceMetrics.html">Performance Metrics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Major Blockchain Protocols</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hyperledger-sawtooth">HyperLedger Sawtooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hyperledger-fabric">HyperLedger Fabric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ethereum">Ethereum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#corda">Corda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Releases.html">Releases</a></li>
@@ -146,13 +153,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Ethereum Deployment Specifications</li>
+      <li>Major Blockchain Protocols</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/Ethereum.md.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Blockchain_Protocols.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -165,41 +172,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ethereum-deployment-specifications">
-<h1>Ethereum Deployment Specifications<a class="headerlink" href="#ethereum-deployment-specifications" title="Permalink to this headline">¶</a></h1>
-<p><img alt="_images/network-creation-ethereum.gif" src="_images/network-creation-ethereum.gif" /></p>
-<p>In order to be specific about the parameters which need your attention, we would like to brief you about them:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>Type Of Network</strong></p>
-<ul>
-<li><p><strong>MainNet</strong>: This will deploy your network on the network mainnet. This is suggested for deploying production grade ethereum dapps.</p></li>
-<li><p><strong>Ropsten</strong>: This is a testnet you can use this for your non production needs like testing or demonstrations.</p></li>
-<li><p><strong>Rinkeby</strong>: This is yet another testnet which can be used for non production needs like testing or demonstrations, however unlike ropsten it just supports geth.</p></li>
-</ul>
-</li>
-</ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>Data Directory</strong>: You can also specify the path to the ethereum’s data directory. This directory is meant for storing the ethereum’s wallet files.</p></li>
-</ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>RPC Port</strong>: Specify the port of your blockchain application.</p></li>
-</ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>WS Port</strong>: Specify the port at which you want to make web socket connection with your running blockchain instance.</p></li>
-</ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>RPC API</strong>: Choose from a list of management APIs which you want to offer over the RPC endpoints.</p></li>
-</ul>
-</div></blockquote>
+  <div class="section" id="major-blockchain-protocols">
+<h1>Major Blockchain Protocols<a class="headerlink" href="#major-blockchain-protocols" title="Permalink to this headline">¶</a></h1>
+<p>This page of this documentation is here just to provide you with a gist of various major protocols and help you give a rough idea around them. So you can choose the one which suits your usecase well.</p>
+<div class="section" id="hyperledger-sawtooth">
+<h2>HyperLedger Sawtooth<a class="headerlink" href="#hyperledger-sawtooth" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/sawtooth.png" src="_images/sawtooth.png" /> Hyperledger Sawtooth is an enterprise blockchain platform for building distributed ledger applications and networks. The design philosophy targets keeping ledgers distributed and making smart contracts safe, particularly for enterprise use. <a class="reference external" href="https://sawtooth.hyperledger.org/docs/core/releases/1.0/introduction.html">Ref.</a></p>
+<!-- ![](images/sawtooth.png) Sawtooth is a modular platform for building, deploying, and running [[Glossary|distributed ledgers]]. Provide a digital record (such as asset ownership) that is maintained without a central authority or implementation.
+Sawtooth is an open source project under Hyper ledger umbrella. Sawtooth is also highly modular. This modularity enables enterprises and consortia to make policy decisions that they are best equipped to make. [Ref.](https://sawtooth.hyperledger.org/docs/core/releases/1.0/introduction.html) --></div>
+<div class="section" id="hyperledger-fabric">
+<h2>HyperLedger Fabric<a class="headerlink" href="#hyperledger-fabric" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/fabric.png" src="_images/fabric.png" /> Hyperledger Fabric is an open source enterprise-grade permissioned distributed ledger technology (DLT) platform, designed for use in enterprise contexts, that delivers some key differentiating capabilities over other popular distributed ledger or blockchain platforms. <a class="reference external" href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/whatis.html">Ref.</a></p>
+</div>
+<div class="section" id="ethereum">
+<h2>Ethereum<a class="headerlink" href="#ethereum" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/ethereum.png" src="_images/ethereum.png" /> Ethereum is an open-source, blockchain based distributed computing platform which involves smart contract (business logic coded script) functionality. Ether is a currency used for transactions between accounts and also used to compensate participating mining nodes for computations performed. <a class="reference external" href="https://www.ethereum.org/">Ref.</a></p>
+<!-- [Ethereum](./Glossary.md) is a global, decentralized platform for money and new kinds of applications. On [Ethereum](./Glossary.md), you can write code that controls money, and build applications accessible anywhere in the world. --></div>
+<div class="section" id="corda">
+<h2>Corda<a class="headerlink" href="#corda" title="Permalink to this headline">¶</a></h2>
+<p><img src='_images/corda.svg' width="90px"></img> Corda is an open source blockchain project, designed for businesses. Only Corda allows you to build interoperable blockchain networks that transact in strict privacy. Corda’s smart contract technology allows businesses to transact directly, with value. <a class="reference external" href="https://www.corda.net/">Ref.</a></p>
+</div>
+<div class="section" id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/credits.png" src="_images/credits.png" /> Credits is a decentralized blockchain platform built over peer-to-peer principles in order to develop smart contracts and decentralized applications. Smart contracts are aiming to create high-performance applications. <a class="reference external" href="https://credits.com/">Ref.</a></p>
+</div>
 </div>
 
 
@@ -210,10 +206,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Corda.html" class="btn btn-neutral float-right" title="Corda Deployment Specifications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="References.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="HyperledgerFabric.html" class="btn btn-neutral float-left" title="Hyperledger Fabric Deployment Specifications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="PerformanceMetrics.html" class="btn btn-neutral float-left" title="Performance Metrics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
