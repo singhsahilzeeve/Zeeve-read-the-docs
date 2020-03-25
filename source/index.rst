@@ -28,6 +28,7 @@ Welcome to Zeeve's documentation!
    ../PerformanceMetrics.md
    ../Blockchain_Protocols.md
    ../References.md
+   ../Zeeve_Support.md
    ../Glossary.md
    ../Releases.md
 
