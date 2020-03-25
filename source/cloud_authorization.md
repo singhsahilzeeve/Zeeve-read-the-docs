@@ -72,10 +72,10 @@ After ensuring these, follow the given steps:-
 
 To authorize your Digital Ocean account on Zeeve you'll need to ensure certain things:-
  
-> * User must have an account with global admin role
-> * Source should be an azure active directory
-> * Login from this account in Azure portal(if hasn't been logged before)
-> * User must have enough permissions to write subscription Id
+> * User must have an account with enough permissions to create - 
+> * Project
+> * Droplets
+> * and Kubernetes service.
 
 After which on Zeeve do following steps:- 
 
@@ -91,10 +91,11 @@ After which on Zeeve do following steps:-
 
     ![](images/editprofile.png)
 
-4. Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.
+4. Authorize DigitalOcean will redirect you to login page, you can login with your DigitalOcean credentials, once login is successful, Zeeve will be connected to your account.
 
-    ![](images/azurelogin.png)
+    ![](images/digitaloceanlogin.png)
 
+5. After this, you will be asked to allow Zeeve in your cloud account. Make sure you provide both **read and write** access on this page.
 
 ## IBM Cloud Authorization
 
