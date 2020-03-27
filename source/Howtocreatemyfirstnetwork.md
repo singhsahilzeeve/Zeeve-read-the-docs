@@ -4,6 +4,10 @@ Zeeve makes the process of blockchain network deployment from a long time consum
 
 With a handful of steps using [Zeeve](https://zeeve.io), it has become so easy to create your own blockchain network. These networks can also be altered as per the need of the required deployment with the help of  given protocol specific parameters that helps you align with your desired network performance.
 
+So wondering upon how to begin? Just head to the dashboard and hit launch network button. 
+
+<img src="./_images/network-creation.png" width="696.47"></img>
+
 <!-- Currently we have restricted for below mentioned with which user can create the Blockchain network. Initially you should choose your blockchain platform -->
 
 

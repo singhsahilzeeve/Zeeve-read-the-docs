@@ -34,7 +34,8 @@ This document will help user to understand different operations onto zeeve and u
     *    [Hyperledger Fabric Development Practices](./developmentHLF.md)
     *    [Hyperledger Sawtooth Development Practices](./developmentSawtooth.md)
     <br/>
-* [Network Scalability](./NetworkScalability.md)
+* [Scaling Networks](./NetworkScalability.md)
+* [Zeeve Community Support](./Zeeve_Support.md)
 * [Performance Metrics](./PerformanceMetrics.md)
 *   [Major Blockchain Protocols](./Blockchain_Protocols.md)
 *   [References](./References.md)
