@@ -87,7 +87,7 @@ After which on Zeeve do following steps:-
  
     ![](images/profilemenu.png)
 
-3. Click on your cloud authentication for Azure account, click on **Authorize Azure**.
+3. Click on your cloud authentication for Digital Ocean account, click on **Authorize digital Ocean**.
 
     ![](images/editprofile.png)
 
@@ -101,10 +101,9 @@ After which on Zeeve do following steps:-
 
 To authorize your IBM account on Zeeve you'll need to ensure certain things:-
  
-> * User must have an account with global admin role
-> * Source should be an azure active directory
-> * Login from this account in Azure portal(if hasn't been logged before)
-> * User must have enough permissions to write subscription Id
+> * Login to your IBM cloud account and note down your account ID from account section.
+> * Then create a resource group from account section and note down resource group ID.
+> * Create an IBM cloud key from the IAM access section and copy the key.
 
 After which on Zeeve do following steps:- 
 
@@ -116,10 +115,10 @@ After which on Zeeve do following steps:-
  
     ![](images/profilemenu.png)
 
-3. Click on your cloud authentication for Azure account, click on **Authorize Azure**.
+3. Click on your cloud authentication for IBM account, click on **Authorize IBM cloud**.
 
     ![](images/editprofile.png)
 
-4. Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.
+4. Here user will have to fill the IBM account ID, IBM resource group ID and IBM key in the given fields.
 
-    ![](images/azurelogin.png)
+    ![](images/ibmlogin.png)
