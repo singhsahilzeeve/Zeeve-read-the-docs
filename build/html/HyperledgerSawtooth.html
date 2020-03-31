@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sawtooth Deployment &mdash; Zeeve 1.6.0 documentation</title>
+  <title>Hyperledger Sawtooth Deployment Specifications &mdash; Zeeve 1.6.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hyperledger Fabric Deployment" href="HyperledgerFabric.html" />
-    <link rel="prev" title="How to create my first Network" href="Howtocreatemyfirstnetwork.html" /> 
+    <link rel="next" title="Hyperledger Fabric Deployment Specifications" href="HyperledgerFabric.html" />
+    <link rel="prev" title="How to create my first Network?" href="Howtocreatemyfirstnetwork.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,21 +81,23 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">Zeeve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">What is Zeeve?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sawtooth Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hyperledger Sawtooth Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Network Scalability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PerformanceMetrics.html">Performance Metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Releases.html">Releases</a></li>
@@ -144,7 +146,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Sawtooth Deployment</li>
+      <li>Hyperledger Sawtooth Deployment Specifications</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -163,28 +165,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sawtooth-deployment">
-<h1>Sawtooth Deployment<a class="headerlink" href="#sawtooth-deployment" title="Permalink to this headline">¶</a></h1>
-<p>Sawtooth is a modular platform for building, deploying, and running [[Glossary|distributed ledgers]]. Provide a digital record (such as asset ownership) that is maintained without a central authority or implementation.
-Sawtooth is an open source project under Hyper ledger umbrella. Sawtooth is also highly modular. This modularity enables enterprises and consortia to make policy decisions that they are best equipped to make. <a class="reference external" href="https://sawtooth.hyperledger.org/docs/core/releases/1.0/introduction.html">Ref.</a></p>
-<p>While creating a network, we are suppose to select one of the blockchain platform to be deployed over the network. Sawtooth is one of them which is readily available over <a class="reference external" href="https://zeeve.io">Zeeve</a> platform.</p>
+  <div class="section" id="hyperledger-sawtooth-deployment-specifications">
+<h1>Hyperledger Sawtooth Deployment Specifications<a class="headerlink" href="#hyperledger-sawtooth-deployment-specifications" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p><img alt="_images/CreateNetworkPage.JPG" src="_images/CreateNetworkPage.JPG" /></p>
-</div></blockquote>
-<p>Once you are done with the selection of Sawtooth above, then platform will ask for further Sawtooth specific configuration.</p>
-<blockquote>
-<div><p><img alt="_images/sawtooth_config.PNG" src="_images/sawtooth_config.PNG" /></p>
+<div><p><img alt="_images/network-creation-sawtooth.gif" src="_images/network-creation-sawtooth.gif" /></p>
 </div></blockquote>
 <p>In order to be specific about the parameters which need your attention, we would like to brief about the parameters which need your input for creating a network</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>Selection of cloud type</strong> : Prior to this, you have authenticated your cloud service viz., AWS or Azure. This section will incorporate the same cloud which you have chose, and will create the Blockchain network on it.</p></li>
-<li><p><strong>Name your Network</strong> : In order to uniquely identify your network, this field requires a unique name for it. Unique over here is in terms of the account in which you are creating your network. In case you have created some network earlier, and now you are trying to create with the same name, then the <a class="reference external" href="https://zeeve.io">Zeeve</a> platform won’t allow you to create it.</p></li>
-<li><p><strong>Location</strong> : It indicates the region of cloud service viz., AWS or Azure. These regions are the geographic locations where your network instances are going to be hosted. In case of AWS each of its Region has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren’t replicated across AWS Regions unless you do so specifically. <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">Ref.</a></p></li>
 <li><p><strong>Mode</strong></p>
 <ul>
-<li><p>Demo Mode: If you opt this, then you would be able to create a network with single instance only. In case if you want to do like unit testing or learning or giving demo, then this option is for you! We are not restricting you to use this for the mentioned option, this is your platform and you can use it anyways.</p></li>
-<li><p>Production Mode: If you opt for this, then you can go with as many nodes as you want to be included in your network.</p></li>
+<li><p>Demo Mode: If you opt this, then you would be able to create a network with single instance only. In case if you want to do things like unit testing or learning or demos, then this option is for you! We are not restricting you to use this, this is your platform and you can use it anyways.</p></li>
+<li><p>Production Mode: If you opt for this, then you can go with as many nodes as you want to be included in your network. This is suggested for deploying production grade sawtooth solutions.</p></li>
 </ul>
 </li>
 </ul>
@@ -199,10 +191,10 @@ Sawtooth is an open source project under Hyper ledger umbrella. Sawtooth is also
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="HyperledgerFabric.html" class="btn btn-neutral float-right" title="Hyperledger Fabric Deployment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="HyperledgerFabric.html" class="btn btn-neutral float-right" title="Hyperledger Fabric Deployment Specifications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Howtocreatemyfirstnetwork.html" class="btn btn-neutral float-left" title="How to create my first Network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Howtocreatemyfirstnetwork.html" class="btn btn-neutral float-left" title="How to create my first Network?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

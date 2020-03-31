@@ -1,23 +1,26 @@
 # Cloud Authorizations
 
-Zeeve allows you to authorize multiple cloud accounts of yours so as to create networks in the cloud of your choice. You may choose to deploy a some nodes of network on one cloud and extend some nodes of the same on another. This cross cloud deployment maybe a major requirement for your usecase or clients especially for creating/expanding consortiums.
+Zeeve allows you to authorize multiple cloud accounts of yours so as to create networks in the cloud of your choice. You may choose to deploy some nodes of network on one cloud and extend some nodes of the same on another. This cross cloud deployment maybe a major requirement for your usecase or clients especially for creating/expanding consortiums.
 
-Zeeve supports a list of cloud for you to chcoose from. You can authorize multiple clouds and choose between them at the time of creating networks or nodes. List of supported clouds currently:-
+Zeeve supports a list of cloud for you to choose from. You can authorize multiple clouds and choose between them at the time of creating networks or nodes. Following is the list of currently supported clouds:-
 
 1. AWS
 2. Azure
 3. Digital Ocean 
-4. Google Cloud
-5. IBM Cloud
+4. IBM Cloud
 
 
 ---
-***FACT:** Zeeve doesn't use blockchain services of any of the clouds, hence is not dependent on any cloud for the level of features it can provide for a protocol. It does use, at times, services like kubernetes and others so as to allow that protocol to exist itself.*
+***INTERESTING FACT:** Zeeve doesn't use **blockchain services** of any of the supported cloud platforms, and hence is not restricted for the level of features it can provide for a protocol on any cloud.*
 
 ---
 
 
 ## AWS Authorization
+
+Before you authorize your AWS account with Zeeve, you'll need following permissions to deploy a network:
+> * Permission to create VPC, Elastic Ips, EC2 instance, Security group, Internet gateway and Route tables.
+> * For Fabric, you need additional permissions to read/write EKS, CloudFormation and to create and pass any Role in IAM.
 
 To authorize your AWS account on Zeeve:-
 
@@ -29,17 +32,45 @@ To authorize your AWS account on Zeeve:-
  
     ![](images/profilemenu.png)
 
-3. Click on your cloud authentication for AWS account, click on **AWS Authentication**.
+3. Click on your cloud authentication for AWS account, click on **Authorize Aws**.
  
     ![](images/editprofile.png)
 
-4. You need to generate AWS Access Key and AWS Access Secret Key, after that you can authenticate your AWS account with Zeeve.
+4. You will need AWS Access Key and AWS Access Secret Key, to authenticate your AWS account with Zeeve.
 
     ![](images/awslogin.png)
 
 ## Azure Authorization
 
 To authorize your Azure account on Zeeve you'll need to ensure certain things:-
+ 
+> * User must have an account with **Global Admin** Role
+> * Source should be an azure **Active Directory**
+> * Login from this account in Azure portal(if hasn't been logged before)
+> * User must have enough permissions to write Subscription Id, create Resource group and to add any Enterprise Application into Azure Active Directory.
+
+After ensuring these, follow the given steps:- 
+
+1. Hover on **profile** 
+ 
+    ![](images/profile.png)
+
+2. Click on **Edit Profile**
+ 
+    ![](images/profilemenu.png)
+
+3. Click on your cloud authentication for Azure account, click on **Authorize Azure**.
+
+    ![](images/editprofile.png)
+
+4. Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.
+
+    ![](images/azurelogin.png)
+
+
+## Digital Ocean Authorization
+
+To authorize your Digital Ocean account on Zeeve you'll need to ensure certain things:-
  
 > * User must have an account with global admin role
 > * Source should be an azure active directory
@@ -56,10 +87,38 @@ After which on Zeeve do following steps:-
  
     ![](images/profilemenu.png)
 
-3. Click on your cloud authentication for Azure account, click on **Azure Authentication**.
+3. Click on your cloud authentication for Azure account, click on **Authorize Azure**.
 
     ![](images/editprofile.png)
 
-4. Azure authentication will redirect you to Microsoft Azure login page, you can login with Microsoft credentials, once login successful, Zeeve will be connected to your Azure account.
+4. Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.
+
+    ![](images/azurelogin.png)
+
+
+## IBM Cloud Authorization
+
+To authorize your IBM account on Zeeve you'll need to ensure certain things:-
+ 
+> * User must have an account with global admin role
+> * Source should be an azure active directory
+> * Login from this account in Azure portal(if hasn't been logged before)
+> * User must have enough permissions to write subscription Id
+
+After which on Zeeve do following steps:- 
+
+1. Hover on **profile** 
+ 
+    ![](images/profile.png)
+
+2. Click on **Edit Profile**
+ 
+    ![](images/profilemenu.png)
+
+3. Click on your cloud authentication for Azure account, click on **Authorize Azure**.
+
+    ![](images/editprofile.png)
+
+4. Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.
 
     ![](images/azurelogin.png)

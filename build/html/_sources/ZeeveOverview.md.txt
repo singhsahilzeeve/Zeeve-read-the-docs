@@ -1,10 +1,10 @@
 # Overview
 
-> [Zeeve](https://www.zeeve.io/) is a [Blockchain](./Glossary.md) as a Service (BaaS) is offering that allows customers to leverage cloud-based solutions to build, host and use their own Blockchain apps, [[Glossary|Smart Contracts]] and functions on the blockchain while the cloud-based service provider manages all the necessary tasks and activities to keep the infrastructure agile and operational. It is an interesting development in the blockchain ecosystem that is indirectly aiding the blockchain adoption across businesses. It is based on, and works similar to, the concept of [Software As A Service (SaaS)](https://en.wikipedia.org/wiki/Software_as_a_service) model.
+> [Zeeve](https://www.zeeve.io/) is a [Blockchain](./Glossary.html#blockchain) as a Service (BaaS) offering that allows customers to leverage cloud-based solutions to build, host and use their own Blockchain apps, [Smart Contracts](./Glossary.html#smartcontracts) and functions on the blockchain while the cloud-based service provider manages all the necessary tasks and activities to keep the infrastructure agile and operational. It is an interesting development in the blockchain ecosystem that is indirectly aiding the blockchain adoption across businesses. It is based on, and works similar to, the concept of [Software As A Service (SaaS)](https://en.wikipedia.org/wiki/Software_as_a_service) model.
 
 ## ![](images/Dashboard.png)Dashboard
 
-> This is the dashboard page of Zeeve where you can see your Networks, Nodes, deployed product details, [Node](./Glossary.md) Disk Usage, Node Statistics, and all activity logs.
+> This is the dashboard page of Zeeve where you can see your Networks, Nodes, deployed product details, [Node](./Glossary.html#node) Disk Usage, Node Statistics, and all activity logs.
 
 ## ![](images/Networks.png)Networks
 

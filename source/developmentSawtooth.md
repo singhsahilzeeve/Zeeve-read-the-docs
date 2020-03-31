@@ -14,7 +14,9 @@ Certain practices can help developer create application which are one click depl
 
 * Create an .env file at root of your project and mention you domain-prefix and port-number on host machine to expose. For example:-
 
-```
-EXT_EXPOSED_SERVICES=("balancetranfer:3500" "another_service:3400")
-```
-This will create a domain like `balancetransfer.xxxxxx.zeeve.net` & `another_service.xxxxxx.zeeve.net` which will map to 3500 & 3400 ports respectively.
+  ```
+  EXT_EXPOSED_SERVICES=("balancetranfer:3500" "another_service:3400")
+  ```
+  This will create a domain like `balancetransfer.xxxxxx.zeeve.net` & `another_service.xxxxxx.zeeve.net` which will map to 3500 & 3400 ports respectively and allow SSL connections.
+
+For example of a sawtooth application please take a look at the demo supplychain application: [Sawtooth Asset Tracking](https://github.com/Zeeve-App/sawtooth-supplychain).
