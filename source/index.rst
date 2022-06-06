@@ -29,6 +29,7 @@ Welcome to Zeeve's documentation!
    ../Blockchain_Protocols.md
    ../References.md
    ../Zeeve_Support.md
+   ../zeeveDistributedFileSystem.md
    ../Glossary.md
    ../Releases.md
 
