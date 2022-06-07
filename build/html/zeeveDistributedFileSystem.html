@@ -118,9 +118,16 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#zdfs-gui">ZDFS GUI</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#files">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-upload">File Upload</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-list">File List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-detail">File Detail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-edit">File Edit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-delete">File Delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-export">File Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-unpin">File Unpin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-pin">File Pin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-preview">File Preview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#file-cid-verifier">File CID Verifier</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Purchase Subscription</a></li>
 </ul>
 </li>
 </ul>
@@ -198,8 +205,8 @@
 <h1>Zeeve Distributed File System<a class="headerlink" href="#zeeve-distributed-file-system" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>ZDFS is your secure and decentralised storage for your digital assets whether it be NFTs or other digital assets. It has been built by developers for developers and feature the most secure, easy to use and easy to integrate decentralised storage service. Now you don’t need to hustle around <a class="reference external" href="https://docs.ipfs.io/concepts/what-is-ipfs/">IPFS</a> complexities because ZDFS offers you the complete control over your contents using interactive <a class="reference external" href="#zdfs-gui">ZDFS GUI</a>. ZDFS allows you to upload your file, folder and content using IPFS hash of 25GB in size. ZDFS ensures your content is always online in IPFS network without worrying about unusal downtime and IPFS node management. ZDFS supports <a class="reference external" href="#ipfs-cli">IPFS CLI</a> out of the box and also provides Public <a class="reference external" href="#http-apis">HTTP APIs</a> to integrate with your application and perform various actions on your content.</p>
-<p>There is a series of steps you need to follow in order access ZDFS service.</p>
+<p>ZDFS is your secure and decentralised storage for your digital assets whether it be NFTs or other digital assets. It has been built by developers for developers and feature the most secure, easy to use and easy to integrate decentralised storage service. Now you don’t need to hustle around <a class="reference external" href="https://docs.ipfs.io/concepts/what-is-ipfs/">IPFS</a> complexities because ZDFS offers you the complete control over your contents using interactive <a class="reference external" href="#zdfs-gui">ZDFS GUI</a>. ZDFS allows you to upload your file, folder and content using an IPFS hash of 25GB in size. ZDFS ensures your content is always online in the IPFS network without worrying about unusual downtime and IPFS node management. ZDFS supports <a class="reference external" href="#ipfs-cli">IPFS CLI</a> out of the box and also provides Public <a class="reference external" href="#http-apis">HTTP APIs</a> to integrate with your application and perform various actions on your content.</p>
+<p>There is a series of steps you need to follow in order to access ZDFS service.</p>
 <ol class="simple">
 <li><p><a class="reference external" href="#purchase-subscription">Purchase Subscription</a>.</p></li>
 <li><p><a class="reference external" href="#create-access">Create Access</a>.</p></li>
@@ -208,14 +215,14 @@
 </div>
 <div class="section" id="purchase-subscription">
 <h2>Purchase Subscription<a class="headerlink" href="#purchase-subscription" title="Permalink to this headline">¶</a></h2>
-<p>ZDFS offers you different subscription plan and you can optimize cost as per your requirement using the plan calculator. You need to purchase the endpoints of a particular plan to enjoy seemless services of ZDFS. You can purchase N number of endpoints of a particular plan on monthly basis.</p>
+<p>ZDFS offers you different subscription plans and you can optimize cost as per your requirement using the plan calculator. You need to purchase the endpoints of a particular plan to enjoy seamless services of ZDFS. You can purchase ‘N’ number of endpoints of a particular plan on a monthly basis.</p>
 <hr class="docutils" />
-<p><em><strong>NOTE:</strong> We are referring <strong>1 ENDPOINT</strong> - <strong>1 Access Key</strong>.</em></p>
+<p><em><strong>NOTE:</strong> We are referring <strong>1 ENDPOINT</strong> as <strong>1 Access Key</strong>.</em></p>
 <hr class="docutils" />
 <p>There are two plan types offered by ZDFS currently:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="#basic-plan">Basic Plan</a></p></li>
-<li><p><a class="reference external" href="#standard-plan">Standard Plan</a></p></li>
+<li><p><a class="reference external" href="#basic-plan">Basic Plan</a>.</p></li>
+<li><p><a class="reference external" href="#standard-plan">Standard Plan</a>.</p></li>
 </ul>
 <div class="section" id="basic-plan">
 <h3>Basic Plan<a class="headerlink" href="#basic-plan" title="Permalink to this headline">¶</a></h3>
@@ -247,17 +254,17 @@
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Purchase</span> <span class="pre">Subscription</span></code>.</p>
 <p><img alt="_images/zdfs-purchase-subscription-nav.png" src="_images/zdfs-purchase-subscription-nav.png" /></p>
 </li>
-<li><p>Select plan by clicking on it.</p>
+<li><p>Select the plan by clicking on it.</p>
 <p><img alt="_images/zdfs-purchase-subscription-plans.png" src="_images/zdfs-purchase-subscription-plans.png" /></p>
 </li>
-<li><p>You can enter the number of endpoints you want to purchase.</p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Subscribe</span></code> button to finally crosscheck your purchase detail.</p>
+<li><p>You can enter the ‘N’ number of endpoints you want to purchase.</p></li>
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">Subscribe</span></code> button to finally crosscheck your purchase details.</p>
 <p><img alt="_images/zdfs-purchase-subscription-plan-cal-filled.png" src="_images/zdfs-purchase-subscription-plan-cal-filled.png" /></p>
 </li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Redirect</span> <span class="pre">for</span> <span class="pre">Payment</span></code> button to get redirected to payment gateway.
-zdfs-files-upload-success
-<img alt="_images/zdfs-purchase-subscription-plan-cal-finally.png" src="_images/zdfs-purchase-subscription-plan-cal-finally.png" /></p></li>
-<li><p>You can make the payment by entering your card detail and applying Coupon Code if you have any.</p>
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">Redirect</span> <span class="pre">for</span> <span class="pre">Payment</span></code> button to get redirected to the payment gateway.</p>
+<p><img alt="_images/zdfs-purchase-subscription-plan-cal-finally.png" src="_images/zdfs-purchase-subscription-plan-cal-finally.png" /></p>
+</li>
+<li><p>You can make the payment by entering your card details and applying Coupon Code if you have any.</p>
 <p><img alt="_images/zdfs-purchase-subscription-plan-payment.png" src="_images/zdfs-purchase-subscription-plan-payment.png" /></p>
 </li>
 </ul>
@@ -265,11 +272,11 @@ zdfs-files-upload-success
 </div>
 <div class="section" id="create-access">
 <h2>Create Access<a class="headerlink" href="#create-access" title="Permalink to this headline">¶</a></h2>
-<p>You need to generate an access in order to use ZDFS APIs. You need to have <code class="docutils literal notranslate"><span class="pre">AccessKey</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">AccessSecret</span></code> or <code class="docutils literal notranslate"><span class="pre">AccessToken</span></code> to use APIs.</p>
+<p>You need to generate an access token in order to use ZDFS APIs. You need to have <code class="docutils literal notranslate"><span class="pre">AccessKey</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">AccessSecret</span></code> or <code class="docutils literal notranslate"><span class="pre">AccessToken</span></code> for the same.</p>
 <ul class="simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Settings/My</span> <span class="pre">Accounts</span> <span class="pre">-&gt;</span> <span class="pre">API</span> <span class="pre">Credentials</span></code>.
 <img alt="_images/api-credential.png" src="_images/api-credential.png" /></p></li>
-<li><p>Click on the <strong>Create Key</strong> button. You will get the pop up form to take some information as described in next step.
+<li><p>Click on the <strong>Create Key</strong> button. You will get the pop up form to take some information as described in the next step.
 <img alt="_images/zdfs-api-credential-unfilled.png" src="_images/zdfs-api-credential-unfilled.png" /></p></li>
 <li><p>Provide <strong>Key Name</strong> as per your choice.</p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">ZDFS</span></code> as <strong>Service Type</strong>.</p></li>
@@ -285,7 +292,7 @@ zdfs-files-upload-success
 </div>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>You can utilise ZDFS services in ample of ways as per your use case. There are 3 ways in which you can use ZDFS as follows:</p>
+<p>You can utilize ZDFS services in ample ways as per your use case. There are 3 ways in which you can use ZDFS as follows:</p>
 <ol class="simple">
 <li><p><a class="reference external" href="#ipfs-cli">IPFS CLI</a>.</p></li>
 <li><p><a class="reference external" href="#http-apis">HTTP APIs</a>.</p></li>
@@ -314,59 +321,59 @@ zdfs-files-upload-success
 </ol>
 <div class="section" id="pinning-service-api-psa">
 <h4>1. Pinning Service API (PSA)<a class="headerlink" href="#pinning-service-api-psa" title="Permalink to this headline">¶</a></h4>
-<p>Pinning Service API is meant for the purpose of performing operation on remote IPFS node of ZDFS. Pinning Service API spec is standardized specification for the developers and pinning service providers. Pinning Service API reduces learning curve because of standardization. <a class="reference external" href="https://documenter.getpostman.com/view/19460118/Uz59PKx3#fcd873f3-acdb-4776-a34c-25233832e7b6">Learn More</a>.</p>
+<p>Pinning Service API is meant for the purpose of performing operation on remote IPFS node of ZDFS. Pinning Service API spec is standardized specification for the developers and pinning service providers. Pinning Service API reduces the learning curve because of standardization. <a class="reference external" href="https://documenter.getpostman.com/view/19460118/Uz59PKx3#fcd873f3-acdb-4776-a34c-25233832e7b6">Learn More</a>.</p>
 </div>
 <div class="section" id="data-apis">
 <h4>2. Data APIs<a class="headerlink" href="#data-apis" title="Permalink to this headline">¶</a></h4>
-<p>ZDFS going beyond in order to make the remote operation and integration of content with your application more effective. That’s why your control on your content is not limited to just few pinning methods but there are multiple other ways in which you fully access your content and make seemless pipeline with your application. <a class="reference external" href="https://documenter.getpostman.com/view/19460118/Uz59PKx3#c3bdc0b7-d67a-43a5-8f7c-fa4ce6054968">Learn More</a></p>
+<p>ZDFS goes beyond in order to make the remote operation and integration of content with your application more effective. That’s why your control on your content is not limited to just a few pinning methods but there are multiple other ways in which you fully access your content and make a seamless pipeline with your application. <a class="reference external" href="https://documenter.getpostman.com/view/19460118/Uz59PKx3#c3bdc0b7-d67a-43a5-8f7c-fa4ce6054968">Learn More</a></p>
 </div>
 </div>
 <div class="section" id="zdfs-gui">
 <h3>ZDFS GUI<a class="headerlink" href="#zdfs-gui" title="Permalink to this headline">¶</a></h3>
-<p>ZDFS provides you good and interactive GUI to manage your content on a click of button. You can visualise your content and play around. Perform all the operations graphical which are possible through <a class="reference external" href="#2-data-apis">Data APIs</a>. You can even check file CID and availabilty on IPFS network without being uploaded on it.</p>
-<p>You can see that ZDFS segregated its GUI in the following ways for optimized navigation.</p>
+<p>ZDFS provides you with a good and interactive console to manage your content on a click of a button. You can visualise your content and play around. Perform all the operations graphically which are possible through <a class="reference external" href="#2-data-apis">Data APIs</a>. You can even check file CID and availability on the IPFS Public Network without being uploaded on it.</p>
+<p>You can perform multiple file based operations using ZDFS console manager in the following optimized ways.</p>
 <ol class="simple">
-<li><p><a class="reference external" href="#files">Files</a>.</p></li>
-<li><p><a class="reference external" href="#file-cid-verifier">File CID Verifier</a>.</p></li>
-<li><p><a class="reference external" href="#purchase-subscription">Purchase Subscription</a>.</p></li>
+<li><p><a class="reference external" href="#file-upload">File Upload</a>.</p></li>
+<li><p><a class="reference external" href="#file-list">File List</a>.</p></li>
+<li><p><a class="reference external" href="#file-detail">File Detail</a>.</p></li>
+<li><p><a class="reference external" href="#file-edit">File Edit</a>.</p></li>
+<li><p><a class="reference external" href="#file-delete">File Delete</a>.</p></li>
+<li><p><a class="reference external" href="#file-export">File Export</a>.</p></li>
+<li><p><a class="reference external" href="#file-unpin">File Unpin</a>.</p></li>
+<li><p><a class="reference external" href="#file-pin">File Pin</a>.</p></li>
+<li><p><a class="reference external" href="#file-preview">File Preview</a>.</p></li>
 </ol>
-<div class="section" id="files">
-<h4>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h4>
-<p>We would like to introduce you with all the ZDFS File based operations.</p>
-<div class="section" id="upload">
-<h5>1. Upload.<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="file-upload">
+<h4>File Upload<a class="headerlink" href="#file-upload" title="Permalink to this headline">¶</a></h4>
 <p>You can upload your content using file, folder or by file CID upto individual file size 25GB.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span></code>.</p></li>
 <li><p>Click on <strong>Upload</strong> button.</p>
 <p><img alt="_images/zdfs-files-upload-btn.png" src="_images/zdfs-files-upload-btn.png" /></p>
 </li>
-<li><p>Choose using which you want to upload your content.</p>
+<li><p>Choose from the provided upload method.</p>
 <p><img alt="_images/zdfs-files-upload-modal.png" src="_images/zdfs-files-upload-modal.png" /></p>
 </li>
-<li><p>Select a file and click on <strong>Upload File</strong> button.</p>
+<li><p>Select a file and click on <strong>Upload File</strong> button to complete the process.</p>
 <p><img alt="_images/zdf-files-upload-modal-file.png" src="_images/zdf-files-upload-modal-file.png" /></p>
-</li>
-<li><p>You will get success message at top right corner of the screen.</p>
-<p><img alt="_images/zdfs-files-upload-success.png" src="_images/zdfs-files-upload-success.png" /></p>
 </li>
 </ul>
 </div>
-<div class="section" id="list">
-<h5>2. List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h5>
-<p>You can organize your file or folder at same place so that you can perform different operation individually.</p>
+<div class="section" id="file-list">
+<h4>File List<a class="headerlink" href="#file-list" title="Permalink to this headline">¶</a></h4>
+<p>You can organize your file or folder at the same place so that you can perform different operations individually.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span></code>.</p>
 <p><img alt="_images/zdfs-files-list.png" src="_images/zdfs-files-list.png" /></p>
 </li>
-<li><p>Now, you can perform operations following operations by clicking on more button.</p>
+<li><p>Now, you can perform the following operations by clicking on the More (three vertical dot) button.</p>
 <p><img alt="_images/zdfs-files-list-more-options.png" src="_images/zdfs-files-list-more-options.png" /></p>
 </li>
 </ul>
 </div>
-<div class="section" id="detail">
-<h5>3. Detail<a class="headerlink" href="#detail" title="Permalink to this headline">¶</a></h5>
-<p>You can check detail of your file in a more readable manner.</p>
+<div class="section" id="file-detail">
+<h4>File Detail<a class="headerlink" href="#file-detail" title="Permalink to this headline">¶</a></h4>
+<p>You can check the details of your file in a more readable manner.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span> <span class="pre">-&gt;</span> <span class="pre">More</span> <span class="pre">-&gt;</span> <span class="pre">Details</span></code>.</p>
 <p><img alt="_images/zdfs-files-list-more-detail.png" src="_images/zdfs-files-list-more-detail.png" /></p>
@@ -376,8 +383,8 @@ zdfs-files-upload-success
 </li>
 </ul>
 </div>
-<div class="section" id="edit">
-<h5>4. Edit<a class="headerlink" href="#edit" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="file-edit">
+<h4>File Edit<a class="headerlink" href="#file-edit" title="Permalink to this headline">¶</a></h4>
 <p>You can change the file or folder name along with the meta data.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span> <span class="pre">-&gt;</span> <span class="pre">More</span> <span class="pre">-&gt;</span> <span class="pre">Edit</span></code>.</p>
@@ -388,8 +395,8 @@ zdfs-files-upload-success
 </li>
 </ul>
 </div>
-<div class="section" id="delete">
-<h5>5. Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="file-delete">
+<h4>File Delete<a class="headerlink" href="#file-delete" title="Permalink to this headline">¶</a></h4>
 <p>You can delete any content such that it will get automatically unpinned while removing its entry in ZDFS.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span> <span class="pre">-&gt;</span> <span class="pre">More</span> <span class="pre">-&gt;</span> <span class="pre">Delete</span></code>.</p>
@@ -400,9 +407,9 @@ zdfs-files-upload-success
 </li>
 </ul>
 </div>
-<div class="section" id="export">
-<h5>5. Export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h5>
-<p>You can download your content by simplying following the steps.</p>
+<div class="section" id="file-export">
+<h4>File Export<a class="headerlink" href="#file-export" title="Permalink to this headline">¶</a></h4>
+<p>You can download your content by simply following the steps.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span> <span class="pre">-&gt;</span> <span class="pre">More</span> <span class="pre">-&gt;</span> <span class="pre">Export</span></code>.</p>
 <p><img alt="_images/zdfs-files-list-more-export.png" src="_images/zdfs-files-list-more-export.png" /></p>
@@ -410,8 +417,8 @@ zdfs-files-upload-success
 <li><p>Click on <strong>Export</strong> button to start downloading.</p></li>
 </ul>
 </div>
-<div class="section" id="unpin">
-<h5>6. Unpin<a class="headerlink" href="#unpin" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="file-unpin">
+<h4>File Unpin<a class="headerlink" href="#file-unpin" title="Permalink to this headline">¶</a></h4>
 <p>You can unpin the already pinned file or folder.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span> <span class="pre">-&gt;</span> <span class="pre">More</span> <span class="pre">-&gt;</span> <span class="pre">Unpin</span></code>.</p>
@@ -420,8 +427,8 @@ zdfs-files-upload-success
 <li><p>Click on <strong>Unpin</strong> button to make the file unpin.</p></li>
 </ul>
 </div>
-<div class="section" id="pin">
-<h5>7. Pin<a class="headerlink" href="#pin" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="file-pin">
+<h4>File Pin<a class="headerlink" href="#file-pin" title="Permalink to this headline">¶</a></h4>
 <p>You can pin the unpinned file or folder.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span> <span class="pre">-&gt;</span> <span class="pre">More</span> <span class="pre">-&gt;</span> <span class="pre">Pin</span></code>.</p>
@@ -430,9 +437,9 @@ zdfs-files-upload-success
 <li><p>Click on <strong>Pin</strong> button to make the file pin.</p></li>
 </ul>
 </div>
-<div class="section" id="preview">
-<h5>7. Preview<a class="headerlink" href="#preview" title="Permalink to this headline">¶</a></h5>
-<p>You can see your file directly on IPFS gateway.</p>
+<div class="section" id="file-preview">
+<h4>File Preview<a class="headerlink" href="#file-preview" title="Permalink to this headline">¶</a></h4>
+<p>You can see your file directly on the IPFS gateway.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">Files</span> <span class="pre">-&gt;</span> <span class="pre">More</span> <span class="pre">-&gt;</span> <span class="pre">Preview</span></code>.</p>
 <p><img alt="_images/zdfs-files-list-more-preview.png" src="_images/zdfs-files-list-more-preview.png" /></p>
@@ -440,10 +447,9 @@ zdfs-files-upload-success
 <li><p>Click on <strong>Preview</strong> button to see your file.</p></li>
 </ul>
 </div>
-</div>
 <div class="section" id="file-cid-verifier">
 <h4>File CID Verifier<a class="headerlink" href="#file-cid-verifier" title="Permalink to this headline">¶</a></h4>
-<p>ZDFS offers you to check the IPFS file CID IPFS hash of version 0 and 1 hashing schema. And also provides you to check its avaibility on IPFS Public Gateway. ZDFS ensures that you can check file CID IPFS hash of a particular content without being uploaded to the IPFS Public Gateway.</p>
+<p>ZDFS offers you to check the IPFS file CID IPFS hash of version 0 and 1 hashing schema. And also provides you to check its availability on IPFS Public Gateway. ZDFS ensures that you can check file CID IPFS hash of a particular content without being uploaded to the IPFS Public Gateway.</p>
 <ul>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">ZDFS</span> <span class="pre">-&gt;</span> <span class="pre">File</span> <span class="pre">CID</span> <span class="pre">Verifier</span></code>.</p>
 <p><img alt="_images/zdfs-file-cid-verifier-nav.png" src="_images/zdfs-file-cid-verifier-nav.png" /></p>
@@ -451,19 +457,15 @@ zdfs-files-upload-success
 <li><p>Drag file or click inside the dotted area.</p>
 <p><img alt="_images/zdfs-file-cid-verifier-upload.png" src="_images/zdfs-file-cid-verifier-upload.png" /></p>
 </li>
-<li><p>Now you will be able to see file CID hash and its availbility for both the cases.</p>
+<li><p>Now you will be able to see file CID hash and its availability for both the cases.</p>
 <p><img alt="_images/zdfs-file-cid-verifier-upload-404.png" src="_images/zdfs-file-cid-verifier-upload-404.png" />
 <img alt="_images/zdfs-file-cid-verifier-upload-200.png" src="_images/zdfs-file-cid-verifier-upload-200.png" /></p>
 </li>
 <li><p>Click on <strong>Clear</strong> button to check for another file.</p></li>
 </ul>
 <hr class="docutils" />
-<p><em><strong>NOTICE:</strong> Checking IPFS avaibility may not work correctly for recently uploaded file on IPFS Public Network. You may need to wait for sometime after uploading the file</em></p>
-</div>
+<p><em><strong>NOTE:</strong> File might get available late on IPFS Public Network after upload because it takes some time to propagate on IPFS Public Network</em></p>
 <hr class="docutils" />
-<div class="section" id="id1">
-<h4>Purchase Subscription<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<p>ZDFS offers you some of the exicting subscription plan, please <a class="reference external" href="#purchase-subscription">click</a> here to learn more.</p>
 </div>
 </div>
 </div>
