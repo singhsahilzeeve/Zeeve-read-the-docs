@@ -1,77 +1,162 @@
-# ![](images/fabric.png) Hyperledger Fabric Deployment Specifications
-
+# Hyperledger Fabric Dedicated Node Setup
 
 Hyperledger Fabric has one of the most exhaustive set of available configuration parameters. 
 <br/>
 This page would help you a lot to achieve a highly customised fabric network.
-Fabric network creation is spread across 3 sections. Please read further to know about each of them. 
 
-> ![](images/network-creation-fabric.gif)
+1. [Create network](#create-a-network)
+2. [Add peer](#add-peer)
+3. [Add organization](#add-organization)
+4. [Zeeve CLI](#zeeve-cli)
 
+### **Create a network**
+Fabric network creation is spread across 4 sections. Please read further to know about each of them. <br></br>
+On the **Network Configuration** page you will have diffrent cards with dffrent network configurations for Fabric, which looks similar to the image provided below. 
 
+  ![](images/fabricNetworkConfiguration.png)
 
-<!-- <ins>Certain steps which helps in configuring a network are based upon the selections of the parameters</ins> -->
+---
+***NOTE:** These cards can be different for your case. Card's configurations totally depend on your purchased subscription.*
 
-## **Step 1** : Configuring Consortium (Organizations) under Topology Section
+---
 
- ![](images/fabric_topology_1.PNG)
-
-### Consortium
-
-A fabric network is made up of a group of organizations wherein an organization is a mere stakeholder(participant) of the network, this group is called as a consortium. You can add an organization by pressing the add button alongside the organization keyword and after that add a name for this organization.
-
-
-Each organization participate in the network via a few fabric specific pillars namely [orderer](./Glossary.html#orderer), [peer](./Glossary.html#peer) and [certificate authority](./Glossary.html#certificate-authority).
-
-#### Certificate Authority 
-    
-CA(Certificate Authority) can be configured just by providing the admin user name and password under the selected organization.
-
-#### Ordering Service
-
-Zeeve supports all the three types of ordering service, which are provided by HL Fabric namely <strong>Solo</strong> (Single Orderer Network), <strong>[Kafka](./Glossary.html#kafka)</strong> and <strong>[Raft](./Glossary.html#raft)</strong>. Making it one of the best tools for deploying fabric based production networks. 
-
-So based upon the requirement, select the type of ordering service and just add the number of orderers using the Add Orderer button under the orderer tab of the organization section. 
-
-**Not To Forget:** Zeeve provides you with decentralized ordering service out of the box; allowing each organization to have their own orderering service which ends the need of keeping extra orderer organizations. Go ahead and try creating a network with multiple organizations each having a number of orderers.
+Choose the configuration you want. Click on the card and follow the steps accordingly.
 
 
- #### Peer Service
+1. In the first step choose the **Fabric version** and **Consensus** type. After that click on **Next Step** button.<br></br>
+  ![](images/fabricCreateNetwork-1.png)
 
- A peer can be added to the organization by using the add button under the peer tab of the organization section. You just need to choose the type of peer service for each peer you want to go with, it can be either levelDb or couchDb based and specify whether you want to have a persistent volume for the same.
+2. A fabric network is made up of a group of organizations wherein an organization is a mere stakeholder(participant) of the network, this group is called as a consortium. You can add an organization by pressing the **Add organization** button and after that add a name for this organization.<br></br>
+  ![](images/fabricCreateNetwork-2.png)
 
-<!-- 
-One of the role is " **Anchor peer** "
-Anchor peer's role is to broadcast the block, created by orderer node, to other peers inside the organization. It is the one who is directly interacting with Orderer node. Number of Anchor peer should be greater than zero. -->
+    Each organization participate in the network via a few fabric specific pillars namely [orderer](./Glossary.html#orderer), [peer](./Glossary.html#peer) and [certificate authority](./Glossary.html#certificate-authority).<br></br>
 
-## **Step 2** : Configuring CSR (Optional)
+    >*  **CA**: CA(Certificate Authority) can be configured just by providing the admin user name and password.
+    >* **Orderer**: Zeeve supports all the three types of ordering service, which are provided by HL Fabric namely <strong>Solo</strong> (Single Orderer Network), <strong>Kafka</strong> and <strong>Raft</strong>. Making it one of the best tools for deploying fabric based production networks. 
 
-> ![](images/fabric_csr.PNG)
+    <br></br>So based upon the requirement, select the type of ordering service and just add the number of orderers using the Add Orderer button under the orderer tab of the organization section. 
 
-CSR is Certificate Signing Request. [Ref.](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#fabric-ca-server)
+3. This is the step to configure the channel details.<br></br>
+  ![](images/fabricCreateNetwork-3.png)
 
-## **Step 3** : Configuring the Channel Details
+   >*  **Batch Timeout** is the amount of time to wait after receiving first transaction, in order to receive more transactions before cutting a block. In case if we decrease this value then we get lower latency but decreasing too much will result in the decrease of throughput, as block will not fill to its maximum capacity.
+    > *   As indicated in the above screenshot `{ "timeout": "2s" }`
+    > *   **Maximum Message Count** indicates the maximum number of transaction in a block. 
+    Also, if we look into
+    > *   **Absolute Maximum Bytes**: It indicates the maximum size of a block which can be build in the channel.
+    > *   In respect of **Absolute Maximum Bytes**, there is another parameter viz.,
+    > *  **Preferred maximum Bytes** which is nothing but the minimum size of a block.
 
-> ![](images/fabric_channel.PNG)
+4. This is the last step for creating a network. select the region for the network by clicking on **Select Region**, select the [AWS](./cloud_authorization.md) account you want to use by clicking on **Select Cloud Account**, also choose the instance type as your requirement by clicking on **Select Instance Type**, and then click on the **Create** button. <br></br>
+  
+    ![](images/fabricCreateNetwork-4.png)
 
-### System Channel
+> * **Region**: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In case of AWS each of its Region has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. [Ref.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
+> * **Cloud Account**: It represent the AWS cloud account that is going to be used for network creation. 
+> *   **Type of Instance**: It defines the combination of CPU cores and memory. Choose the configuration which could handle the loads of your network. This parameter is useful for scaling up the network. Type of Instances may vary from cloud to cloud.
 
-**Batch Timeout** is the amount of time to wait after receiving first transaction, in order to receive more transactions before cutting a block. In case if we decrease this value then we get lower latency but decreasing too much will result in the decrease of throughput, as block will not fill to its maximum capacity. [Ref.](https://hyperledger-fabric.readthedocs.io/en/release-1.4/config_update.html)
+### **View Network**
+1. Click on **Networks** on the left side navigation bar.
 
-> As indicated in the above screenshot `{ "timeout": "2s" }`
+    ![](images/sideNavBar.png)
 
-**Batch Size** is a group of three different parameters which are governing it by dictating the number and size of transactions in a block. **Maximum Message Count** indicates the maximum number of transaction in a block. 
-Also, if we look into **Absolute Maximum Bytes** field, then it indicates the maximum size of a block which can be build in the channel. In respect of **Absolute Maximum Bytes**, there is another parameter viz., **Preferred maximum Bytes** which is nothing but the minimum size of a block. [Ref.](https://hyperledger-fabric.readthedocs.io/en/release-1.4/config_update.html)
+2. You will be landed to a page similar to below image. You can view all of your network listed on this page.
 
-> As indicated in the above screen
- `{
-  "absolute_max_bytes": 103809024,
-  "max_message_count": 10,
-  "preferred_max_bytes": 524288
-  }`
+    ![](images/AllNetworks.png)
 
-### Application Channel (Optional)
+---
+***NOTE*** This page can be different in your case.
 
-  You have an option to create an application channel and make all the peers defined in the topology section join the same.
+---
+3. Select the Fabric network you want. After clicking on the network card you can view the nodes attached to the selected network. Network Nodes are listed with details - node’s unique ID and cloud provider, organization it is part of, node’s role(peer, ca, orderer), node’s deployment region.
 
-  **Channel Name** indicates the name uniqueness with which it is known in the architecture.
+    ![](images/fabricViewNetwork.png)
+
+4. Pipelines are listed with details - pipeline unique ID, status of the pipeline(completed, in progress, failed), Total Jobs that it holds, Action (to open up jobs inside it).
+
+    ![](images/fabricPipelines.png)
+
+
+
+### **Add peer**
+ A peer can be added to the organization by only following two steps mentioned below. You just need to choose the type of peer service for each peer you want to go with, it can be either levelDb or couchDb based and specify whether you want to have a persistent volume for the same.
+
+1. Select the network to which you want to add a node, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.<br></br>
+    ![](images/fabricViewNetwork.png)
+
+2. Click on **Actions** button and select **Add Peer**.<br></br>
+    ![](images/fabricActions.png)
+
+3. You will get to see a web page similar to the image provided below. Fill the details and click **create** button.<br></br>
+    ![](images/fabricAddPeer.png)
+
+### **Add organization**
+
+1. Select the network to which you want to add a node, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.<br></br>
+    ![](images/viewNetwork.png)
+
+2. Click on **Actions** button and select **Add Peer**.<br></br>
+    ![](images/fabricViewNetwork.png)
+  
+3. You will get to see a web page similar to the image provided below. Fill the details and click **create** button.<br></br>
+  ![](images/fabricAddOrg.png)
+
+
+## **Zeeve CLI**
+
+  This section talks about how to use the Zeeve CLI and how to perform fabric chaincode operations.
+
+  1. [Create CLI access](#create-cli-access)
+  2. [Chaincode pipelines](#chaincode-pipelines)
+
+### **Create CLI Access**
+
+1. Navigate to settings and then click on “API Credentials” to see a list of CLI/API credentials.
+2. Click “Create key”.
+3. Provide a name, and select one or more networks to associate with the key.
+4. Add appropriate permissions for the operations that the keys are being created for.
+5. Click “Create key” and then copy/save generated keys.
+
+
+### **Chaincode Pipelines**
+
+1. Login with Zeeve CLI using the earlier created keys and add these urls as well - <br></br>
+    ```
+     zeeve login -i < access-key > -s < secret-key > -ae https://app.zeeve.io/auth/cli/login -fe https://app.zeeve.io/fabric-backend/chaincode/
+    ```
+
+2. Zeeve cli supports fabric chaincode operations - package, install, deploy, approve and commit. 
+3. Package: builds chaincode image,creates ECR and pushes into ECR and creates chaincode connection package to be installed onto peers. Zeeve chaincode pipelines can deploy chaincode as a service (For more details). Following are the inputs required to run package operation
+     - Chaincode zip file is compressed file of chaincode with the name chaincode.tar.gz
+     ```
+      zeeve fabric chaincode package -f /path/to/chaincode.tar.gz -n 44b28e1f-7296-42a4-8904-e04341edfb27 -c marbles2 -v 1.0 -o org1 <br></br>
+      ```
+     ![](images/fabricChaincodePackageHelp.png)
+4. Install: runs chaincode install operation on given peer urls.
+    - Install operation can be run on a set of peers in a given org with peer-urls option.
+    ```
+     zeeve fabric chaincode install -n 44b28e1f-7296-42a4-8904-e04341edfb27 -c marbles2 -v 1.0 -o org1 -p peer1.org1.example.fabric.zeeve.net, peer2.org1.example.fabric.zeeve.net
+     ```
+    ![](images/fabricChaincodeInstallHelp.png)
+5. Deploy: starts chaincode pod/service in kubernetes cluster.
+    ```
+    - zeeve fabric chaincode deploy -n 44b28e1f-7296-42a4-8904-e04341edfb27 -c marbles3 -v 1.0 -o org1 -p peer1.org1.example.fabric.zeeve.net ,peer2.org1.example.fabric.zeeve.net
+    ```
+6. Approve: runs ‘peer chaincode approve’ on a set of given peers in an org in the channel provided.
+    ```
+     zeeve fabric chaincode approve -n 44b28e1f-7296-42a4-8904-e04341edfb27 -cc marbles3 -v 1.0 -o org1 -p peer1.org1.example.fabric.zeeve.net, peer2.org1.example.fabric.zeeve.net -ch mychannel -s 1 
+    ```
+   ![](images/fabricChaincodeApproveHelp.png)
+7. Commit: runs ‘peer chaincode commit’ and also inits the chaincode with Init method on the given set of peers and orgs in the provided channel.
+   ```
+    zeeve fabric chaincode commit -n 44b28e1f-7296-42a4-8904-e04341edfb27 -cc marbles3 -v 1.0 -o org1,org2 -p peer1.org1.example.fabric.zeeve.net,peer2.org1.example.fabric.zeeve.net -ch mychannel -s 1 
+    ```
+   ![](images/fabricChaincodeCommitHelp.png)
+
+
+
+
+
+
+
+

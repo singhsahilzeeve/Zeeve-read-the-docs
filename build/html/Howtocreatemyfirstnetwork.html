@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hyperledger Sawtooth Deployment Specifications" href="HyperledgerSawtooth.html" />
+    <link rel="next" title="Hyperledger Fabric Dedicated Node Setup" href="HyperledgerFabric.html" />
     <link rel="prev" title="Cloud Authorizations" href="cloud_authorization.html" /> 
 </head>
 
@@ -86,19 +86,13 @@
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How to create my first Network?</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#selecting-a-blockchain-protocol">Selecting A Blockchain Protocol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#selecting-a-cloud-for-the-network">Selecting A Cloud For The Network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exploring-your-network">Exploring Your Network</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#taskbar">TaskBar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#node-listing">Node Listing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-workspace">Create workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-network">Create Network</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Hyperledger Sawtooth Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html">Hyperledger Fabric Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
@@ -180,57 +174,55 @@
 <h1>How to create my first Network?<a class="headerlink" href="#how-to-create-my-first-network" title="Permalink to this headline">¶</a></h1>
 <p>Zeeve makes the process of blockchain network deployment from a long time consuming one to just a matter of few clicks whilst taking care of the most important bits.</p>
 <p>With a handful of steps using <a class="reference external" href="https://zeeve.io">Zeeve</a>, it has become so easy to create your own blockchain network. These networks can also be altered as per the need of the required deployment with the help of  given protocol specific parameters that helps you align with your desired network performance.</p>
-<p>So wondering upon how to begin? Just head to the dashboard and hit launch network button.</p>
-<p><img src="./_images/network-creation.png" width="696.47"></img></p>
-<!-- Currently we have restricted for below mentioned with which user can create the Blockchain network. Initially you should choose your blockchain platform --><div class="section" id="selecting-a-blockchain-protocol">
-<h2>Selecting A Blockchain Protocol<a class="headerlink" href="#selecting-a-blockchain-protocol" title="Permalink to this headline">¶</a></h2>
-<p>So to go ahead with the network creation, you first need to decide and pick one out of the major blockchain protocols out there, This decision might be driven majorly by the needs of your usecase. We have something for you <a class="reference internal" href="Blockchain_Protocols.html"><span class="doc">here</span></a> which might help you to get started.</p>
-<!-- 
-> *   [Hyperledger Sawtooth](./Glossary.html#hyperledger-sawtooth)
-> *   [Hyperledger Fabric](./Glossary.html#hyperledger-fabric)
-> *   [Ethereum](./Glossary.html#ethereum)
-> *   [Credits](./Glossary.html#credits)
-> *   [Corda](./Glossary.html#corda) --><p><img alt="_images/CreateNetworkPage.JPG" src="_images/CreateNetworkPage.JPG" /></p>
-<p>After selecting the protocol just configure your network as per the desired network parameters and then you are good to go. To see protocol specific configuration parameters please refer to the detailed deployment spec using the following links:</p>
-<!-- These are the logs coming while creating a [network](./Glossary.md) --><blockquote>
-<div><ul class="simple">
-<li><p><a class="reference internal" href="HyperledgerSawtooth.html"><span class="doc">Hyperledger Sawtooth Deployment Specifications</span></a></p></li>
-<li><p><a class="reference internal" href="HyperledgerFabric.html"><span class="doc">Hyperledger Fabric Deployment Specifications</span></a></p></li>
-<li><p><a class="reference internal" href="Ethereum.html"><span class="doc">Ethereum  Deployment Specifications</span></a></p></li>
-<li><p><a class="reference internal" href="Corda.html"><span class="doc">Corda Deployment Specifications</span></a></p></li>
-<li><p><a class="reference internal" href="Credits.html"><span class="doc">Credits Deployment Specifications</span></a></p></li>
-</ul>
-</div></blockquote>
+<p>So wondering upon how to begin? Just follow these easy steps:-</p>
+<ol class="simple">
+<li><p><a class="reference external" href="#create-workspace">Create Workspace</a></p></li>
+<li><p><a class="reference external" href="#create-network">Create Network</a></p></li>
+</ol>
+<div class="section" id="create-workspace">
+<h2>Create workspace<a class="headerlink" href="#create-workspace" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Click on <strong>Workspace</strong> on the left side navigation bar.</p></li>
+</ol>
+<p><img alt="_images/sideNavBar.png" src="_images/sideNavBar.png" /></p>
+<ol class="simple">
+<li><p>You will be landed to a page similar to below image.</p></li>
+</ol>
+<p><img alt="_images/addWorkspace.png" src="_images/addWorkspace.png" /></p>
+<ol class="simple">
+<li><p>Click on <strong>New workspace</strong>. A pop up window will appear.</p></li>
+</ol>
+<p><img alt="_images/createWorkspace.png" src="_images/createWorkspace.png" /></p>
+<ol class="simple">
+<li><p>Give it a name of your choice(in our case we are going to name it Ethereum) and add a short description. Click <strong>create</strong>. You can see your newly created workspace added to the workspace tab.</p></li>
+</ol>
+<p><img alt="_images/createdWorkspace.png" src="_images/createdWorkspace.png" /></p>
 </div>
-<div class="section" id="selecting-a-cloud-for-the-network">
-<h2>Selecting A Cloud For The Network<a class="headerlink" href="#selecting-a-cloud-for-the-network" title="Permalink to this headline">¶</a></h2>
-<p>The next step is to specify the cloud via which you wish to deploy your network.</p>
-<!--   Here multiple cloud network available users can choose the cloud as per choice. --><p>Choose a cloud* to deploy the network and configure the following settings :</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong>Name of Network</strong> : In order to uniquely identify your network, this field requires a unique name for it. Unique over here is in terms of the account in which you are creating your network. In case you have created some network earlier, and now you are trying to create with the same name, then the <a class="reference external" href="https://zeeve.io">Zeeve</a> platform won’t allow you to create it.</p></li>
-<li><p><strong>Location</strong> : It indicates the region of cloud service viz., AWS or Azure. These regions are the geographic locations where your network instances are going to be hosted. In case of AWS each of its Region has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren’t replicated across AWS Regions unless you do so specifically. <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">Ref.</a></p></li>
-<li><p><strong>Type of Instance</strong> : It defines the combination of CPU cores and memory. Choose the configuration which could handle the loads of your network. This parameter is useful for scaling up the network. Type of Instances may vary from cloud to cloud.</p></li>
-<li><p><strong>Number of Instances</strong> : It defines the number of instances. This parameter is useful for scaling out the network.</p></li>
-</ul>
-</div></blockquote>
-<p><i><small>(*Make sure you have authorized Zeeve to connect to your desired cloud account. Not done it yet? Head to <a class="reference internal" href="cloud_authorization.html"><span class="doc">Cloud Authorizations</span></a>.)</small></i></p>
-<p><img alt="_images/CloudConfigurationPage.JPG" src="_images/CloudConfigurationPage.JPG" /></p>
-</div>
-<div class="section" id="exploring-your-network">
-<h2>Exploring Your Network<a class="headerlink" href="#exploring-your-network" title="Permalink to this headline">¶</a></h2>
-<p>Zeeve also provides you with just a few insights about your network, ranging from what happens while Zeeve is bringing it up &amp; beyond.</p>
-<div class="section" id="taskbar">
-<h3>TaskBar<a class="headerlink" href="#taskbar" title="Permalink to this headline">¶</a></h3>
-<p>To track every bit of the network lifecycle. Just switch to the tasks section to get an essence of what all Zeeve is actually doing for you on just a few clicks of yours.</p>
-<p>This is how a taskbar looks after placing a few back to back network creation requests.</p>
-<!-- These are the logs coming while creating a [network](./Glossary.md) --><p><img alt="_images/NetworkingCreationPage.JPG" src="_images/NetworkingCreationPage.JPG" /></p>
-</div>
-<div class="section" id="node-listing">
-<h3>Node Listing<a class="headerlink" href="#node-listing" title="Permalink to this headline">¶</a></h3>
-<p>You can also view the nodes related to your network. Once nodes have been created they will be displayed with an <strong>Online</strong> status. User can click a node to view the individual node details.</p>
-<p><img alt="_images/NodesPage.JPG" src="_images/NodesPage.JPG" /></p>
-</div>
+<div class="section" id="create-network">
+<h2>Create Network<a class="headerlink" href="#create-network" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Click on <strong>Workspace</strong> on the left side navigation bar.</p></li>
+</ol>
+<p><img alt="_images/sideNavBar.png" src="_images/sideNavBar.png" /></p>
+<ol class="simple">
+<li><p>You will be landed to <strong>Zeeve’s</strong> network listing page where you will get the list of all of the networks you created. Click on <strong>Add Network</strong>.</p></li>
+</ol>
+<p><img alt="_images/allNetworks.png" src="_images/allNetworks.png" /></p>
+<ol class="simple">
+<li><p>You will be landed to the <strong>Network Configuration</strong> page which looks similar to the below image.</p></li>
+</ol>
+<p><img alt="_images/networkConfiguration.png" src="_images/networkConfiguration.png" /></p>
+<p>Here you will get to see different cards with different network configuration of diffrent protocols. These cards can be different according to your purchased subscriptions.<br>
+Choose the configuration of your choice for creating a network, and click on a card accordingly.<br>
+To see protocol specific configuration parameters please refer to the detailed deployment spec using the following links.</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="avalanche.html"><span class="doc">Avalanche</span></a></p></li>
+<li><p><a class="reference internal" href="Binance.html"><span class="doc">Binance</span></a></p></li>
+<li><p><a class="reference internal" href="Ethereum.html"><span class="doc">Ethereum</span></a></p></li>
+<li><p><a class="reference internal" href="Fantom.html"><span class="doc">Fantom</span></a></p></li>
+<li><p><a class="reference internal" href="Polygon.html"><span class="doc">Polygon</span></a></p></li>
+<li><p><a class="reference internal" href="Tron.html"><span class="doc">Tron</span></a></p></li>
+</ol>
 </div>
 </div>
 
@@ -242,7 +234,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="HyperledgerSawtooth.html" class="btn btn-neutral float-right" title="Hyperledger Sawtooth Deployment Specifications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="HyperledgerFabric.html" class="btn btn-neutral float-right" title="Hyperledger Fabric Dedicated Node Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="cloud_authorization.html" class="btn btn-neutral float-left" title="Cloud Authorizations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

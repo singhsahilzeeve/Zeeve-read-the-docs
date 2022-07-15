@@ -19,6 +19,11 @@ Welcome to Zeeve's documentation!
    ../HyperledgerFabric.md
    ../Ethereum.md
    ../Corda.md
+   ../Avalache.md
+   ../Binance.md
+   ../Fantom.md
+   ../Polygon.md
+   ../Tron.md
    ../Credits.md
    ../Product_configure.md
    ../DevelopmentPractices.md

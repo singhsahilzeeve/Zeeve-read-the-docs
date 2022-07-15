@@ -85,10 +85,9 @@
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Hyperledger Sawtooth Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html">Hyperledger Fabric Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
@@ -198,40 +197,45 @@
 <li class="toctree-l2"><a class="reference internal" href="ZeeveOverview.html#zeeve-assistant"> Zeeve Assistant</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AccountCreation.html#signing-up-with-google-account">Signing up with google account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AccountCreation.html#signing-up-with-github-account">Signing up with github account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AccountCreation.html#signing-up-with-email-account">Signing up with email account</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="cloud_authorization.html#aws-authorization">AWS Authorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud_authorization.html#azure-authorization">Azure Authorization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud_authorization.html#digital-ocean-authorization">Digital Ocean Authorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud_authorization.html#ibm-cloud-authorization">IBM Cloud Authorization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Howtocreatemyfirstnetwork.html#selecting-a-blockchain-protocol">Selecting A Blockchain Protocol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Howtocreatemyfirstnetwork.html#selecting-a-cloud-for-the-network">Selecting A Cloud For The Network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Howtocreatemyfirstnetwork.html#exploring-your-network">Exploring Your Network</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Howtocreatemyfirstnetwork.html#taskbar">TaskBar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Howtocreatemyfirstnetwork.html#node-listing">Node Listing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Howtocreatemyfirstnetwork.html#create-workspace">Create workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Howtocreatemyfirstnetwork.html#create-network">Create Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html">Hyperledger Fabric Dedicated Node Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HyperledgerFabric.html#create-a-network"><strong>Create a network</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="HyperledgerFabric.html#view-network"><strong>View Network</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="HyperledgerFabric.html#add-peer"><strong>Add peer</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="HyperledgerFabric.html#add-organization"><strong>Add organization</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="HyperledgerFabric.html#zeeve-cli"><strong>Zeeve CLI</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="HyperledgerFabric.html#create-cli-access"><strong>Create CLI Access</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="HyperledgerFabric.html#chaincode-pipelines"><strong>Chaincode Pipelines</strong></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Hyperledger Sawtooth Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment Specifications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="HyperledgerFabric.html#step-1-configuring-consortium-organizations-under-topology-section"><strong>Step 1</strong> : Configuring Consortium (Organizations) under Topology Section</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="HyperledgerFabric.html#consortium">Consortium</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="HyperledgerFabric.html#step-2-configuring-csr-optional"><strong>Step 2</strong> : Configuring CSR (Optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="HyperledgerFabric.html#step-3-configuring-the-channel-details"><strong>Step 3</strong> : Configuring the Channel Details</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="HyperledgerFabric.html#system-channel">System Channel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="HyperledgerFabric.html#application-channel-optional">Application Channel (Optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Dedicated Node Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ethereum.html#dedicated-nodes">Dedicated nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Ethereum.html#create-a-network"><strong>Create a network</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ethereum.html#add-node-to-a-network"><strong>Add node to a network</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ethereum.html#delete-node-in-a-network"><strong>Delete node in a network</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Ethereum.html#delete-a-network"><strong>Delete a network</strong></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Product_configure.html#configuring-a-product">Configuring a Product</a><ul>
@@ -254,11 +258,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Blockchain_Protocols.html#hyperledger-sawtooth">HyperLedger Sawtooth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Blockchain_Protocols.html#hyperledger-fabric">HyperLedger Fabric</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Blockchain_Protocols.html#ethereum">Ethereum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Blockchain_Protocols.html#corda">Corda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Blockchain_Protocols.html#credits">Credits</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
