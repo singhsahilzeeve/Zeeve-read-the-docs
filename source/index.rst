@@ -19,7 +19,7 @@ Welcome to Zeeve's documentation!
    ../HyperledgerFabric.md
    ../Ethereum.md
    ../Corda.md
-   ../Avalache.md
+   ../Avalanche.md
    ../Binance.md
    ../Fantom.md
    ../Polygon.md
