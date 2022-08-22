@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Avalanche Dedicated Node Setup &mdash; Zeeve 1.6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Binance Dedicated Node Setup" href="Binance.html" />
+    <link rel="prev" title="Corda" href="Corda.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Zeeve
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">What is Zeeve?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html">Hyperledger Fabric Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Avalanche Dedicated Node Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dedicated-nodes">Dedicated nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-network"><strong>Create a network</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#managed-aws">Managed - AWS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#byoc-aws">BYOC - AWS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#byoc-do">BYOC - DO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-node-to-a-network"><strong>Add node to a network</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-node-in-a-network"><strong>Delete node in a network</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-a-network"><strong>Delete a network</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rpc-api-endpoints"><strong>RPC API endpoints</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-endpoint"><strong>Create endpoint</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-endpoint"><strong>Edit endpoint</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-endpoint"><strong>Delete endpoint</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Binance.html">Binance Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Fantom.html">Fantom Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polygon.html">Polygon Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tron.html">Tron Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zeeveDistributedFileSystem.html">Zeeve Distributed File System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve_Support.html">Zeeve Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Releases.html">Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Zeeve</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Avalanche Dedicated Node Setup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Avalanche.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="avalanche-dedicated-node-setup">
+<h1>Avalanche Dedicated Node Setup<a class="headerlink" href="#avalanche-dedicated-node-setup" title="Permalink to this headline">¶</a></h1>
+<p>This section will guide you about the different features offered by Zeeve for Avalanche.</p>
+<ol class="simple">
+<li><p><a class="reference external" href="#dedicated-nodes">Dedicated nodes</a></p></li>
+<li><p><a class="reference external" href="#rpc-api-endpoints">Rpc api endpoints</a></p></li>
+</ol>
+<div class="section" id="dedicated-nodes">
+<h2>Dedicated nodes<a class="headerlink" href="#dedicated-nodes" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="#create-a-network">Create a network</a></p></li>
+<li><p><a class="reference external" href="#add-node-to-a-network">Add a node</a></p></li>
+<li><p><a class="reference external" href="#delete-node-in-a-network">Delete a node</a></p></li>
+<li><p><a class="reference external" href="#delete-a-network">Delete a network</a></p></li>
+</ol>
+<div class="section" id="create-a-network">
+<h3><strong>Create a network</strong><a class="headerlink" href="#create-a-network" title="Permalink to this headline">¶</a></h3>
+<p>This section will provide you with detailed steps for creating a network of <strong>Avalanche</strong>.</p>
+<hr class="docutils" />
+<p><em><strong>NOTE</strong></em> Please make sure to follow the <a class="reference internal" href="Howtocreatemyfirstnetwork.html"><span class="doc">steps</span></a> before proceeding.</p>
+<hr class="docutils" />
+<p>On the <strong>Network Configuration</strong> page you will have different cards with different network configurations for Avalanche, which looks similar to the image provided below.</p>
+<p><img alt="_images/avlancheNetworkConfiguration.png" src="_images/avlancheNetworkConfiguration.png" /></p>
+<hr class="docutils" />
+<p><em><strong>NOTE:</strong> These cards can be different in your case. Card configurations depend on your purchased subscription.</em></p>
+<hr class="docutils" />
+<p>You can Choose <strong>Managed-AWS</strong> (Zeeve’s managed hosting) for the infrastructure of your node or you can use your cloud account (AWS/DO) for the hosting of your node.</p>
+<p>Choose the configuration you want. Click on the card and follow the steps accordingly.</p>
+<ol class="simple">
+<li><p><strong>Network Info</strong>
+Clicking on the card you will be landed on a page similar to the below image. In this section, we have to provide network-related information for ex- Network Name, Network type, etc.</p></li>
+</ol>
+<p><img alt="_images/avalancheCreateNetwork-1.png" src="_images/avalancheCreateNetwork-1.png" /></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Name of Network</strong>: To uniquely identify your network, this field requires a unique name for it. Unique over here is in terms of the account in which you are creating your network. In case you have created some network earlier, and now you are trying to create with the same name, then the <a class="reference external" href="https://zeeve.io">Zeeve</a> platform won’t allow you to create it.</p></li>
+<li><p><strong>Deployment Type</strong>: Deployment type</p></li>
+<li><p><strong>Type Of Network</strong></p>
+<ul>
+<li><p><strong>MainNet</strong>: This will deploy your network on the network mainnet. This is suggested for deploying production-grade avalanche dapps.</p></li>
+<li><p><strong>TestNet</strong>: This will deploy your network on the network testnet. you can use this for your non-production needs like testing or demonstrations.</p></li>
+</ul>
+</li>
+<li><p><strong>Workspace</strong>: This represents the workspace in which the network will be added after the successful creation.</p></li>
+</ul>
+</div></blockquote>
+<p>After providing all the details correctly go to the next step by clicking on the <strong>Next Step</strong> button.</p>
+<ol class="simple">
+<li><p><strong>Node Configuration</strong></p></li>
+</ol>
+<p>In this section, you have to fill in the details of the nodes you want to add to your network.</p>
+<p><img alt="_images/avalancheCreateNetwork-2.png" src="_images/avalancheCreateNetwork-2.png" /></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Username &amp; Password</strong>: Choose the username and password of your choice. These will be used as RPC API credentials.</p></li>
+<li><p><strong>Email</strong>: Fill email of yours.</p></li>
+<li><p><strong>Node Name</strong>: To identify your nodes, this field will be used.</p></li>
+<li><p><strong>Rpc Server</strong>: RPC, which stands for “Remote Procedure Call,” is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction.
+&gt;     * <strong>HTTP</strong>: Uses individual HTTP requests and responses for each call, similar to a RESTful API.
+&gt;     * <strong>ws</strong>: WebSocket uses a persistent connection that allows the server to push data to the client.</p></li>
+<li><p><strong>JSON RPC APIs</strong>: JSON RPC API is a bridge that allows dApps to connect to nodes.</p></li>
+</ul>
+</div></blockquote>
+<p>After providing the details click on <strong>Next step</strong> to go to the last step.</p>
+<ol class="simple">
+<li><p><strong>Cloud Configuration</strong></p></li>
+</ol>
+<p>This is the step for the configuration of the cloud for your nodes. This step can be different based on your selection of <strong>Network configuration cards</strong></p>
+<ol class="simple">
+<li><p><a class="reference external" href="#managed---aws">Manged - AWS</a></p></li>
+<li><p><a class="reference external" href="#byoc---aws">BYOC - AWS</a></p></li>
+<li><p><a class="reference external" href="#byoc---do">BYOC - DO</a></p></li>
+</ol>
+<hr class="docutils" />
+<div class="section" id="managed-aws">
+<h4>Managed - AWS<a class="headerlink" href="#managed-aws" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+<p>In the case of <strong>Managed - AWS</strong>, you don’t have to bother about anything, just select the region for the network by clicking on <strong>Select Region</strong>.<br></br></p>
+<p><img alt="_images/avalacheCreateNetworkMANAGED-AWS.png" src="_images/avalacheCreateNetworkMANAGED-AWS.png" /></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Region</strong>: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In the case of AWS, each of its regions has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren’t replicated across AWS Regions unless you do so specifically. <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">Ref.</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="byoc-aws">
+<h4>BYOC - AWS<a class="headerlink" href="#byoc-aws" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+<p>In the case of <strong>BYOC - AWS</strong>, select the region for the network by clicking on <strong>Select Region</strong>, select the <a class="reference internal" href="cloud_authorization.html"><span class="doc">AWS</span></a> account you want to use by clicking on <strong>Select Cloud Account</strong>, also choose the instance type as your requirement by clicking on <strong>Select Instance Type</strong>.<br></br></p>
+<p><img alt="_images/avalacheCreateNetworkBYOC-AWS.png" src="_images/avalacheCreateNetworkBYOC-AWS.png" /></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Region</strong>: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In the case of AWS, each of its regions has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren’t replicated across AWS Regions unless you do so specifically. <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">Ref.</a></p></li>
+<li><p><strong>Cloud Account</strong>: It represents the AWS cloud account that is going to be used for network creation.</p></li>
+<li><p><strong>Type of Instance</strong>: It defines the combination of CPU cores and memory. Choose the configuration which could handle loads of your network. This parameter is useful for scaling up the network. The type of Instances may vary from cloud to cloud.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="byoc-do">
+<h4>BYOC - DO<a class="headerlink" href="#byoc-do" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+<p>In the case of <strong>BYOC - DO</strong>,  select the region for the network by clicking on <strong>Select Region</strong>, select the <a class="reference internal" href="cloud_authorization.html"><span class="doc">Digital Ocean</span></a> account you want to use by clicking on <strong>Select Cloud Account</strong>, also choose the instance type as your requirement by clicking on <strong>Select Instance Type</strong>. <br></br></p>
+<p><img alt="_images/avalacheCreateNetworkBYOC-DO.png" src="_images/avalacheCreateNetworkBYOC-DO.png" /></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Region</strong>: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In the case of AWS, each of its regions has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren’t replicated across AWS Regions unless you do so specifically. <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">Ref.</a></p></li>
+<li><p><strong>Cloud Account</strong>: It represents the Digital Ocean cloud account that is going to be used for network creation.</p></li>
+<li><p><strong>Type of Instance</strong>: It defines the combination of CPU cores and memory. Choose the configuration which could handle loads of your network. This parameter is useful for scaling up the network. The type of Instances may vary from cloud to cloud.</p></li>
+</ul>
+</div></blockquote>
+<ol>
+<li><p>Click on the <strong>Create</strong> button. A pop-up window will appear similar to the below image, which ensures the successful creation of your network.</p>
+<p><img alt="_images/createNetworkSuccessModal.png" src="_images/createNetworkSuccessModal.png" /></p>
+</li>
+<li><p>Click on <strong>continue</strong> and you will be redirected to a page similar to the below image where you can see the nodes listed you’ve just added to the network.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="add-node-to-a-network">
+<h3><strong>Add node to a network</strong><a class="headerlink" href="#add-node-to-a-network" title="Permalink to this headline">¶</a></h3>
+<p>This section will guide you on how you can add a node to a network.</p>
+<ol>
+<li><p>Select the network to which you want to add a node, and click on the network card <a class="reference internal" href="View_your_network_and_nodes.html"><span class="doc">Ref.</span></a>. You will get to see similar to the below image.</p>
+<p><img alt="_images/viewNetwork.png" src="_images/viewNetwork.png" /></p>
+</li>
+<li><p>Click on the <em>Actions</em> button on the top right, and select the <strong>Add Node</strong> option. You will get to see a web page similar to that provided below.</p>
+<p><img alt="_images/avalancheAddnode-1.png" src="_images/avalancheAddnode-1.png" /></p>
+</li>
+<li><p>Fill in the details for the new node and click on the <strong>Next</strong> button. In this step, the cloud configuration and region will be prefilled according to the configuration of the network. Click on the <strong>Create</strong> button and it’s done!</p>
+<p><img alt="_images/avalancheAddnode-2.png" src="_images/avalancheAddnode-2.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="delete-node-in-a-network">
+<h3><strong>Delete node in a network</strong><a class="headerlink" href="#delete-node-in-a-network" title="Permalink to this headline">¶</a></h3>
+<ol>
+<li><p>Select the network, in which you want to perform the delete node action, and click on the network card <a class="reference internal" href="View_your_network_and_nodes.html"><span class="doc">Ref.</span></a>. You will get to see similar to the below image.</p>
+<p><img alt="_images/viewNetwork.png" src="_images/viewNetwork.png" /></p>
+</li>
+<li><p>Click on the delete icon present alongside the node. A pop-up window will open for the confirmation, click on the <strong>yes</strong> button to confirm.</p>
+<p><img alt="_images/deleteNodeModal.png" src="_images/deleteNodeModal.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="delete-a-network">
+<h3><strong>Delete a network</strong><a class="headerlink" href="#delete-a-network" title="Permalink to this headline">¶</a></h3>
+<ol>
+<li><p>Select the network you want to delete, and click on the network card<a class="reference internal" href="View_your_network_and_nodes.html"><span class="doc">Ref.</span></a>. You will get to see similar to the below image.</p>
+<p><img alt="_images/viewNetwork.png" src="_images/viewNetwork.png" /></p>
+</li>
+<li><p>Click on the <em>Actions</em> button on the top right, and select the <strong>Delete Network</strong> option. A confirmation window will open, click on the <strong>Yes</strong> button, attached to it.</p>
+<p><img alt="_images/deleteNetwork.png" src="_images/deleteNetwork.png" /></p>
+</li>
+</ol>
+<hr class="docutils" />
+<p><em><strong>NOTE</strong></em> It can take a few minutes to delete a network.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="rpc-api-endpoints">
+<h2><strong>RPC API endpoints</strong><a class="headerlink" href="#rpc-api-endpoints" title="Permalink to this headline">¶</a></h2>
+<p>This section talks about different actions you can perform in Avalanche RPC API endpoints.</p>
+<ol class="simple">
+<li><p><a class="reference external" href="#create-endpoint">Create endponits</a></p></li>
+<li><p><a class="reference external" href="#edit-endpoint">Edit endpoints</a></p></li>
+<li><p><a class="reference external" href="#delete-endpoint">Delete endpoint</a></p></li>
+</ol>
+<div class="section" id="create-endpoint">
+<h3><strong>Create endpoint</strong><a class="headerlink" href="#create-endpoint" title="Permalink to this headline">¶</a></h3>
+<p>This section provides a step-by-step guide for creating avalanche RPC API endpoints.</p>
+<ol>
+<li><p>Click on <strong>Endpoints</strong> on the left side navigation bar and then click on <strong>Add Endpoints</strong>.</p>
+<p><img alt="_images/sideNavBar.png" src="_images/sideNavBar.png" /></p>
+</li>
+<li><p>You will be landed on a page similar to the below image.</p>
+<p><img alt="_images/avalancheEndpointConfigurations.png" src="_images/avalancheEndpointConfigurations.png" /></p>
+</li>
+</ol>
+<hr class="docutils" />
+<p><em><strong>NOTE</strong></em> It can take be different in your case. These configuration cards depend on your subscription.</p>
+<hr class="docutils" />
+<ol>
+<li><p>Select the configuration and click on the card you want. You will be landed on a page similar to the image provided below. Fill in the required details and click <strong>next</strong>.</p>
+<p><img alt="_images/avalancheCreateEndpoint-1.png" src="_images/avalancheCreateEndpoint-1.png" /></p>
+</li>
+<li><p>In this step you can check the <strong>Require JWT</strong> and provide JWT public key details and click on <strong>Submit</strong>.</p>
+<p><img alt="_images/avalancheCreateEndpoint-2.png" src="_images/avalancheCreateEndpoint-2.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="edit-endpoint">
+<h3><strong>Edit endpoint</strong><a class="headerlink" href="#edit-endpoint" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="delete-endpoint">
+<h3><strong>Delete endpoint</strong><a class="headerlink" href="#delete-endpoint" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Binance.html" class="btn btn-neutral float-right" title="Binance Dedicated Node Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Corda.html" class="btn btn-neutral float-left" title="Corda" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Zeeve
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

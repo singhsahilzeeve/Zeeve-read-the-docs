@@ -86,23 +86,22 @@
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Cloud Authorizations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#aws-authorization">AWS Authorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#azure-authorization">Azure Authorization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#digital-ocean-authorization">Digital Ocean Authorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ibm-cloud-authorization">IBM Cloud Authorization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerSawtooth.html">Hyperledger Sawtooth Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html"> Hyperledger Fabric Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Deployment Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html">Hyperledger Fabric Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Avalanche.html">Avalanche Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Binance.html">Binance Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Fantom.html">Fantom Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polygon.html">Polygon Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tron.html">Tron Dedicated Node Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developmentSawtooth.html">Hyperledger Sawtooth’s Application Development Practices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NetworkScalability.html">Scaling Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PerformanceMetrics.html">Performance Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zeeveDistributedFileSystem.html">Zeeve Distributed File System</a></li>
@@ -179,9 +178,7 @@
 <p>Zeeve supports a list of cloud for you to choose from. You can authorize multiple clouds and choose between them at the time of creating networks or nodes. Following is the list of currently supported clouds:-</p>
 <ol class="simple">
 <li><p>AWS</p></li>
-<li><p>Azure</p></li>
 <li><p>Digital Ocean</p></li>
-<li><p>IBM Cloud</p></li>
 </ol>
 <hr class="docutils" />
 <p><em><strong>INTERESTING FACT:</strong> Zeeve doesn’t use <strong>blockchain services</strong> of any of the supported cloud platforms, and hence is not restricted for the level of features it can provide for a protocol on any cloud.</em></p>
@@ -203,38 +200,15 @@
 <li><p>Click on <strong>Edit Profile</strong></p>
 <p><img alt="_images/profilemenu.png" src="_images/profilemenu.png" /></p>
 </li>
-<li><p>Click on your cloud authentication for AWS account, click on <strong>Authorize Aws</strong>.</p>
+<li><p>Click on <strong>My Cloud</strong>.</p>
 <p><img alt="_images/editprofile.png" src="_images/editprofile.png" /></p>
+</li>
+<li><p>Click on <strong>AWS</strong> and then click on
+<strong>Add AWS Cloud</strong>.</p>
+<p><img alt="_images/addAWS.png" src="_images/addAWS.png" /></p>
 </li>
 <li><p>You will need AWS Access Key and AWS Access Secret Key, to authenticate your AWS account with Zeeve.</p>
 <p><img alt="_images/awslogin.png" src="_images/awslogin.png" /></p>
-</li>
-</ol>
-</div>
-<div class="section" id="azure-authorization">
-<h2>Azure Authorization<a class="headerlink" href="#azure-authorization" title="Permalink to this headline">¶</a></h2>
-<p>To authorize your Azure account on Zeeve you’ll need to ensure certain things:-</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>User must have an account with <strong>Global Admin</strong> Role</p></li>
-<li><p>Source should be an azure <strong>Active Directory</strong></p></li>
-<li><p>Login from this account in Azure portal(if hasn’t been logged before)</p></li>
-<li><p>User must have enough permissions to write Subscription Id, create Resource group and to add any Enterprise Application into Azure Active Directory.</p></li>
-</ul>
-</div></blockquote>
-<p>After ensuring these, follow the given steps:-</p>
-<ol>
-<li><p>Hover on <strong>profile</strong></p>
-<p><img alt="_images/profile.png" src="_images/profile.png" /></p>
-</li>
-<li><p>Click on <strong>Edit Profile</strong></p>
-<p><img alt="_images/profilemenu.png" src="_images/profilemenu.png" /></p>
-</li>
-<li><p>Click on your cloud authentication for Azure account, click on <strong>Authorize Azure</strong>.</p>
-<p><img alt="_images/editprofile.png" src="_images/editprofile.png" /></p>
-</li>
-<li><p>Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.</p>
-<p><img alt="_images/azurelogin.png" src="_images/azurelogin.png" /></p>
 </li>
 </ol>
 </div>
@@ -260,36 +234,14 @@
 <li><p>Click on your cloud authentication for Digital Ocean account, click on <strong>Authorize digital Ocean</strong>.</p>
 <p><img alt="_images/editprofile.png" src="_images/editprofile.png" /></p>
 </li>
+<li><p>Click on <strong>DigitalOcean</strong> and then click on
+<strong>Add Digital Ocean Cloud</strong>.</p>
+<p><img alt="_images/addDO.png" src="_images/addDO.png" /></p>
+</li>
 <li><p>Authorize DigitalOcean will redirect you to login page, you can login with your DigitalOcean credentials, once login is successful, Zeeve will be connected to your account.</p>
-<p><img alt="_images/digitaloceanlogin.png" src="_images/digitaloceanlogin.png" /></p>
+<p><img alt="_images/DOlogin.png" src="_images/DOlogin.png" /></p>
 </li>
 <li><p>After this, you will be asked to allow Zeeve in your cloud account. Make sure you provide both <strong>read and write</strong> access on this page.</p></li>
-</ol>
-</div>
-<div class="section" id="ibm-cloud-authorization">
-<h2>IBM Cloud Authorization<a class="headerlink" href="#ibm-cloud-authorization" title="Permalink to this headline">¶</a></h2>
-<p>To authorize your IBM account on Zeeve you’ll need to ensure certain things:-</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Login to your IBM cloud account and note down your account ID from account section.</p></li>
-<li><p>Then create a resource group from account section and note down resource group ID.</p></li>
-<li><p>Create an IBM cloud key from the IAM access section and copy the key.</p></li>
-</ul>
-</div></blockquote>
-<p>After which on Zeeve do following steps:-</p>
-<ol>
-<li><p>Hover on <strong>profile</strong></p>
-<p><img alt="_images/profile.png" src="_images/profile.png" /></p>
-</li>
-<li><p>Click on <strong>Edit Profile</strong></p>
-<p><img alt="_images/profilemenu.png" src="_images/profilemenu.png" /></p>
-</li>
-<li><p>Click on your cloud authentication for IBM account, click on <strong>Authorize IBM cloud</strong>.</p>
-<p><img alt="_images/editprofile.png" src="_images/editprofile.png" /></p>
-</li>
-<li><p>Here user will have to fill the IBM account ID, IBM resource group ID and IBM key in the given fields.</p>
-<p><img alt="_images/ibmlogin.png" src="_images/ibmlogin.png" /></p>
-</li>
 </ol>
 </div>
 </div>

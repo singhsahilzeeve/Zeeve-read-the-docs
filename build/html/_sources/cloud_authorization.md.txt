@@ -5,9 +5,7 @@ Zeeve allows you to authorize multiple cloud accounts of yours so as to create n
 Zeeve supports a list of cloud for you to choose from. You can authorize multiple clouds and choose between them at the time of creating networks or nodes. Following is the list of currently supported clouds:-
 
 1. AWS
-2. Azure
-3. Digital Ocean 
-4. IBM Cloud
+2. Digital Ocean 
 
 
 ---
@@ -32,41 +30,18 @@ To authorize your AWS account on Zeeve:-
  
     ![](images/profilemenu.png)
 
-3. Click on your cloud authentication for AWS account, click on **Authorize Aws**.
- 
+3. Click on **My Cloud**.
+
     ![](images/editprofile.png)
 
-4. You will need AWS Access Key and AWS Access Secret Key, to authenticate your AWS account with Zeeve.
+4. Click on **AWS** and then click on 
+    **Add AWS Cloud**.
+   
+    ![](images/addAWS.png)
+
+5. You will need AWS Access Key and AWS Access Secret Key, to authenticate your AWS account with Zeeve.
 
     ![](images/awslogin.png)
-
-## Azure Authorization
-
-To authorize your Azure account on Zeeve you'll need to ensure certain things:-
- 
-> * User must have an account with **Global Admin** Role
-> * Source should be an azure **Active Directory**
-> * Login from this account in Azure portal(if hasn't been logged before)
-> * User must have enough permissions to write Subscription Id, create Resource group and to add any Enterprise Application into Azure Active Directory.
-
-After ensuring these, follow the given steps:- 
-
-1. Hover on **profile** 
- 
-    ![](images/profile.png)
-
-2. Click on **Edit Profile**
- 
-    ![](images/profilemenu.png)
-
-3. Click on your cloud authentication for Azure account, click on **Authorize Azure**.
-
-    ![](images/editprofile.png)
-
-4. Authorize Azure will redirect you to Microsoft Azure login page, you can login with your Microsoft credentials, once login is successful, Zeeve will be connected to your Azure account.
-
-    ![](images/azurelogin.png)
-
 
 ## Digital Ocean Authorization
 
@@ -91,34 +66,13 @@ After which on Zeeve do following steps:-
 
     ![](images/editprofile.png)
 
-4. Authorize DigitalOcean will redirect you to login page, you can login with your DigitalOcean credentials, once login is successful, Zeeve will be connected to your account.
+4. Click on **DigitalOcean** and then click on 
+    **Add Digital Ocean Cloud**.
+   
+    ![](images/addDO.png)
 
-    ![](images/digitaloceanlogin.png)
+5. Authorize DigitalOcean will redirect you to login page, you can login with your DigitalOcean credentials, once login is successful, Zeeve will be connected to your account.
 
-5. After this, you will be asked to allow Zeeve in your cloud account. Make sure you provide both **read and write** access on this page.
+    ![](images/DOlogin.png)
 
-## IBM Cloud Authorization
-
-To authorize your IBM account on Zeeve you'll need to ensure certain things:-
- 
-> * Login to your IBM cloud account and note down your account ID from account section.
-> * Then create a resource group from account section and note down resource group ID.
-> * Create an IBM cloud key from the IAM access section and copy the key.
-
-After which on Zeeve do following steps:- 
-
-1. Hover on **profile** 
- 
-    ![](images/profile.png)
-
-2. Click on **Edit Profile**
- 
-    ![](images/profilemenu.png)
-
-3. Click on your cloud authentication for IBM account, click on **Authorize IBM cloud**.
-
-    ![](images/editprofile.png)
-
-4. Here user will have to fill the IBM account ID, IBM resource group ID and IBM key in the given fields.
-
-    ![](images/ibmlogin.png)
+6. After this, you will be asked to allow Zeeve in your cloud account. Make sure you provide both **read and write** access on this page.
