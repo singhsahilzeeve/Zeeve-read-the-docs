@@ -44,7 +44,7 @@ So wondering upon how to begin? Just follow these easy steps:-
   Choose the configuration of your choice for creating a network, and click on a card accordingly.<br>
   To see protocol specific configuration parameters please refer to the detailed deployment spec using the following links.
 
-  1. [Avalanche](./avalanche.md)
+  1. [Avalanche](./Avalanche.md)
   2. [Binance](./Binance.md)
   3. [Ethereum](./Ethereum.md)
   4. [Fantom](./Fantom.md)

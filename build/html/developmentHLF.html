@@ -85,6 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subscriptions.html">Manage your subscriptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html">Hyperledger Fabric Dedicated Node Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Dedicated Node Setup</a></li>
@@ -174,7 +175,7 @@
 <p>Certain practices can help the developer create applications which are one click deployable on Zeeve. They are:-</p>
 <ul>
 <li><p>For packaging your product to be automated by Zeeve, you will need to <a class="reference external" href="https://docs.docker.com/engine/examples/">dockerize</a> your project’s services by creating <code class="docutils literal notranslate"><span class="pre">Dockerfiles</span></code> for them.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FROM</span> <span class="n">node</span><span class="p">:</span><span class="mf">8.9.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FROM</span> <span class="n">node</span><span class="p">:</span><span class="mf">8.9</span><span class="o">.</span><span class="mi">0</span>
 
 <span class="n">WORKDIR</span> <span class="o">/</span><span class="n">balance</span><span class="o">-</span><span class="n">transfer</span>
 
@@ -274,8 +275,8 @@ The file needs to keep the following points in account:-</p>
             <span class="o">-</span> <span class="o">|</span>
               <span class="n">echo</span> <span class="s2">&quot;installing GO&quot;</span> 
               <span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
-              <span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">go</span><span class="o">/</span><span class="n">go1</span><span class="mf">.10.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-              <span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">go1</span><span class="mf">.10.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+              <span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">go</span><span class="o">/</span><span class="n">go1</span><span class="o">.</span><span class="mf">10.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+              <span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">go1</span><span class="o">.</span><span class="mf">10.3</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
               <span class="n">echo</span> <span class="s2">&quot;export PATH=$PATH:/usr/local/go/bin&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">bashrc</span>
               <span class="n">source</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">bashrc</span>
 

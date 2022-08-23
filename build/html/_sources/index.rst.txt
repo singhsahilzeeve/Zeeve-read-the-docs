@@ -14,6 +14,7 @@ Welcome to Zeeve's documentation!
    ../ZeeveOverview.md
    ../AccountCreation.md
    ../cloud_authorization.md
+   ../subscriptions.md
    ../Howtocreatemyfirstnetwork.md
    ../HyperledgerSawtooth.md
    ../HyperledgerFabric.md
@@ -38,4 +39,4 @@ Welcome to Zeeve's documentation!
    ../Glossary.md
    ../Releases.md
 
-   
+
