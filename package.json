@@ -1,0 +1,14 @@
+{
+  "name": "doc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "scripts": {
+   "start": "git pull origin master && cp -r source/* /home/zeeve-prod/public_html/docs && docsify serve source",
+   "dev": "docsify serve source"
+  }
+}
