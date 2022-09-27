@@ -1,7 +1,6 @@
 # Manage your subscriptions
 
-This section talks about how one can purcahse subscription of their choosen service. It will also guides how one can view their subscriptions,
-also edit and delete their subscriptions.
+This section talks about how one can purcahse a subscription of a service. It will also guide how one can view manage their subscriptions.
 
 1. [Purchase Subscriptions](#purchase-subscriptions).
 
@@ -11,7 +10,7 @@ also edit and delete their subscriptions.
 
 ## Purchase Subscriptions
 
-This section is going to guide how you can you purchase subscription of protocols of you choice and start deployment of nodes.
+This section is going to guide you how to purchase a subscription of your choice.
 
 1.  **[Staking Nodes](#staking-nodes)**
 
@@ -21,27 +20,32 @@ This section is going to guide how you can you purchase subscription of protocol
 
 #### Staking Nodes
 
-1. Click on the **Staking Nodes** under **Buy Services** and you will be able to see a list of protocols that [Zeeve](https://zeeve.io) offers.
+1. Click on the **Staking Nodes** under **Buy Services** from the left pane and you will be able to see the list of protocols that [Zeeve](https://zeeve.io) offers for staking.
 
    ![](images/stakingMarketplace.png)
+   &nbsp;
 
-2. Click on the protocol card that you want to purchase subscription for. You will be then redirected to the purchase page.
+2. Click on the protocol card that you want to subscribe. You will be then redirected to the purchase page.
 
    ![](images/stakingPurchase.png)
+   &nbsp;
 
-3. Select the cloud option from **_Bring Your Own Cloud_** or **_Zeeve Managed Cloud_** and the number of nodes you want to purchase. You can also view the amount based on your selection of different options and number of nodes. After your selection, click on **subscribe** button. A pop up window will open similar to the below image. Click on **continue**.
+3. Select the cloud option from **_Bring Your Own Cloud_** or **_Zeeve Managed Cloud_** and the number of nodes you want to purchase. Based on your selection the total amount for the subscription will be shown. Click on **Subscribe** button to continue. A pop up window will open, click on **Continue** to proceed with your purchase.
 
    ![](images/stakingPurchaseRedirect.png)
+   &nbsp;
 
-4. You will get redirect to the payment page to complete your purchase of subscription. Fill all the required details and click **subscribe**.
+4. You will be redirected to the payment page to complete your purchase. Fill the card details and click **Subscribe**.
 
    ![](images/stakingPaymentPage.png)
+   &nbsp;
 
    **NOTE** Prices on this page totally depends on the protocol and your selection of different options in previous step.
 
-5. After successful payment you will be redirected to payment success page which ensures successful purchase of your subscription.
+5. After successful payment you will be redirected to success page which ensures successful purchase of your subscription.
 
    ![](images/paymentSuccessPage.png)
+   &nbsp;
 
 ---
 

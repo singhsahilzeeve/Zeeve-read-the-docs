@@ -1,6 +1,6 @@
 # Dcomm Staking Node Setup
 
-**NOTE** Please make sure to [purchase](./subscriptions.md#staking-nodes) a subscription before proceeding.
+**NOTE** [Purchase](./subscriptions.md) a subscription before proceeding.
 
 1. [Create a network](#create-a-network)
 2. [Add a node](#add-node-to-a-network)
@@ -11,76 +11,78 @@
 
 ### **Create a network**
 
-This section will provide you with detailed steps for creating a network of **Dcomm**.
+This section will provide you detailed steps for creating a network of **Dcomm**.
 
-On the **Network Configuration** page you will have different cards with different network configurations for Dcomm, which looks similar to the image provided below.
+On the **Network Configuration** page you will be able to see different configuration cards for Dcomm, which looks similar to the image provided below.
 
-![](images/dcomm/dcommNetworkConfiguration.png)
+![](images/dcomm/dcommNetown workConfiguration.png)
 
-**\*NOTE:** These cards can be different in your case. Card configurations depend on your purchased subscriptions.\*
+**\*NOTE:** These configuration cards can be different based on your purchased subscriptions.\*
 
 ---
 
-You can Choose **Managed-AWS** (Zeeve's managed hosting) for the infrastructure of your node or you can use your cloud account (AWS/DO) for the hosting of your node.
+You can Choose **Managed-AWS** (Zeeve's managed hosting) or you can use your cloud account (AWS/DO) for the infrastructure of your node.
 
-Choose the configuration you want. Click on the card and follow the steps accordingly.
+Choose the card with the configuration you want. Clicking on the card you will be redirected to the network setup page.
 
 1. **Network Info**
-   Clicking on the card you will be landed on a page similar to the below image. In this section, we have to provide network-related information for ex- Network Name, Network type, etc.
 
    ![](images/dcomm/dcommCreateNetwork-1.png)
+   &nbsp;
 
-> - **Name of Network**: A name to identify your network.
+> - **Network Name**: A name to identify your network.
 > - **Deployment Type**: Deployment type
-> - **Type Of Network**
+> - **Network Type**
 >   - **TestNet**: This will deploy your network on the network testnet. you can use this for your non-production needs like testing or demonstrations.
 > - **Workspace**: This represents the workspace in which the network will be added after the successful creation.
 
-Proceed by clicking on the **Next Step** button after providing all the details.
+Proceed further by clicking on the **Next Step** button after providing all the details.
 
 2. **Cloud Configuration**
 
-This is the step for the configuration of the cloud for your node. This step can be different based on your selection of **Network configuration cards**
+This step configures the cloud settings for your node. This step can vary based on your selection of **Network configuration card**
 
-1. [Zeeve Manged Cloud](#managed-cloud)
-2. [Bring Your Own Cloud (BYOC)](#byoc)
-
----
-
-#### Managed Cloud
+1. [Zeeve Manged Cloud](#zeeve-managed-cloud)
+2. [Bring Your Own Cloud (BYOC)](#bring-your-own-cloud)
 
 ---
 
-In the case of **Managed - Cloud**, you don't have to bother about anything, just select the region for the network by under **Select Region**.<br></br>
+#### Zeeve Managed Cloud
+
+---
+
+In the case of **Managed - Cloud**, select the region for the network under **Select Region** and provide a name to your node.<br></br>
 
 ![](images/dcomm/dcommCreateNetworkMANAGED.png)
+&nbsp;
 
-> - **Region**: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In the case of AWS, each of its regions has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. [Ref.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
-
-**\*NOTE:** The name for the node will be given automatically by Zeeve.\*
-
----
-
-#### BYOC
+> - **Node Name**: A name to identify your node, this field requires a unique name. Unique means that it should be unique in a network to which you are adding a node.
+> - **Region**: It indicates the region of the cloud service. These regions are the geographic locations where your network instances are going to be hosted.
 
 ---
 
-In the case of **BYOC** (AWS or Digital Ocean), select the region for the network by clicking on **Select Region**, select the [Cloud](./cloud_authorization.md) account you want to use by clicking on **Select Cloud Account**, also choose the instance type as your requirement by clicking on **Select Instance Type**.<br></br>
+#### Bring Your Own Cloud
+
+---
+
+In the case of **BYOC** (AWS or Digital Ocean), select the region for the network by clicking on **Select Region**, select the [Cloud](./cloud_authorization.md) account you want to use by clicking on **Select Cloud Account**, choose the instance type as your requirement by clicking on **Select Instance Type** and provide a name to your node.<br></br>
 
 ![](images/dcomm/dcommCreateNetworkBYOC.png)
+&nbsp;
 
-> - **Region**: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In the case of AWS, each of its regions has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. [Ref.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
+> - **Node Name**: A name to identify your node, this field requires a unique name. Unique means that it should be unique in a network to which you are adding a node.
+> - **Region**: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted.
 > - **Cloud Account**: It represents the cloud account that is going to be used for network creation.
-> - **Node Name**: A name of the node to identify it, this field requires a unique name for it. Unique means that it should be unique in a network to which you are adding a node.
 > - **Type of Instance**: It defines the combination of CPU cores and memory. Choose the configuration which could handle loads of your network. This parameter is useful for scaling up the network. The type of Instances may vary from cloud to cloud.
 
 ---
 
-3. Click on the **Create** button. A pop-up window will appear similar to the below image, which ensures the successful creation of your network.
+3. On clicking the **Create** button a pop-up window will open which ensures the successful creation of your network.
 
    ![](images/createNetworkSuccessModal.png)
+   &nbsp;
 
-4. Click on **continue** and you will be redirected to a page similar to the below image where you can see the nodes listed you've just added to the network.
+4. On clicking the **Continue** button you will be redirected to the page where you can see the network you created.
 
 ---
 
@@ -88,37 +90,47 @@ In the case of **BYOC** (AWS or Digital Ocean), select the region for the networ
 
 This section will guide you on how you can add a node to a network.
 
-1. Select the network to which you want to add a node, and click on the network card. You will get to see a screen similar to the below image.
+1. Visit the network detail page. Click on the _Actions_ button on the top right, and select the **Add Node** option.
 
-   ![](images/viewNetwork.png)
+   ![](images/dcomm/dcommNetworkActions.png)
+   &nbsp;
 
-2. Click on the _Actions_ button on the top right, and select the **Add Node** option. You will get to see a web page similar to that provided below.
+2. You will be redirected to the node setup page. Fill the name for the new node, network type and deployment type will be prefilled based on the network configuration. Click on the **Next** button to continue.
 
-   ![](images/dcomm/dcommAddnode-1.png)
+   ![](images/dcomm/dcommAddNode-1.png)
+   &nbsp;
 
-3. Fill in the details for the new node and click on the **Next** button. In this step, the cloud configuration and region will be prefilled according to the configuration of the network. Click on the **Create** button and it's done!
+3. Select the instance type for the node, cloud account and region will be prefilled based on the network configuration. Click on the **Create** button and the node will be added.
+   ![](images/dcomm/dcommAddNode-2.png)
+   &nbsp;
 
-   ![](images/dcomm/dcommAddnode-2.png)
+**_NOTE_** For Zeeve Managed Cloud, the option for selecting the instance type will not be available as it will be selected by [Zeeve](https://zeeve.io).
+
+---
 
 ### **Delete node in a network**
 
-1. Select the network, in which you want to perform the delete node action, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.
+1. Select the network, in which you want to perform the delete node action, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see a page similar to the below image.
 
-   ![](images/viewNetwork.png)
+   ![](images/dcomm/dcommNetworkActions.png)
+   &nbsp;
 
-2. Click on the delete icon present alongside the node. A pop-up window will open for the confirmation, click on the **yes** button to confirm.
+2. Click on the delete icon present alongside the node. A pop-up window will open for the confirmation, click on the **Yes** button to confirm.
 
-   ![](images/deleteNodeModal.png)
+   ![](images/dcomm/dcommDeleteNodeModal.png)
+   &nbsp;
 
 ### **Delete a network**
 
-1. Select the network you want to delete, and click on the network card[Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.
+1. Visit the network detail page[Ref.](./View_your_network_and_nodes.md). Click on the _Actions_ button on the top right, and select the **Delete Network** option.
 
-   ![](images/viewNetwork.png)
+   ![](images/dcomm/dcommNetworkActions.png)
+   &nbsp;
 
-2. Click on the _Actions_ button on the top right, and select the **Delete Network** option. A confirmation window will open, click on the **Yes** button, attached to it.
+2. A confirmation window will open, click on the **Yes** button to delete the network.
 
-   ![](images/deleteNetwork.png)
+   ![](images/dcomm/dcommDeleteNetworkModal.png)
+   &nbsp;
 
 ---
 
