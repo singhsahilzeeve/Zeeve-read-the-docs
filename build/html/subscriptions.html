@@ -86,7 +86,11 @@
 <li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Manage your subscriptions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#purchase-subscriptions">Purchase Subscriptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#purchase-subscriptions">Purchase Subscriptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#staking-nodes">Staking Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#full-nodes">Full Nodes</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#view-subscriptions">View Subscriptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#edit-subscriptions">Edit Subscriptions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#increase-items">Increase items</a></li>
@@ -102,6 +106,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Avalanche.html">Avalanche Dedicated Node Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Binance.html">Binance Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dcomm.html">Dcomm Staking Node Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Fantom.html">Fantom Dedicated Node Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Polygon.html">Polygon Dedicated Node Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tron.html">Tron Dedicated Node Setup</a></li>
@@ -181,8 +186,7 @@
             
   <div class="section" id="manage-your-subscriptions">
 <h1>Manage your subscriptions<a class="headerlink" href="#manage-your-subscriptions" title="Permalink to this headline">¶</a></h1>
-<p>This section talks about how one can purcahse subscription of their choosen service. It will also guides how one can view their subscriptions,
-also edit and delete their subscriptions.</p>
+<p>This section talks about how one can purcahse a subscription of a service. It will also guide how one can view manage their subscriptions.</p>
 <ol class="simple">
 <li><p><a class="reference external" href="#purchase-subscriptions">Purchase Subscriptions</a>.</p></li>
 <li><p><a class="reference external" href="#view-subscriptions">View Subscriptions</a>.</p></li>
@@ -191,7 +195,41 @@ also edit and delete their subscriptions.</p>
 </ol>
 <div class="section" id="purchase-subscriptions">
 <h2>Purchase Subscriptions<a class="headerlink" href="#purchase-subscriptions" title="Permalink to this headline">¶</a></h2>
-<p>This section is going to guide how you can you purchase subscription of protocols of you choice and start deployment of nodes.</p>
+<p>This section is going to guide you how to purchase a subscription of your choice.</p>
+<ol class="simple">
+<li><p><strong><a class="reference external" href="#staking-nodes">Staking Nodes</a></strong></p></li>
+<li><p><strong><a class="reference external" href="#full-nodes">Full Nodes</a></strong></p></li>
+</ol>
+<hr class="docutils" />
+<div class="section" id="staking-nodes">
+<h3>Staking Nodes<a class="headerlink" href="#staking-nodes" title="Permalink to this headline">¶</a></h3>
+<ol>
+<li><p>Click on the <strong>Staking Nodes</strong> under <strong>Buy Services</strong> from the left pane and you will be able to see the list of protocols that <a class="reference external" href="https://zeeve.io">Zeeve</a> offers for staking.</p>
+<p><img alt="_images/stakingMarketplace.png" src="_images/stakingMarketplace.png" />
+ </p>
+</li>
+<li><p>Click on the protocol card that you want to subscribe. You will be then redirected to the purchase page.</p>
+<p><img alt="_images/stakingPurchase.png" src="_images/stakingPurchase.png" />
+ </p>
+</li>
+<li><p>Select the cloud option from <strong><em>Bring Your Own Cloud</em></strong> or <strong><em>Zeeve Managed Cloud</em></strong> and the number of nodes you want to purchase. Based on your selection the total amount for the subscription will be shown. Click on <strong>Subscribe</strong> button to continue. A pop up window will open, click on <strong>Continue</strong> to proceed with your purchase.</p>
+<p><img alt="_images/stakingPurchaseRedirect.png" src="_images/stakingPurchaseRedirect.png" />
+ </p>
+</li>
+<li><p>You will be redirected to the payment page to complete your purchase. Fill the card details and click <strong>Subscribe</strong>.</p>
+<p><img alt="_images/stakingPaymentPage.png" src="_images/stakingPaymentPage.png" />
+ </p>
+<p><strong>NOTE</strong> Prices on this page totally depends on the protocol and your selection of different options in previous step.</p>
+</li>
+<li><p>After successful payment you will be redirected to success page which ensures successful purchase of your subscription.</p>
+<p><img alt="_images/paymentSuccessPage.png" src="_images/paymentSuccessPage.png" />
+ </p>
+</li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="full-nodes">
+<h3>Full Nodes<a class="headerlink" href="#full-nodes" title="Permalink to this headline">¶</a></h3>
 <ol>
 <li><p>Click on <strong>Marketplace</strong> on the left side navigation bar.</p>
 <p><img alt="_images/sideNavBar.png" src="_images/sideNavBar.png" /></p>
@@ -204,7 +242,7 @@ also edit and delete their subscriptions.</p>
 </li>
 </ol>
 <hr class="docutils" />
-<p><em><strong>NOTE</strong></em> This page can be different for different protocls. Node types can vary from protocol to protocol</p>
+<p><strong>NOTE</strong> This page can be different for different protocls. Node types can vary from protocol to protocol</p>
 <hr class="docutils" />
 <ol>
 <li><p>Select the number of nodes you want to purchase. You can also view the amount based on your selection of different options and number of nodes. After your selection, click on <strong>subscribe</strong> button. A pop up window will open similar to the below image. Click on <strong>continue</strong>.</p>
@@ -215,13 +253,14 @@ also edit and delete their subscriptions.</p>
 </li>
 </ol>
 <hr class="docutils" />
-<p><em><strong>NOTE</strong></em> Prices on this page totally depends on protocol and your selection of different options in previous step.</p>
+<p><strong><em>NOTE</em></strong> Prices on this page totally depends on protocol and your selection of different options in previous step.</p>
 <hr class="docutils" />
 <ol>
 <li><p>After successful payment you will be redirected to payment success page which ensures successful purchase of your subscription.</p>
-<p><img alt="_images/paymentSucessPage.png" src="_images/paymentSucessPage.png" /></p>
+<p><img alt="_images/paymentSuccessPage.png" src="_images/paymentSuccessPage.png" /></p>
 </li>
 </ol>
+</div>
 </div>
 <div class="section" id="view-subscriptions">
 <h2>View Subscriptions<a class="headerlink" href="#view-subscriptions" title="Permalink to this headline">¶</a></h2>
@@ -300,7 +339,7 @@ also edit and delete their subscriptions.</p>
 <li><p>After successful updation you can view your updated subscription in <a class="reference external" href="#view-subscriptions"><strong>subscriptions</strong></a> section.</p></li>
 </ol>
 <hr class="docutils" />
-<p><em><strong>INFO:</strong> One can decrease the quantity of an item as much as available quantity of that item.</em></p>
+<p><strong>*INFO:</strong> One can decrease the quantity of an item as much as available quantity of that item.*</p>
 </div>
 </div>
 <hr class="docutils" />
@@ -309,7 +348,7 @@ also edit and delete their subscriptions.</p>
 <p>This section talks about how to delte the subscriptions you don’t need.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Before deleting a subsection, make sure that any of the items of the subscription is not consumed. Basically, make sure that the purchased quantity and available quantity is same for each of the item associated with the subscription.     Otherwise you will not be able to delete a subscription.</p></li>
+<li><p>Before deleting a subsection, make sure that any of the items of the subscription is not consumed. Basically, make sure that the purchased quantity and available quantity is same for each of the item associated with the subscription. Otherwise you will not be able to delete a subscription.</p></li>
 </ul>
 </div></blockquote>
 <ol>

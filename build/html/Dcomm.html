@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dcomm Staking Node Setup &mdash; Zeeve 1.6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Fantom Dedicated Node Setup" href="Fantom.html" />
+    <link rel="prev" title="Binance Dedicated Node Setup" href="Binance.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Zeeve
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">What is Zeeve?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subscriptions.html">Manage your subscriptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html">Hyperledger Fabric Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Avalanche.html">Avalanche Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Binance.html">Binance Dedicated Node Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dcomm Staking Node Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-network"><strong>Create a network</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#zeeve-managed-cloud">Zeeve Managed Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bring-your-own-cloud">Bring Your Own Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#add-node-to-a-network"><strong>Add node to a network</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-node-in-a-network"><strong>Delete node in a network</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-a-network"><strong>Delete a network</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Fantom.html">Fantom Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polygon.html">Polygon Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tron.html">Tron Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zeeveDistributedFileSystem.html">Zeeve Distributed File System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve_Support.html">Zeeve Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Releases.html">Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Zeeve</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Dcomm Staking Node Setup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Dcomm.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dcomm-staking-node-setup">
+<h1>Dcomm Staking Node Setup<a class="headerlink" href="#dcomm-staking-node-setup" title="Permalink to this headline">¶</a></h1>
+<p><strong>NOTE</strong> <a class="reference internal" href="subscriptions.html"><span class="doc">Purchase</span></a> a subscription before proceeding.</p>
+<ol class="simple">
+<li><p><a class="reference external" href="#create-a-network">Create a network</a></p></li>
+<li><p><a class="reference external" href="#add-node-to-a-network">Add a node</a></p></li>
+<li><p><a class="reference external" href="#delete-node-in-a-network">Delete a node</a></p></li>
+<li><p><a class="reference external" href="#delete-a-network">Delete a network</a></p></li>
+</ol>
+<hr class="docutils" />
+<div class="section" id="create-a-network">
+<h2><strong>Create a network</strong><a class="headerlink" href="#create-a-network" title="Permalink to this headline">¶</a></h2>
+<p>This section will provide you detailed steps for creating a network of <strong>Dcomm</strong>.</p>
+<p>On the <strong>Network Configuration</strong> page you will be able to see different configuration cards for Dcomm, which looks similar to the image provided below.</p>
+<p><img alt="_images/dcommNetworkConfiguration.png" src="_images/dcommNetworkConfiguration.png" /></p>
+<p><strong>*NOTE:</strong> These configuration cards can be different based on your purchased subscriptions.*</p>
+<hr class="docutils" />
+<p>You can Choose <strong>Managed-AWS</strong> (Zeeve’s managed hosting) or you can use your cloud account (AWS/DO) for the infrastructure of your node.</p>
+<p>Choose the card with the configuration you want. Clicking on the card you will be redirected to the network setup page.</p>
+<ol>
+<li><p><strong>Network Info</strong></p>
+<p><img alt="_images/dcommCreateNetwork-1.png" src="_images/dcommCreateNetwork-1.png" />
+ </p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Network Name</strong>: A name to identify your network.</p></li>
+<li><p><strong>Deployment Type</strong>: Deployment type</p></li>
+<li><p><strong>Network Type</strong></p>
+<ul>
+<li><p><strong>TestNet</strong>: This will deploy your network on the network testnet. you can use this for your non-production needs like testing or demonstrations.</p></li>
+</ul>
+</li>
+<li><p><strong>Workspace</strong>: This represents the workspace in which the network will be added after the successful creation.</p></li>
+</ul>
+</div></blockquote>
+<p>Proceed further by clicking on the <strong>Next Step</strong> button after providing all the details.
+ </p>
+</li>
+<li><p><strong>Cloud Configuration</strong></p>
+<p>This step configures the cloud settings for your node. This step can vary based on your selection of <strong>Network configuration card</strong></p>
+<ol class="simple">
+<li><p><a class="reference external" href="#zeeve-managed-cloud">Zeeve Manged Cloud</a></p></li>
+<li><p><a class="reference external" href="#bring-your-own-cloud">Bring Your Own Cloud (BYOC)</a></p></li>
+</ol>
+</li>
+</ol>
+<hr class="docutils" />
+<div class="section" id="zeeve-managed-cloud">
+<h3>Zeeve Managed Cloud<a class="headerlink" href="#zeeve-managed-cloud" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>In the case of <strong>Managed - Cloud</strong>, select the region for the network under <strong>Select Region</strong> and provide a name to your node.<br></br></p>
+<p><img alt="_images/dcommCreateNetworkMANAGED.png" src="_images/dcommCreateNetworkMANAGED.png" />
+ </p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Node Name</strong>: A name to identify your node, this field requires a unique name. Unique means that it should be unique in a network to which you are adding a node.</p></li>
+<li><p><strong>Region</strong>: It indicates the region of the cloud service. These regions are the geographic locations where your network instances are going to be hosted.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="bring-your-own-cloud">
+<h3>Bring Your Own Cloud<a class="headerlink" href="#bring-your-own-cloud" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>In the case of <strong>BYOC</strong> (AWS or Digital Ocean), select the region for the network by clicking on <strong>Select Region</strong>, select the <a class="reference internal" href="cloud_authorization.html"><span class="doc">Cloud</span></a> account you want to use by clicking on <strong>Select Cloud Account</strong>, choose the instance type as your requirement by clicking on <strong>Select Instance Type</strong> and provide a name to your node.<br></br></p>
+<p><img alt="_images/dcommCreateNetworkBYOC.png" src="_images/dcommCreateNetworkBYOC.png" />
+ </p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Node Name</strong>: A name to identify your node, this field requires a unique name. Unique means that it should be unique in a network to which you are adding a node.</p></li>
+<li><p><strong>Region</strong>: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted.</p></li>
+<li><p><strong>Cloud Account</strong>: It represents the cloud account that is going to be used for network creation.</p></li>
+<li><p><strong>Type of Instance</strong>: It defines the combination of CPU cores and memory. Choose the configuration which could handle loads of your network. This parameter is useful for scaling up the network. The type of Instances may vary from cloud to cloud.</p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<ol>
+<li><p>On clicking the <strong>Create</strong> button a pop-up window will open which ensures the successful creation of your network.</p>
+<p><img alt="_images/createNetworkSuccessModal.png" src="_images/createNetworkSuccessModal.png" />
+ </p>
+</li>
+<li><p>On clicking the <strong>Continue</strong> button you will be redirected to the page where you can see the network you created.</p></li>
+</ol>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="add-node-to-a-network">
+<h2><strong>Add node to a network</strong><a class="headerlink" href="#add-node-to-a-network" title="Permalink to this headline">¶</a></h2>
+<p>This section will guide you on how you can add a node to a network.</p>
+<ol>
+<li><p>Visit the network detail page. Click on the <em>Actions</em> button on the top right, and select the <strong>Add Node</strong> option.</p>
+<p><img alt="_images/dcommNetworkActions.png" src="_images/dcommNetworkActions.png" />
+ </p>
+</li>
+<li><p>You will be redirected to the node setup page. Fill the name for the new node, network type and deployment type will be prefilled based on the network configuration. Click on the <strong>Next</strong> button to continue.</p>
+<p><img alt="_images/dcommAddNode-1.png" src="_images/dcommAddNode-1.png" />
+ </p>
+</li>
+<li><p>Select the instance type for the node, cloud account and region will be prefilled based on the network configuration. Click on the <strong>Create</strong> button and the node will be added.
+<img alt="_images/dcommAddNode-2.png" src="_images/dcommAddNode-2.png" />
+ </p></li>
+</ol>
+<p><strong><em>NOTE</em></strong> For Zeeve Managed Cloud, the option for selecting the instance type will not be available as it will be selected by <a class="reference external" href="https://zeeve.io">Zeeve</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="delete-node-in-a-network">
+<h2><strong>Delete node in a network</strong><a class="headerlink" href="#delete-node-in-a-network" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>Select the network, in which you want to perform the delete node action, and click on the network card <a class="reference internal" href="View_your_network_and_nodes.html"><span class="doc">Ref.</span></a>. You will get to see a page similar to the below image.</p>
+<p><img alt="_images/dcommNetworkActions.png" src="_images/dcommNetworkActions.png" />
+ </p>
+</li>
+<li><p>Click on the delete icon present alongside the node. A pop-up window will open for the confirmation, click on the <strong>Yes</strong> button to confirm.</p>
+<p><img alt="_images/dcommDeleteNodeModal.png" src="_images/dcommDeleteNodeModal.png" />
+ </p>
+</li>
+</ol>
+</div>
+<div class="section" id="delete-a-network">
+<h2><strong>Delete a network</strong><a class="headerlink" href="#delete-a-network" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>Visit the network detail page<a class="reference internal" href="View_your_network_and_nodes.html"><span class="doc">Ref.</span></a>. Click on the <em>Actions</em> button on the top right, and select the <strong>Delete Network</strong> option.</p>
+<p><img alt="_images/dcommNetworkActions.png" src="_images/dcommNetworkActions.png" />
+ </p>
+</li>
+<li><p>A confirmation window will open, click on the <strong>Yes</strong> button to delete the network.</p>
+<p><img alt="_images/dcommDeleteNetworkModal.png" src="_images/dcommDeleteNetworkModal.png" />
+ </p>
+</li>
+</ol>
+<hr class="docutils" />
+<p><strong><em>NOTE</em></strong> It will take a few minutes to delete a network.</p>
+<hr class="docutils" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Fantom.html" class="btn btn-neutral float-right" title="Fantom Dedicated Node Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Binance.html" class="btn btn-neutral float-left" title="Binance Dedicated Node Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Zeeve
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

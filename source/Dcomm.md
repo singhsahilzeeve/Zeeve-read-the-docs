@@ -15,7 +15,7 @@ This section will provide you detailed steps for creating a network of **Dcomm**
 
 On the **Network Configuration** page you will be able to see different configuration cards for Dcomm, which looks similar to the image provided below.
 
-![](images/dcomm/dcommNetown workConfiguration.png)
+![](images/dcomm/dcommNetworkConfiguration.png)
 
 **\*NOTE:** These configuration cards can be different based on your purchased subscriptions.\*
 
@@ -30,20 +30,20 @@ Choose the card with the configuration you want. Clicking on the card you will b
    ![](images/dcomm/dcommCreateNetwork-1.png)
    &nbsp;
 
-> - **Network Name**: A name to identify your network.
-> - **Deployment Type**: Deployment type
-> - **Network Type**
->   - **TestNet**: This will deploy your network on the network testnet. you can use this for your non-production needs like testing or demonstrations.
-> - **Workspace**: This represents the workspace in which the network will be added after the successful creation.
+   > - **Network Name**: A name to identify your network.
+   > - **Deployment Type**: Deployment type
+   > - **Network Type**
+   >   - **TestNet**: This will deploy your network on the network testnet. you can use this for your non-production needs like testing or demonstrations.
+   > - **Workspace**: This represents the workspace in which the network will be added after the successful creation.
 
-Proceed further by clicking on the **Next Step** button after providing all the details.
+   Proceed further by clicking on the **Next Step** button after providing all the details.
 
 2. **Cloud Configuration**
 
-This step configures the cloud settings for your node. This step can vary based on your selection of **Network configuration card**
+   This step configures the cloud settings for your node. This step can vary based on your selection of **Network configuration card**
 
-1. [Zeeve Manged Cloud](#zeeve-managed-cloud)
-2. [Bring Your Own Cloud (BYOC)](#bring-your-own-cloud)
+   1. [Zeeve Manged Cloud](#zeeve-managed-cloud)
+   2. [Bring Your Own Cloud (BYOC)](#bring-your-own-cloud)
 
 ---
 
@@ -119,6 +119,8 @@ This section will guide you on how you can add a node to a network.
 
    ![](images/dcomm/dcommDeleteNodeModal.png)
    &nbsp;
+
+---
 
 ### **Delete a network**
 

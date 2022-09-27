@@ -22,6 +22,7 @@ Welcome to Zeeve's documentation!
    ../Corda.md
    ../Avalanche.md
    ../Binance.md
+   ../Dcomm.md
    ../Fantom.md
    ../Polygon.md
    ../Tron.md
