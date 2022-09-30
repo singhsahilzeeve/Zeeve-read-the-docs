@@ -1,4 +1,4 @@
-# Manage your subscriptions
+# **Manage your subscriptions**
 
 This section talks about how one can purcahse a subscription of a service. It will also guide how one can view manage their subscriptions.
 
@@ -8,17 +8,50 @@ This section talks about how one can purcahse a subscription of a service. It wi
 3. [Edit Subscriptions](#edit-subscriptions).
 4. [Delete Subscriptions](#delete-subscriptions).
 
-## Purchase Subscriptions
+## **Purchase Subscriptions**
 
 This section is going to guide you how to purchase a subscription of your choice.
 
-1.  **[Staking Nodes](#staking-nodes)**
+1.  **[API Endpoint](#api-endpoint)**
 
-2.  **[Full Nodes](#full-nodes)**
+2.  **[Staking Nodes](#staking-nodes)**
+
+3.  **[Full Nodes](#full-nodes)**
 
 ---
 
-#### Staking Nodes
+#### **API Endpoint**
+
+1. Click on the **API Endpoint** under **Buy Services** from the left pane and you will be redirected to the purchase page.
+
+   ![](images/apiEndpoint/apiEndpointMarketplace.png)
+   &nbsp;
+
+2. Click on the **Supported Protocols** button on top right and you will be able to see the protocols and their chains that [Zeeve](https://zeeve.io) offers for creating API endpoints.
+
+   ![](images/apiEndpoint/apiEndpointSupportedProtocols.png)
+   &nbsp;
+
+3. Choose the plan of your choice and click on the **Subscribe** button under the plan of choice. A pop up window will open which will show the plan which you are subscribing. Click on **Continue** button to proceed with your purchase.
+
+   ![](images/apiEndpoint/apiEndpointPurchaseRedirect.png)
+   &nbsp;
+
+4. You will be redirected to the payment page to complete your purchase. Fill the card details and click **Subscribe**.
+
+   ![](images/apiEndpoint/apiEndpointPaymentPage.png)
+   &nbsp;
+
+5. After successful payment you will be redirected to success page which ensures successful purchase of your subscription.
+
+   ![](images/apiEndpoint/apiEndpointPaymentSuccessPage.png)
+   &nbsp;
+
+**NOTE:** **Developer Plan** is a free plan and can only be purchased once.
+
+---
+
+#### **Staking Nodes**
 
 1. Click on the **Staking Nodes** under **Buy Services** from the left pane and you will be able to see the list of protocols that [Zeeve](https://zeeve.io) offers for staking.
 
@@ -49,7 +82,7 @@ This section is going to guide you how to purchase a subscription of your choice
 
 ---
 
-#### Full Nodes
+#### **Full Nodes**
 
 1. Click on **Marketplace** on the left side navigation bar.
 

@@ -37,7 +37,6 @@ Choose the card with the configuration you want. Clicking on the card you will b
    > - **Workspace**: This represents the workspace in which the network will be added after the successful creation.
 
    Proceed further by clicking on the **Next Step** button after providing all the details.
-   &nbsp;
 
 2. **Cloud Configuration**
 
@@ -120,6 +119,8 @@ This section will guide you on how you can add a node to a network.
 
    ![](images/dcomm/dcommDeleteNodeModal.png)
    &nbsp;
+
+---
 
 ### **Delete a network**
 
