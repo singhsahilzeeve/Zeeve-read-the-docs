@@ -15,6 +15,7 @@ Welcome to Zeeve's documentation!
    ../AccountCreation.md
    ../cloud_authorization.md
    ../subscriptions.md
+   ../HowToCreateApiEndpoint.md
    ../Howtocreatemyfirstnetwork.md
    ../HyperledgerSawtooth.md
    ../HyperledgerFabric.md
