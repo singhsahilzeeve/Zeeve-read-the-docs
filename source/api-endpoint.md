@@ -1,5 +1,7 @@
 # API Endpoints
 
+This page has detailed steps on how to
+
 1. [Create an endpoint](#create-an-endpoint)
 
 2. [Modify an endpoint](#modify-endpoint)
