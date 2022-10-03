@@ -27,7 +27,7 @@ This section is going to guide you how to purchase a subscription of your choice
    ![](images/apiEndpoint/apiEndpointMarketplace.png)
    &nbsp;
 
-2. Click on the **Supported Protocols** button on top right and you will be able to see the protocols and their chains that [Zeeve](https://zeeve.io) offers for creating API endpoints.
+2. Click on the **Supported Protocols** button on top right and you will be able to see the protocols and their network types that [Zeeve](https://zeeve.io) offers for creating API endpoints.
 
    ![](images/apiEndpoint/apiEndpointSupportedProtocols.png)
    &nbsp;
