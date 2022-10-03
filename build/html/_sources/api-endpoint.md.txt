@@ -46,7 +46,9 @@ Click on the card to choose the subscription in which you want add the endpoint.
    Proceed further by clicking on the **Next Step** button after providing all the details.
    <br></br>
 
-2. **Security Configuration (Optional)**
+2. **Security Configuration**
+
+   **NOTE:** Adding security to the endpoint is **optional**.
 
    This step configures the security settings for the endpoint. An option to add a **JWT** in your API call to make your endpoint more secure.
 
