@@ -44,8 +44,9 @@ Click on the card to choose the subscription in which you want add the endpoint.
    - **Network Type:** The network type of the selected blockchain protocol.
 
    Proceed further by clicking on the **Next Step** button after providing all the details.
+   <br></br>
 
-2. **Security Configuration**
+2. **Security Configuration (Optional)**
 
    This step configures the security settings for the endpoint. An option to add a **JWT** in your API call to make your endpoint more secure.
 
@@ -56,7 +57,7 @@ Click on the card to choose the subscription in which you want add the endpoint.
    - **Public Key Name:** The name associated to the _public key_.
    - **Public Key:** The public key of a assymetric key-pair. Only keys generated using **_RSA_** and **_ECDSA_** algorithms are allowed.
 
-On clicking the **Submit** button a pop-up window will open which ensures the successful creation of your network.
+On clicking the **Submit** button a pop-up window will open which ensures the successful creation of your endpoint.
 
 > > > > > > ![](images/apiEndpoint/apiEndpointCreateSuccessModal.png)
 
@@ -75,13 +76,13 @@ This section will guide you on how you can modify an endpoint's
 
 Visit the endpoint detail page of your endpoint (Manage Services > API Endpoints > Your Endpoint).
 
-Click on the **_Edit_** button in the top right corner.
+Click on the **_Edit_** icon in the top right corner.
 
 > > > > > > > > > > > ![](images/apiEndpoint/apiEndpointButtonEdit.png)
 
 - **Change Endpoint Name**
 
-  After clicking the **_Edit_** button the endpoint name field will become editable. Update the name as required.
+  After clicking the **_Edit_** icon the endpoint name field will become editable. Update the name as required.
 
   Then click the **_Save_** button beside the input field to save the name.
 
@@ -89,7 +90,7 @@ Click on the **_Edit_** button in the top right corner.
 
 - **Modify Endpoint Security**
 
-  After clicking the **_Edit_** button the security section will become editable.
+  After clicking the **_Edit_** icon the security section will become editable.
 
   Toggle the security toggle as per the requirement to turn on or off the JWT security option.
 
@@ -103,7 +104,7 @@ Click on the **_Edit_** button in the top right corner.
 
 Visit the endpoint detail page of your endpoint (Manage Services > API Endpoints > Your Endpoint).
 
-Click on the **_Edit_** button in the top right corner.
+Click on the **_Delete_** icon in the top right corner.
 
 > > > > > > > > > > > > ![](images/apiEndpoint/apiEndpointButtonDelete.png)
 
