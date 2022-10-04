@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Endpoints &mdash; Zeeve 1.6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to create my first Network?" href="Howtocreatemyfirstnetwork.html" />
+    <link rel="prev" title="Manage your subscriptions" href="subscriptions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Zeeve
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Zeeve User Manual.html">What is Zeeve?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ZeeveOverview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AccountCreation.html">Account Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud_authorization.html">Cloud Authorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subscriptions.html"><strong>Manage your subscriptions</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-an-endpoint"><strong>Create an endpoint</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modify-endpoint"><strong>Modify Endpoint</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-endpoint"><strong>Delete Endpoint</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Howtocreatemyfirstnetwork.html">How to create my first Network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HyperledgerFabric.html">Hyperledger Fabric Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ethereum.html">Ethereum Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Corda.html">Corda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Avalanche.html">Avalanche Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Binance.html">Binance Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dcomm.html">Dcomm Staking Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Fantom.html">Fantom Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polygon.html">Polygon Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tron.html">Tron Dedicated Node Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credits.html">Credits Deployment Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Product_configure.html">Product Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevelopmentPractices.html">Development Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developmentHLF.html">Hyperledger Fabric’s Application Development Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blockchain_Protocols.html">Major Blockchain Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zeeveDistributedFileSystem.html">Zeeve Distributed File System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Zeeve_Support.html">Zeeve Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Releases.html">Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Zeeve</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Endpoints</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api endpoint.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-endpoints">
+<h1>API Endpoints<a class="headerlink" href="#api-endpoints" title="Permalink to this headline">¶</a></h1>
+<p>This page has detailed steps on how to</p>
+<ol class="simple">
+<li><p><a class="reference external" href="#create-an-endpoint">Create an endpoint</a></p></li>
+<li><p><a class="reference external" href="#modify-endpoint">Modify an endpoint</a></p>
+<ul class="simple">
+<li><p>Change name</p></li>
+<li><p>Update security</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#delete-endpoint">Delete an endpoint</a></p></li>
+</ol>
+<hr class="docutils" />
+<div class="section" id="create-an-endpoint">
+<h2><strong>Create an endpoint</strong><a class="headerlink" href="#create-an-endpoint" title="Permalink to this headline">¶</a></h2>
+<p><strong>NOTE:</strong> <a class="reference internal" href="subscriptions.html"><span class="doc">Purchase</span></a> a subscription plan before proceeding.</p>
+<p>This section will provide you detailed steps for creating an API endpoint.</p>
+<p>Visit the API Endpoints page by clicking on <strong>API Endpoints</strong> under <strong>Manage Services</strong> from the left side pane.</p>
+<p><img alt="_images/apiEndpointsPage.png" src="_images/apiEndpointsPage.png" />
+ </p>
+<p>Click on <strong>Add Endpoint</strong> card or the button on top right corner. You will be able to see all the subscriptions you bought for the API endpoints.</p>
+<p><img alt="_images/apiEndpointSubscriptionCards.png" src="_images/apiEndpointSubscriptionCards.png" /></p>
+<p><strong>NOTE:</strong> These cards can be different based on your purchased subscriptions.</p>
+<p><strong>NOTE:</strong> The card will not be visible if the <em>API Units</em> or the <em>Endpoint</em> quota for that subscription has been exhausted.</p>
+<p>Click on the card to choose the subscription in which you want add the endpoint. This will redirect you to the endpoint setup page.</p>
+<ol>
+<li><p><strong>Endpoint Info</strong></p>
+<p>This step configures the basic and blockchain protocol settings for the endpoint.</p>
+<p><img alt="_images/apiEndpointCreate-1.png" src="_images/apiEndpointCreate-1.png" /></p>
+<ul class="simple">
+<li><p><strong>Endpoint Name:</strong> The name of your endpoint.</p></li>
+<li><p><strong>Workspace:</strong> The workspace in which the endpoint will be added.</p></li>
+<li><p><strong>Protocol:</strong> The blockchain protocol for which the endpoint is created.</p></li>
+<li><p><strong>Network Type:</strong> The network type of the selected blockchain protocol.</p></li>
+</ul>
+<p>Proceed further by clicking on the <strong>Next Step</strong> button after providing all the details.</p>
+</li>
+<li><p><strong>Security Configuration</strong></p>
+<p>This step configures the security settings for the endpoint. An option to add a <strong>JWT</strong> in your API call to make your endpoint more secure.</p>
+<p><img alt="_images/apiEndpointCreate-2.png" src="_images/apiEndpointCreate-2.png" />
+ </p>
+<ul class="simple">
+<li><p><strong>Require JWT:</strong> Enable this checkbox if you want to add a JWT security option.</p></li>
+<li><p><strong>Public Key Name:</strong> The name associated to the <em>public key</em>.</p></li>
+<li><p><strong>Public Key:</strong> The public key of a assymetric key-pair. Only keys generated using <strong><em>RSA</em></strong> and <strong><em>ECDSA</em></strong> algorithms are allowed.</p></li>
+</ul>
+</li>
+</ol>
+<p>On clicking the <strong>Submit</strong> button a pop-up window will open which ensures the successful creation of your network.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p><img alt="_images/apiEndpointCreateSuccessModal.png" src="_images/apiEndpointCreateSuccessModal.png" /></p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p> </p>
+<p>On clicking the <strong>Continue</strong> button you will be redirected to the page where you can see the endpoint you created.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="modify-endpoint">
+<h2><strong>Modify Endpoint</strong><a class="headerlink" href="#modify-endpoint" title="Permalink to this headline">¶</a></h2>
+<p>This section will guide you on how you can modify an endpoint’s</p>
+<ul class="simple">
+<li><p>Name</p></li>
+<li><p>Security</p></li>
+</ul>
+<p>Visit the endpoint detail page of your endpoint (Manage Services &gt; API Endpoints &gt; Your Endpoint).</p>
+<p>Click on the <strong><em>Edit</em></strong> button in the top right corner.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p><img alt="_images/apiEndpointButtonEdit.png" src="_images/apiEndpointButtonEdit.png" /></p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<ul>
+<li><p><strong>Change Endpoint Name</strong></p>
+<p>After clicking the <strong><em>Edit</em></strong> button the endpoint name field will become editable. Update the name as required.</p>
+<p>Then click the <strong><em>Save</em></strong> button beside the input field to save the name.</p>
+<p>A pop-up will confirm the successful updation of the endpoint name.</p>
+</li>
+<li><p><strong>Modify Endpoint Security</strong></p>
+<p>After clicking the <strong><em>Edit</em></strong> button the security section will become editable.</p>
+<p>Toggle the security toggle as per the requirement to turn on or off the JWT security option.</p>
+<p>Then click the <strong><em>Save</em></strong> button below to save the update in security.</p>
+<p>A pop-up will confirm the successful updation of the endpoint security.</p>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="delete-endpoint">
+<h2><strong>Delete Endpoint</strong><a class="headerlink" href="#delete-endpoint" title="Permalink to this headline">¶</a></h2>
+<p>Visit the endpoint detail page of your endpoint (Manage Services &gt; API Endpoints &gt; Your Endpoint).</p>
+<p>Click on the <strong><em>Edit</em></strong> button in the top right corner.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p><img alt="_images/apiEndpointButtonDelete.png" src="_images/apiEndpointButtonDelete.png" /></p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>A confirmation window will open, click on the <strong>Yes</strong> button to delete the endpoint.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p><img alt="_images/apiEndpointDeleteModal.png" src="_images/apiEndpointDeleteModal.png" /></p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p> </p>
+<hr class="docutils" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Howtocreatemyfirstnetwork.html" class="btn btn-neutral float-right" title="How to create my first Network?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="subscriptions.html" class="btn btn-neutral float-left" title="Manage your subscriptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Zeeve
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

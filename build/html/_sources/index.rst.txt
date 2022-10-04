@@ -15,6 +15,7 @@ Welcome to Zeeve's documentation!
    ../AccountCreation.md
    ../cloud_authorization.md
    ../subscriptions.md
+   ../api-endpoint.md
    ../Howtocreatemyfirstnetwork.md
    ../HyperledgerSawtooth.md
    ../HyperledgerFabric.md
@@ -22,6 +23,7 @@ Welcome to Zeeve's documentation!
    ../Corda.md
    ../Avalanche.md
    ../Binance.md
+   ../Dcomm.md
    ../Fantom.md
    ../Polygon.md
    ../Tron.md
