@@ -1,4 +1,4 @@
-# **Manage your subscriptions**
+# Manage your subscriptions
 
 This section talks about how one can purcahse a subscription of a service. It will also guide how one can view manage their subscriptions.
 
