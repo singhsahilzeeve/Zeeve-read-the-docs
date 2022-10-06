@@ -19,12 +19,12 @@ This section will provide you detailed steps for creating an API endpoint.
 
 Visit the API Endpoints page by clicking on **API Endpoints** under **Manage Services** from the left side pane.
 
-![](images/apiEndpoint/apiEndpointsPage.png)
+![img](./images/apiEndpoint/apiEndpointsPage.png)
 &nbsp;
 
 Click on **Add Endpoint** card or the button on top right corner. You will be able to see all the subscriptions you bought for the API endpoints.
 
-![](images/apiEndpoint/apiEndpointSubscriptionCards.png)
+![img](./images/apiEndpoint/apiEndpointSubscriptionCards.png)
 
 **NOTE:** These cards can be different based on your purchased subscriptions.
 
@@ -36,7 +36,7 @@ Click on the card to choose the subscription in which you want add the endpoint.
 
    This step configures the basic and blockchain protocol settings for the endpoint.
 
-   ![](images/apiEndpoint/apiEndpointCreate-1.png)
+   ![img](./images/apiEndpoint/apiEndpointCreate-1.png)
 
    - **Endpoint Name:** The name of your endpoint.
    - **Workspace:** The workspace in which the endpoint will be added.
@@ -52,7 +52,7 @@ Click on the card to choose the subscription in which you want add the endpoint.
 
    This step configures the security settings for the endpoint. An option to add a **JWT** in your API call to make your endpoint more secure.
 
-   ![](images/apiEndpoint/apiEndpointCreate-2.png)
+   ![img](./images/apiEndpoint/apiEndpointCreate-2.png)
    &nbsp;
 
    - **Require JWT:** Enable this checkbox if you want to add a JWT security option.
@@ -61,7 +61,7 @@ Click on the card to choose the subscription in which you want add the endpoint.
 
 On clicking the **Submit** button a pop-up window will open which ensures the successful creation of your endpoint.
 
-> > > > > > ![](images/apiEndpoint/apiEndpointCreateSuccessModal.png)
+> > > > > > ![img](./images/apiEndpoint/apiEndpointCreateSuccessModal.png)
 
 &nbsp;
 
@@ -80,7 +80,7 @@ Visit the endpoint detail page of your endpoint (Manage Services > API Endpoints
 
 Click on the **_Edit_** icon in the top right corner.
 
-> > > > > > > > > > > ![](images/apiEndpoint/apiEndpointButtonEdit.png)
+> > > > > > > > > > > ![img](./images/apiEndpoint/apiEndpointButtonEdit.png)
 
 - **Change Endpoint Name**
 
@@ -108,11 +108,11 @@ Visit the endpoint detail page of your endpoint (Manage Services > API Endpoints
 
 Click on the **_Delete_** icon in the top right corner.
 
-> > > > > > > > > > > > ![](images/apiEndpoint/apiEndpointButtonDelete.png)
+> > > > > > > > > > > > ![img](./images/apiEndpoint/apiEndpointButtonDelete.png)
 
 A confirmation window will open, click on the **Yes** button to delete the endpoint.
 
-> > > > > > ![](images/apiEndpoint/apiEndpointDeleteModal.png)
+> > > > > > ![img](./images/apiEndpoint/apiEndpointDeleteModal.png)
 
 &nbsp;
 

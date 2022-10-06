@@ -24,27 +24,27 @@ This section is going to guide you how to purchase a subscription of your choice
 
 1. Click on the **API Endpoint** under **Buy Services** from the left pane and you will be redirected to the purchase page.
 
-   ![](images/apiEndpoint/apiEndpointMarketplace.png)
+   ![img](./images/apiEndpoint/apiEndpointMarketplace.png)
    &nbsp;
 
 2. Click on the **Supported Protocols** button on top right and you will be able to see the protocols and their network types that [Zeeve](https://zeeve.io) offers for creating API endpoints.
 
-   ![](images/apiEndpoint/apiEndpointSupportedProtocols.png)
+   ![img](./images/apiEndpoint/apiEndpointSupportedProtocols.png)
    &nbsp;
 
 3. Choose the plan of your choice and click on the **Subscribe** button under the plan of choice. A pop up window will open which will show the plan which you are subscribing. Click on **Continue** button to proceed with your purchase.
 
-   ![](images/apiEndpoint/apiEndpointPurchaseRedirect.png)
+   ![img](./images/apiEndpoint/apiEndpointPurchaseRedirect.png)
    &nbsp;
 
 4. You will be redirected to the payment page to complete your purchase. Fill the card details and click **Subscribe**.
 
-   ![](images/apiEndpoint/apiEndpointPaymentPage.png)
+   ![img](./images/apiEndpoint/apiEndpointPaymentPage.png)
    &nbsp;
 
 5. After successful payment you will be redirected to success page which ensures successful purchase of your subscription.
 
-   ![](images/apiEndpoint/apiEndpointPaymentSuccessPage.png)
+   ![img](./images/apiEndpoint/apiEndpointPaymentSuccessPage.png)
    &nbsp;
 
 **NOTE:** **Developer Plan** is a free plan and can only be purchased once.
@@ -55,29 +55,29 @@ This section is going to guide you how to purchase a subscription of your choice
 
 1. Click on the **Staking Nodes** under **Buy Services** from the left pane and you will be able to see the list of protocols that [Zeeve](https://zeeve.io) offers for staking.
 
-   ![](images/stakingMarketplace.png)
+   ![img](./images/stakingMarketplace.png)
    &nbsp;
 
 2. Click on the protocol card that you want to subscribe. You will be then redirected to the purchase page.
 
-   ![](images/stakingPurchase.png)
+   ![img](./images/stakingPurchase.png)
    &nbsp;
 
 3. Select the cloud option from **_Bring Your Own Cloud_** or **_Zeeve Managed Cloud_** and the number of nodes you want to purchase. Based on your selection the total amount for the subscription will be shown. Click on **Subscribe** button to continue. A pop up window will open, click on **Continue** to proceed with your purchase.
 
-   ![](images/stakingPurchaseRedirect.png)
+   ![img](./images/stakingPurchaseRedirect.png)
    &nbsp;
 
 4. You will be redirected to the payment page to complete your purchase. Fill the card details and click **Subscribe**.
 
-   ![](images/stakingPaymentPage.png)
+   ![img](./images/stakingPaymentPage.png)
    &nbsp;
 
    **NOTE** Prices on this page totally depends on the protocol and your selection of different options in previous step.
 
 5. After successful payment you will be redirected to success page which ensures successful purchase of your subscription.
 
-   ![](images/paymentSuccessPage.png)
+   ![img](./images/paymentSuccessPage.png)
    &nbsp;
 
 ---
@@ -86,15 +86,15 @@ This section is going to guide you how to purchase a subscription of your choice
 
 1. Click on **Marketplace** on the left side navigation bar.
 
-   ![](images/sideNavBar.png)
+   ![img](./images/sideNavBar.png)
 
 2. You will be landed to zeeve's market place page. Select the protocol card of you choice to purchase subscription of the protocol.
 
-   ![](images/marketPlace.png)
+   ![img](./images/marketPlace.png)
 
 3. You will be redirected to purchase page of the protocol, which looks similar to the below image.
 
-   ![](images/ETHPurcahseSub.png)
+   ![img](./images/ETHPurcahseSub.png)
 
 ---
 
@@ -104,11 +104,11 @@ This section is going to guide you how to purchase a subscription of your choice
 
 4. Select the number of nodes you want to purchase. You can also view the amount based on your selection of different options and number of nodes. After your selection, click on **subscribe** button. A pop up window will open similar to the below image. Click on **continue**.
 
-   ![](images/ETHPurchaseModal.png)
+   ![img](./images/ETHPurchaseModal.png)
 
 5. You will get redirect to the payment page to complete your purchase of subscription. Fill all the required details and click **subscribe**.
 
-   ![](images/ETHPurchasePayment.png)
+   ![img](./images/ETHPurchasePayment.png)
 
 ---
 
@@ -118,7 +118,7 @@ This section is going to guide you how to purchase a subscription of your choice
 
 6. After successful payment you will be redirected to payment success page which ensures successful purchase of your subscription.
 
-   ![](images/paymentSuccessPage.png)
+   ![img](./images/paymentSuccessPage.png)
 
 ## View Subscriptions
 
@@ -128,19 +128,19 @@ To view the subscriptions you have purchased follow the steps given below -
 
 1. Hover on **profile**
 
-   ![](images/profile.png)
+   ![img](./images/profile.png)
 
 2. Click on **Edit Profile**
 
-   ![](images/profilemenu.png)
+   ![img](./images/profilemenu.png)
 
 3. Click on **subscription** on the right most side.
 
-   ![](images/editprofile.png)
+   ![img](./images/editprofile.png)
 
 4. In the subscription section you will be able to view the list of subscriptions, you currently have.
 
-   ![](images/subscriptionList.png)
+   ![img](./images/subscriptionList.png)
 
 - In this section you can have a look to detailed information of your subscriptions.
 
@@ -173,19 +173,19 @@ To increase the quantify of alredy purchased item follow the steps mentioned bel
 
 2. Click on the **update** button on the right most side of the subscription.
 
-   ![](images/subscriptionList.png)
+   ![img](./images/subscriptionList.png)
 
 3. A pop up window will be opened similar to the image provided below.
 
-   ![](images/updateSubPopUpWindow.png)
+   ![img](./images/updateSubPopUpWindow.png)
 
 4. Increase the quantity of the item of your choice by clicking the **green** button associated to it and click on **update** button. A **continue** button will apper on the pop up window.
 
-   ![](images/updateSubIncreaseItem.png)
+   ![img](./images/updateSubIncreaseItem.png)
 
 5. Clicking on the button will redirect you to the payment page, where you can view the items you have just added. Click on the **subscribe** button to complete the process of updation of your subscription.
 
-   ![](images/updateSubPayment.png)
+   ![img](./images/updateSubPayment.png)
 
 6. After successful payment of the item you can view your updated subscription in [**subscriptions**](#view-subscriptions) section.
 
@@ -195,19 +195,19 @@ To increase the quantify of alredy purchased item follow the steps mentioned bel
 
 2. Click on the **update** button on the right most side of the subscription.
 
-   ![](images/subscriptionList.png)
+   ![img](./images/subscriptionList.png)
 
 3. A pop up window will be opened similar to the image provided below.
 
-   ![](images/updateSubPopUpWindow.png)
+   ![img](./images/updateSubPopUpWindow.png)
 
 4. Decrease the quantity of the item of your choice by clicking the **red** button associated to it and click on **update** button.
 
-   ![](images/updateSubDecreaseItems.png)
+   ![img](./images/updateSubDecreaseItems.png)
 
 5. Clicking on the button will update your subscription. A **continue** button will apper on the pop up window.
 
-   ![](images/updateSubDecreased.png)
+   ![img](./images/updateSubDecreased.png)
 
 6. After successful updation you can view your updated subscription in [**subscriptions**](#view-subscriptions) section.
 
@@ -227,10 +227,10 @@ This section talks about how to delte the subscriptions you don't need.
 
 2. Click on the **update** button on the right most side of the subscription.
 
-   ![](images/subscriptionList.png)
+   ![img](./images/subscriptionList.png)
 
 3. A pop up window will be opened similar to the image provided below.
 
-   ![](images/updateSubPopUpWindow.png)
+   ![img](./images/updateSubPopUpWindow.png)
 
 4. Decrease the quantity of each of the item to 0 by clicking the **red** button associated to it and click on **update** button. This will delete your selected subscription.

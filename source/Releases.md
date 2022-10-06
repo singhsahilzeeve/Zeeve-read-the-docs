@@ -1,6 +1,6 @@
 # Releases
 
-## ![](images/zeeve_launch.png) Zeeve 1.5.0 IBM Cloud Release
+## ![img](./images/zeeve_launch.png) Zeeve 1.5.0 IBM Cloud Release
 
 Now use your favourite Cloud to Deploy your favourite Blockchain. This update includes IBM cloud support, which allows you to deploy the choice of Blockchain deployments in a few clicks.
 
@@ -22,7 +22,7 @@ Did someone say bugs? We have restocked the bug repellent to allow seamless expe
 
 > *   Night mode is shinier then it was.
 
-## ![](images/zeeve_launch.png) Zeeve 1.4.0 R3 Corda Release
+## ![img](./images/zeeve_launch.png) Zeeve 1.4.0 R3 Corda Release
 
 We continuously upgrade Zeeve with smaller updates having bigger impacts. This release will be the addition of one of the leading Consortium protocol to the platform. Zeeve will now allow you to deploy Corda Production, Pre-Production and Test net on demand.
 
@@ -50,7 +50,7 @@ Did someone say bugs? We now have made Zeeve stable more than ever. And these as
 > *   Project creation bug fixed for Digital Ocean.
 > *   Day/Night visual mode is persistent now.
 
-## ![](images/zeeve_launch.png) **Zeeve Digital Ocean Follow-up Release**
+## ![img](./images/zeeve_launch.png) **Zeeve Digital Ocean Follow-up Release**
 
 We are committed to continuously update Zeeve and provide you all the Blockchain essentials required to power up your Blockchain Business needs. In the latest Follow-up Release, Zeeve now allows you to Deploy and Manage Hyperledger Fabric Networks on DigitalOcean Cloud using Kubernetes.
 
@@ -73,7 +73,7 @@ Check now @ https://www.zeeve.io
 
 * * *
 
-## ![](images/zeeve_launch.png) **Zeeve 1.3.0 Major Release**
+## ![img](./images/zeeve_launch.png) **Zeeve 1.3.0 Major Release**
 
 Another upgrade to upgrade your Blockchain experience. Zeeve 1.3.0 has been released and is available for use. We now support DigitalOcean, this allows you to deploy your Blockchain networks in your own DigitalOcean cloud infrastructure and its just a few clicks away.
 
@@ -104,7 +104,7 @@ Check now @ https://www.zeeve.io
 
 * * *
 
-## ![](images/zeeve_launch.png) **Zeeve 1.2.0 Major Release**
+## ![img](./images/zeeve_launch.png) **Zeeve 1.2.0 Major Release**
 
 **Credits Public Blockchain deployment is now Supported**
 
@@ -134,7 +134,7 @@ Check now @ https://www.zeeve.io
 
 * * *
 
-## ![](images/zeeve_launch.png) **Zeeve 1.1.1 Minor Release**
+## ![img](./images/zeeve_launch.png) **Zeeve 1.1.1 Minor Release**
 
 **IoT as a Service is the latest offering.**
 
@@ -161,7 +161,7 @@ Check now @ https://www.zeeve.io
 
 * * *
 
-## ![](images/zeeve_launch.png) **Zeeve 1.1.0 Released**
+## ![img](./images/zeeve_launch.png) **Zeeve 1.1.0 Released**
 
 Zeeve 1.1.0 has been released and is live.
 

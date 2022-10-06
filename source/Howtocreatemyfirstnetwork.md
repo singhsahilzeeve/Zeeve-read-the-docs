@@ -13,32 +13,32 @@ So wondering upon how to begin? Just follow these easy steps:-
 
   1. Click on **Workspace** on the left side navigation bar.
 
-  ![](images/sideNavBar.png)
+  ![img](./images/sideNavBar.png)
 
   2. You will be landed to a page similar to below image.
 
-  ![](images/addWorkspace.png)
+  ![img](./images/addWorkspace.png)
 
   2. Click on **New workspace**. A pop up window will appear.
 
-   ![](images/createWorkspace.png)
+   ![img](./images/createWorkspace.png)
 
   3. Give it a name of your choice(in our case we are going to name it Ethereum) and add a short description. Click **create**. You can see your newly created workspace added to the workspace tab.
 
-  ![](images/createdWorkspace.png)
+  ![img](./images/createdWorkspace.png)
   
 ### Create Network
   1. Click on **Workspace** on the left side navigation bar.
 
-  ![](images/sideNavBar.png)
+  ![img](./images/sideNavBar.png)
 
   2. You will be landed to **Zeeve's** network listing page where you will get the list of all of the networks you created. Click on **Add Network**.
 
-  ![](images/allNetworks.png)
+  ![img](./images/allNetworks.png)
 
   3. You will be landed to the **Network Configuration** page which looks similar to the below image.
    
-   ![](images/networkConfiguration.png)
+   ![img](./images/networkConfiguration.png)
 
   Here you will get to see different cards with different network configuration of diffrent protocols. These cards can be different according to your purchased subscriptions.<br>
   Choose the configuration of your choice for creating a network, and click on a card accordingly.<br>

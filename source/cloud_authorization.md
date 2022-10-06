@@ -24,24 +24,24 @@ To authorize your AWS account on Zeeve:-
 
 1. Hover on **profile** 
 
-    ![](images/profile.png)
+    ![img](./images/profile.png)
 
 2. Click on **Edit Profile**
  
-    ![](images/profilemenu.png)
+    ![img](./images/profilemenu.png)
 
 3. Click on **My Cloud**.
 
-    ![](images/editprofile.png)
+    ![img](./images/editprofile.png)
 
 4. Click on **AWS** and then click on 
     **Add AWS Cloud**.
    
-    ![](images/addAWS.png)
+    ![img](./images/addAWS.png)
 
 5. You will need AWS Access Key and AWS Access Secret Key, to authenticate your AWS account with Zeeve.
 
-    ![](images/awslogin.png)
+    ![img](./images/awslogin.png)
 
 ## Digital Ocean Authorization
 
@@ -56,23 +56,23 @@ After which on Zeeve do following steps:-
 
 1. Hover on **profile** 
  
-    ![](images/profile.png)
+    ![img](./images/profile.png)
 
 2. Click on **Edit Profile**
  
-    ![](images/profilemenu.png)
+    ![img](./images/profilemenu.png)
 
 3. Click on your cloud authentication for Digital Ocean account, click on **Authorize digital Ocean**.
 
-    ![](images/editprofile.png)
+    ![img](./images/editprofile.png)
 
 4. Click on **DigitalOcean** and then click on 
     **Add Digital Ocean Cloud**.
    
-    ![](images/addDO.png)
+    ![img](./images/addDO.png)
 
 5. Authorize DigitalOcean will redirect you to login page, you can login with your DigitalOcean credentials, once login is successful, Zeeve will be connected to your account.
 
-    ![](images/DOlogin.png)
+    ![img](./images/DOlogin.png)
 
 6. After this, you will be asked to allow Zeeve in your cloud account. Make sure you provide both **read and write** access on this page.
