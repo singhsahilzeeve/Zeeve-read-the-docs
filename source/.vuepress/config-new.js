@@ -52,5 +52,11 @@ module.exports = {
     plugins: {
         '@vuepress/active-header-links': true,
         '@vuepress/back-to-top': true,
+        'clean-urls': {
+            normalSuffix: ''
+        },
+        'check-md': true,
+        'code-switcher': true,
+	'@dovyp/vuepress-plugin-clipboard-copy': true,
     }
 }
