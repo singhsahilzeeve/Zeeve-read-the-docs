@@ -21,7 +21,7 @@ On the **Network Configuration** page you will be able to see different configur
 
 ---
 
-You can Choose **Managed-AWS** (Zeeve's managed hosting) or you can use your cloud account (AWS/DO) for the infrastructure of your node.
+You can Choose **Zeeve Managed Cloud** or you can use your cloud account (AWS/DO) for the infrastructure of your node.
 
 Choose the card with the configuration you want. Clicking on the card you will be redirected to the network setup page.
 
@@ -33,7 +33,7 @@ Choose the card with the configuration you want. Clicking on the card you will b
    > - **Network Name**: A name to identify your network.
    > - **Deployment Type**: Deployment type
    > - **Network Type**
-   >   - **TestNet**: This will deploy your network on the network testnet. you can use this for your non-production needs like testing or demonstrations.
+   >   - **Melbourne Testnet**: This will deploy your network on the network testnet. you can use this for your non-production needs like testing or demonstrations.
    > - **Workspace**: This represents the workspace in which the network will be added after the successful creation.
 
    Proceed further by clicking on the **Next Step** button after providing all the details.
@@ -58,6 +58,17 @@ In the case of **Managed - Cloud**, select the region for the network under **Se
 
 > - **Node Name**: A name to identify your node, this field requires a unique name. Unique means that it should be unique in a network to which you are adding a node.
 > - **Region**: It indicates the region of the cloud service. These regions are the geographic locations where your network instances are going to be hosted.
+
+For better understanding of which region is best for you please refer the following
+
+New York City, The US: NYC1, NYC2, NYC3<br/>
+San Francisco, The US: SFO1, SFO2<br/>
+Toronto, Canada: TOR1<br/>
+London, United Kingdom: LON1<br/>
+Frankfurt, Germany: FRA1<br/>
+Amsterdam, the Netherlands: AMS2, AMS3<br/>
+Singapore: SGP1<br/>
+Bangalore, India: BLR1<br/>
 
 ---
 
