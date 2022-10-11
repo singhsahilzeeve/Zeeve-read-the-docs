@@ -3,7 +3,7 @@
 **NOTE** [Purchase](./subscriptions.md) a subscription before proceeding.
 
 1. [Create a network](#create-a-network)
-2. [Add a node](#add-node-to-a-network)
+2. [Add an additional node](#add-additional-node-to-a-network)
 3. [Delete a node](#delete-node-in-a-network)
 4. [Delete a network](#delete-a-network)
 
@@ -61,13 +61,12 @@ In the case of **Managed - Cloud**, select the region for the network under **Se
 
 For better understanding of which region is best for you please refer the following
 
-New York City, The US: NYC1, NYC2, NYC3<br/>
-San Francisco, The US: SFO1, SFO2<br/>
+New York City, The US: NYC1, NYC3<br/>
+San Francisco, The US: SFO2<br/>
 Toronto, Canada: TOR1<br/>
 London, United Kingdom: LON1<br/>
 Frankfurt, Germany: FRA1<br/>
-Amsterdam, the Netherlands: AMS2, AMS3<br/>
-Singapore: SGP1<br/>
+Amsterdam, the Netherlands: AMS3<br/>
 Bangalore, India: BLR1<br/>
 
 ---
@@ -97,9 +96,9 @@ In the case of **BYOC** (AWS or Digital Ocean), select the region for the networ
 
 ---
 
-### **Add node to a network**
+### **Add additional node to a network**
 
-This section will guide you on how you can add a node to a network.
+This section will guide you on how you can add an additional node to a network. As you have already created a network, follow these steps to add more nodes to the network.
 
 1. Visit the network detail page. Click on the _Actions_ button on the top right, and select the **Add Node** option.
 
