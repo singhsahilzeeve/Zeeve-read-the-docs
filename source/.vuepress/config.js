@@ -1,6 +1,7 @@
 module.exports = {
     title: 'Zeeve Documentation',
     description: "Zeeve documentation",
+    base: "/docs/",
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
@@ -9,14 +10,13 @@ module.exports = {
     },
     themeConfig: {
         logo: '/img/zeeve-head.webp',
-        apiDocsURL: `http://localhost:8080/api/reference/`,
         nav: [
             { text: 'Support', link: '/Zeeve_Support' },
             { text: 'Log in', link: 'https://app.zeeve.io/auth/login?utm_info=e30' },
             { text: 'Sign Up', link: 'https://app.zeeve.io/' }
         ],
         sidebar: [
-            
+            '/AccountCreation',
             '/ZeeveOverview',
             '/AccountCreation',
             '/cloud_authorization',
@@ -42,8 +42,6 @@ module.exports = {
         '/Zeeve_Support',
         ],
         sidebarDepth: 2,
-        docsRepo: 'zeeve/docs',
-        docsDir: 'docs',
         editLinks: true,
         editLinkText: 'Edit on GitHub',
         nextLinks: false,

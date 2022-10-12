@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hyperledger Fabric&#39;s Application Development Practices | Zeeve Documentation</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/docs/favicon.ico">
+    <meta name="description" content="Zeeve documentation">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.35587329.css" as="style"><link rel="preload" href="/docs/assets/js/app.a4965dc8.js" as="script"><link rel="preload" href="/docs/assets/js/2.1b306c87.js" as="script"><link rel="preload" href="/docs/assets/js/41.17b2791c.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.751f0ea5.js"><link rel="prefetch" href="/docs/assets/js/11.1caddf7b.js"><link rel="prefetch" href="/docs/assets/js/12.2c439c43.js"><link rel="prefetch" href="/docs/assets/js/13.c1a53c16.js"><link rel="prefetch" href="/docs/assets/js/14.96727f0b.js"><link rel="prefetch" href="/docs/assets/js/15.0f166928.js"><link rel="prefetch" href="/docs/assets/js/16.5d1d8679.js"><link rel="prefetch" href="/docs/assets/js/17.b9d21619.js"><link rel="prefetch" href="/docs/assets/js/18.58205738.js"><link rel="prefetch" href="/docs/assets/js/19.ed2acb06.js"><link rel="prefetch" href="/docs/assets/js/20.3027e941.js"><link rel="prefetch" href="/docs/assets/js/21.4dafe3a6.js"><link rel="prefetch" href="/docs/assets/js/22.2dc6104b.js"><link rel="prefetch" href="/docs/assets/js/23.462b92fa.js"><link rel="prefetch" href="/docs/assets/js/24.65c9b166.js"><link rel="prefetch" href="/docs/assets/js/25.8caaa4fe.js"><link rel="prefetch" href="/docs/assets/js/26.0a88d5d6.js"><link rel="prefetch" href="/docs/assets/js/27.e6a2972f.js"><link rel="prefetch" href="/docs/assets/js/28.ca1501a5.js"><link rel="prefetch" href="/docs/assets/js/29.32f7d882.js"><link rel="prefetch" href="/docs/assets/js/3.8bc80566.js"><link rel="prefetch" href="/docs/assets/js/30.184e8c9d.js"><link rel="prefetch" href="/docs/assets/js/31.921c6c19.js"><link rel="prefetch" href="/docs/assets/js/32.7e33ac00.js"><link rel="prefetch" href="/docs/assets/js/33.08e1b17d.js"><link rel="prefetch" href="/docs/assets/js/34.a8aad1c8.js"><link rel="prefetch" href="/docs/assets/js/35.f67af070.js"><link rel="prefetch" href="/docs/assets/js/36.0f7fa5ae.js"><link rel="prefetch" href="/docs/assets/js/37.b8221518.js"><link rel="prefetch" href="/docs/assets/js/38.f3549eb4.js"><link rel="prefetch" href="/docs/assets/js/39.023cba74.js"><link rel="prefetch" href="/docs/assets/js/4.4a21a33e.js"><link rel="prefetch" href="/docs/assets/js/40.50c8975b.js"><link rel="prefetch" href="/docs/assets/js/42.52799875.js"><link rel="prefetch" href="/docs/assets/js/43.bb364f01.js"><link rel="prefetch" href="/docs/assets/js/5.a160f30c.js"><link rel="prefetch" href="/docs/assets/js/6.6e400295.js"><link rel="prefetch" href="/docs/assets/js/7.865943ee.js"><link rel="prefetch" href="/docs/assets/js/8.9929153e.js"><link rel="prefetch" href="/docs/assets/js/9.7cb8634a.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.35587329.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/img/zeeve-head.webp" alt="Zeeve Documentation" class="logo"> <span class="site-name can-hide">Zeeve Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/Zeeve_Support.html" class="nav-link">
+  Support
+</a></div><div class="nav-item"><a href="https://app.zeeve.io/auth/login?utm_info=e30" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Log in
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://app.zeeve.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Sign Up
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/Zeeve_Support.html" class="nav-link">
+  Support
+</a></div><div class="nav-item"><a href="https://app.zeeve.io/auth/login?utm_info=e30" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Log in
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://app.zeeve.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Sign Up
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docs/AccountCreation.html" class="sidebar-link">Account Creation</a></li><li><a href="/docs/ZeeveOverview.html" class="sidebar-link">Overview</a></li><li><a href="/docs/AccountCreation.html" class="sidebar-link">Account Creation</a></li><li><a href="/docs/cloud_authorization.html" class="sidebar-link">Cloud Authorizations</a></li><li><a href="/docs/subscriptions.html" class="sidebar-link">Manage your subscriptions</a></li><li><a href="/docs/api-endpoint.html" class="sidebar-link">API Endpoints</a></li><li><a href="/docs/Howtocreatemyfirstnetwork.html" class="sidebar-link">How to create my first Network?</a></li><li><a href="/docs/HyperledgerFabric.html" class="sidebar-link">Hyperledger Fabric Dedicated Node Setup</a></li><li><a href="/docs/Ethereum.html" class="sidebar-link">Ethereum Dedicated Node Setup</a></li><li><a href="/docs/Corda.html" class="sidebar-link">Corda</a></li><li><a href="/docs/Avalanche.html" class="sidebar-link">Avalanche Dedicated Node Setup</a></li><li><a href="/docs/Binance.html" class="sidebar-link">Binance Dedicated Node Setup</a></li><li><a href="/docs/Dcomm.html" class="sidebar-link">Dcomm Staking Node Setup</a></li><li><a href="/docs/Fantom.html" class="sidebar-link">Fantom Dedicated Node Setup</a></li><li><a href="/docs/Polygon.html" class="sidebar-link">Polygon Dedicated Node Setup</a></li><li><a href="/docs/Tron.html" class="sidebar-link">Tron Dedicated Node Setup</a></li><li><a href="/docs/Credits.html" class="sidebar-link">Credits Deployment Specifications</a></li><li><a href="/docs/Product_configure.html" class="sidebar-link">Product Configurations</a></li><li><a href="/docs/DevelopmentPractices.html" class="sidebar-link">Development Practices</a></li><li><a href="/docs/HyperledgerFabric.html" class="sidebar-link">Hyperledger Fabric Dedicated Node Setup</a></li><li><a href="/docs/Blockchain_Protocols.html" class="sidebar-link">Major Blockchain Protocols</a></li><li><a href="/docs/References.html" class="sidebar-link">References</a></li><li><a href="/docs/zeeveDistributedFileSystem.html" class="sidebar-link">Zeeve Distributed File System</a></li><li><a href="/docs/Zeeve_Support.html" class="sidebar-link">Zeeve Support</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="hyperledger-fabric-s-application-development-practices"><a href="#hyperledger-fabric-s-application-development-practices" class="header-anchor">#</a> Hyperledger Fabric's Application Development Practices</h1> <p>Refer to <a href="https://github.com/sanyam-gupta583/balance-transfer-zeeve" target="_blank" rel="nofollow noopener">Sample Project<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>Certain practices can help the developer create applications which are one click deployable on Zeeve. They are:-</p> <ul><li><p>For packaging your product to be automated by Zeeve, you will need to <a href="https://docs.docker.com/engine/examples/" target="_blank" rel="nofollow noopener">dockerize<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> your project's services by creating <code>Dockerfiles</code> for them.</p> <div class="language- extra-class"><pre class="language-text"><code>FROM node:8.9.0
+
+WORKDIR /balance-transfer
+
+COPY . .
+ENV PORT=4000
+RUN npm install
+CMD node app
+</code></pre></div></li> <li><p>Make use of <code>network-config.yaml</code> (connections profiles) and <code>org.yaml</code> (if required) for all blockchain related configurations. At the time of deployment for a network, Zeeve creates these files and allows the developer to download them along with the other artifacts. You can consider this file to develop your applications. All other application configs should be part of the Docker image itself.</p></li> <li><p>Create a <code>.env</code> file containing an array of domain prefixes corrosponding to Ingress resource definitions. The syntax should be of the form:
+<code>(&quot;&lt;domain_prefix_1&gt;:&lt;ingress_resource_name_1&gt;&quot; &quot;&lt;domain_prefix_2&gt;:&lt;ingress_resource_name_2&gt; ...&quot;)</code></p> <div class="language- extra-class"><pre class="language-text"><code>EXT_EXPOSED_SERVICES=(&quot;balancetranfer:balance-transfer-ingress&quot;)
+</code></pre></div></li> <li><p>Create a <code>docker-compose-build.yaml</code> file for creating images of all services that your application requires. This will help Zeeve create relevant images, push them to the container-registry and later use them.</p> <ul><li>Each service definition whose container image would be created needs to have an <code>image</code> keyword, the associated value needs to same as that of image name (Deployment.contianers.spec.containers.image) in k8_application.yaml.template.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>version: &quot;2.0&quot;
+
+services:
+  balance-transfer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: balance-transfer:latest
+    container_name: balance-transfer-default
+    ports:
+      - '4000:4000'
+    command: |
+      bash -c &quot;PORT=4000 node app&quot;
+    restart: always
+    
+</code></pre></div></li> <li><p>Create a yaml file <code>k8_application.yaml.template</code> and keep it at your project's root folder.
+The file needs to keep the following points in account:-</p> <ul><li>The image name for containers needs to adhere to the guideline outlined in the step above.</li> <li>Define an <code>imagePullSecrets</code> named container-registry-cred. Creation and updation of this secret is handled by Zeeve, but the definition is developers responsibility.</li> <li>For mounting relevant crypto data and channel artifacts in a deployment, Zeeve will create secrets and mount them on <code>/crypto-data</code> path. The deployment/s on which this mounting takes place is identified by special character string <code>@@replace_my_crypto_artifacts@@</code>.</li> <li>Host for each Ingress resource will be an amalgamation of information specified in .env file and domain assigned to your Kubernetes cluster.</li> <li>Take special care to mount relevant persistent volumes as pods will be recreated whenever there is an application update.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>apiVersion: v1
+kind: Service
+metadata:
+  name: balance-transfer-svc
+spec:
+  type: ClusterIP
+  ports:
+    - port: 4000
+      targetPort: 4000
+      protocol: TCP
+  selector:
+    name: balance-transfer-dep
+
+ ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: balance-transfer-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: balance-transfer
+  template:
+    metadata:
+      labels:
+        name: balance-transfer
+    spec:
+      volumes:
+        #- name: balance-transfer-data
+        #  persistentVolumeClaim:
+        #    claimName: balance-transfer-data-pvc
+            @@replace_my_crypto_artifacts@@
+      imagePullSecrets:
+      - name: container-registry-cred
+      containers:
+        - name: balance-transfer
+          image: balance-transfer:12
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 4000
+              protocol: TCP
+          #livenessProbe:
+          #  httpGet:
+          #    path: /
+          #    port: 4000
+          command:
+            - bash
+            - -c
+            - |
+              echo &quot;installing GO&quot; 
+              cd /usr/local
+              curl -O https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
+              tar -xvf go1.10.3.linux-amd64.tar.gz
+              echo &quot;export PATH=$PATH:/usr/local/go/bin&quot; &gt;&gt; /root/.bashrc
+              source /root/.bashrc
+
+              echo &quot;configuring application&quot;
+              mkdir /application
+              cd /application
+              cp -r /balance-transfer/* ./
+              cp -Lr /crypto-data/* ./artifacts/
+              #npm install
+              node app
+          volumeMounts:
+            #- mountPath: /application
+            #  name: balance-transfer-data
+              @@replace_my_crypto_artifacts@@
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: balance-transfer-data-pvc
+spec:
+  accessModes:
+    - &quot;ReadWriteOnce&quot;
+  resources:
+    requests:
+      storage: &quot;5Gi&quot;
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: balance-transfer-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/backend-protocol: &quot;http&quot;
+spec:
+  rules:
+    - host: 
+      http:
+        paths:
+        - backend:
+            serviceName: balance-transfer-svc
+            servicePort: 4000
+
+</code></pre></div></li> <li><p>While uploading the project attach some supporting documents to explain the organisation names and other details that shall be put while creating networks for the product. These documents will help users to create and deploy networks and products on their own.</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/docs/assets/js/app.a4965dc8.js" defer></script><script src="/docs/assets/js/2.1b306c87.js" defer></script><script src="/docs/assets/js/41.17b2791c.js" defer></script>
+  </body>
+</html>
