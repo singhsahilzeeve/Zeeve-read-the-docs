@@ -16,7 +16,6 @@ module.exports = {
             { text: 'Sign Up', link: 'https://app.zeeve.io/' }
         ],
         sidebar: [
-            '/AccountCreation',
             '/ZeeveOverview',
             '/AccountCreation',
             '/cloud_authorization',
