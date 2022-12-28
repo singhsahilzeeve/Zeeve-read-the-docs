@@ -207,52 +207,52 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
    <br/>
 
 
-   ⚙️ *****dvm.createAddress*****
+   <!-- ⚙️ *****dvm.createAddress*****
        
    <blockquote>
    <p>Create a new address controlled by the given user.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-createaddress-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.createAsset*****
+   <!-- ⚙️ *****dvm.createAsset*****
   
    <blockquote>
    <p>Create a new variable-cap, fungible asset. No units of the asset exist at initialization. Minters can mint units of this asset using createMintTx, signMintTx and issueTx. The asset can be sent with dvm.send.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-createasset-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.createFixedCapAsset*****
+   <!-- ⚙️ *****dvm.createFixedCapAsset*****
   
    <blockquote>
    <p>Create a new fixed-cap, fungible asset. A quantity of it is created at initialization and then no more is ever created. The asset can be sent with dvm.send.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-createfixedcapasset-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.createNFTAsset*****
+   <!-- ⚙️ *****dvm.createNFTAsset*****
   
    <blockquote>
    <p>Create a new non-fungible asset. No units of the asset exist at initialization. Minters can mint units of this asset using mintTx and signMintTx. The asset can be sent with dvm.sendNFT.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-createnftasset-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.createVariableCapAsset*****
+   <!-- ⚙️ *****dvm.createVariableCapAsset*****
   
    <blockquote>
    <p>Create a new variable-cap, fungible asset. No units of the asset exist at initialization. Minters can mint units of this asset using createMintTx, signMintTx and issueTx. The asset can be sent with dvm.send.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-createvariablecapasset-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-
+<!-- 
    ⚙️ *****dvm.export*****
   
    <blockquote>
@@ -260,16 +260,16 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-export-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
    
-   ⚙️ *****dvm.exportKey*****
+   <!-- ⚙️ *****dvm.exportKey*****
   
    <blockquote>
    <p>Get the private key that controls a given address. The returned private key can be added to a user with dvm.importKey.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-exportkey-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
    ⚙️ *****dvm.getAddressTxs*****
   
@@ -334,77 +334,77 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
 
    <br/>
 
-   ⚙️ *****dvm.import*****
+   <!-- ⚙️ *****dvm.import*****
   
    <blockquote>
    <p>Finalize a transfer of DCM from either the ATH-Chain to the AST-Chain or the ACT-Chain to the AST-Chain. Before this method is called, you must call either the ATH-Chain’s exportDCM method or the ACT-Chain’s exportDCM method to initiate the transfer.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-import-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.importKey*****
+   <!-- ⚙️ *****dvm.importKey*****
   
    <blockquote>
    <p>Give a user control over an address by providing the private key that controls the address.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-importkey-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.listAddresses*****
+   <!-- ⚙️ *****dvm.listAddresses*****
   
    <blockquote>
    <p>List addresses controlled by the given user.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-listaddresses-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.mint*****
+   <!-- ⚙️ *****dvm.mint*****
   
    <blockquote>
    <p>Create an unsigned transaction to mint more of a variable-cap asset (an asset created with dvm.createVariableCapAsset).</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-mint-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.mintNFT*****
+   <!-- ⚙️ *****dvm.mintNFT*****
   
    <blockquote>
    <p>Mint more of a non-fungible asset (an asset created with dvm.createNFTAsset).</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-mintnft-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.send*****
+   <!-- ⚙️ *****dvm.send*****
   
    <blockquote>
    <p>Send a quantity of an asset to an address.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-send-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.sendMultiple*****
+   <!-- ⚙️ *****dvm.sendMultiple*****
   
    <blockquote>
    <p>Send multiple quantity of an asset to an address.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-sendmultiple-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dvm.sendNFT*****
+   <!-- ⚙️ *****dvm.sendNFT*****
   
    <blockquote>
    <p>Send a quantity of an asset to an address.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dvm-sendnft-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
    ⚙️ *****health.health*****
   
@@ -532,23 +532,23 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
 
    <br/>
 
-   ⚙️ *****dcm.export*****
+   <!-- ⚙️ *****dcm.export*****
   
    <blockquote>
    <p>Getting a transaction receipt.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dcm-export-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dcm.exportKey*****
+   <!-- ⚙️ *****dcm.exportKey*****
   
    <blockquote>
    <p>Get the private key that controls a given address.The returned private key can be added to a user with dvm.importKey.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dcm-exportkey-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
    ⚙️ *****dcm.getAtomicTx*****
   
@@ -577,21 +577,21 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
 
    <br/>
 
-   ⚙️ *****dcm.import*****
+   <!-- ⚙️ *****dcm.import*****
   
    <blockquote>Send DCM from the AST-Chain to an account on the ATH-Chain. After calling this method, you must call the ATH-Chain’s DCM method to complete the transfer. the UTXOs that reference a given address.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dcm-import-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dcm.importKey*****
+   <!-- ⚙️ *****dcm.importKey*****
   
    <blockquote>Give a user control over an address by providing the private key that controls the address.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-dcm-importkey-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
    ⚙️ *****net_version*****
   
@@ -897,45 +897,45 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
 
    <br/>
 
-   ⚙️ *****authority.addDelegator*****
+   <!-- ⚙️ *****authority.addDelegator*****
 
    <blockquote>Add a delegator to the Default Subnet. A delegator stakes DCM and specifies a validator (the delegatee) to validate on their behalf. The delegatee has an increased probability of being sampled by other validators (weight) in proportion to the stake delegated to them. The delegatee charges a fee to the delegator; the former receives a percentage of the delegator’s validation reward (if any.) The delegation period must be a subset of the perdiod that the delegatee validates the Default Subnet.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-adddelegator-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****authority.addValidator*****
+   <!-- ⚙️ *****authority.addValidator*****
 
    <blockquote>Add a validator to the Default Subnet.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-addvalidator-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****authority.addSubnetValidator*****
+   <!-- ⚙️ *****authority.addSubnetValidator*****
 
    <blockquote>Add a validator to a Subnet other than the Default Subnet. The validator must validate the Default Subnet for the entire duration they validate this Subnet.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-addsubnetvalidator-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****authority.createAddress*****
+   <!-- ⚙️ *****authority.createAddress*****
 
    <blockquote>Add a delegator to the Default Subnet. A delegator stakes DCM and specifies a validator (the delegatee) to validate on their behalf. The delegatee has an increased probability of being sampled by other validators (weight) in proportion to the stake delegated to them. The delegatee charges a fee to the delegator; the former receives a percentage of the delegator’s validation reward (if any.) The delegation period must be a subset of the perdiod that the delegatee validates the Default Subnet.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-createaddress-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****authority.createSubnet*****
+   <!-- ⚙️ *****authority.createSubnet*****
 
    <blockquote>Create an unsigned transaction to create a new Subnet. The unsigned transaction must be signed with the key of the account paying the transaction fee. The Subnet’s ID is the ID of the transaction that creates it (ie the response from issueTx when issuing the signed transaction.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-createsubnet-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
    ⚙️ *****authority.getBalance*****
 
@@ -1090,46 +1090,46 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
 
    <br/>
 
-   ⚙️ *****authority.exportDCM*****
+   <!-- ⚙️ *****authority.exportDCM*****
 
    <blockquote>Send DCM from an account on the ACT-Chain to an address on the AST-Chain. This transaction must be signed with the key of the account that the DCM is sent from and which pays the transaction fee. After issuing this transaction, you must call the AST-Chain’s importDCM method to complete the transfer.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-exportdcm-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****authority.exportKey*****
+   <!-- ⚙️ *****authority.exportKey*****
 
    <blockquote>Get the private key that controls a given address. The returned private key can be added to a user with authority.importKey.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-exportkey-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****authority.importDCM*****
+   <!-- ⚙️ *****authority.importDCM*****
 
    <blockquote>Complete a transfer of DCM from the AST-Chain to the ACT-Chain. Before this method is called, you must call the AST-Chain’s exportDCM method to initiate the transfer.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-importdcm-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****authority.importKey*****
+   <!-- ⚙️ *****authority.importKey*****
 
    <blockquote>Give a user control over an address by providing the private key that controls the address.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-importkey-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
 
-   ⚙️ *****authority.listAddresses*****
+   <!-- ⚙️ *****authority.listAddresses*****
 
    <blockquote>List the addresses controlled by the given user.</p>
    </blockquote>
    <p>Example: <a href="https://gist.github.com/gowrishZeeve/28c8bc3431d9d8d53efdcaca10f98f46#file-authority-listaddresses-js">Nodejs</a></p>
 
-   <br/>
+   <br/> -->
 
    ⚙️ *****authority.sampleValidators*****
 
@@ -1293,21 +1293,21 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
 
    <br/>
 
-   ⚙️ *****dcm.export*****
+   <!-- ⚙️ *****dcm.export*****
   
    <blockquote>
    <p>Getting a transaction receipt.</p>
    </blockquote>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dcm.exportKey*****
+   <!-- ⚙️ *****dcm.exportKey*****
   
    <blockquote>
    <p>Get the private key that controls a given address.The returned private key can be added to a user with dvm.importKey.</p>
    </blockquote>
 
-   <br/>
+   <br/> -->
 
    ⚙️ *****dcm.getAtomicTx*****
   
@@ -1333,19 +1333,19 @@ Just like any other protocol, **Dcomm** supports JSON RPC API call, which can be
 
    <br/>
 
-   ⚙️ *****dcm.import*****
+   <!-- ⚙️ *****dcm.import*****
   
    <blockquote>Send DCM from the AST-Chain to an account on the ATH-Chain. After calling this method, you must call the ATH-Chain’s DCM method to complete the transfer. the UTXOs that reference a given address.</p>
    </blockquote>
 
-   <br/>
+   <br/> -->
 
-   ⚙️ *****dcm.importKey*****
+   <!-- ⚙️ *****dcm.importKey*****
   
    <blockquote>Give a user control over an address by providing the private key that controls the address.</p>
    </blockquote>
 
-   <br/>
+   <br/> -->
 
    ⚙️ *****net_version*****
   
