@@ -1,3 +1,8 @@
+---
+description: Get support for using Zeeve's platform. Our documentation provides resources for troubleshooting and resolving common issues, as well as information on how to contact our support team for further assistance.
+robots: noindex
+---
+
 # Zeeve Support
 
 Stuck anywhere? Need help about anything? Want some kind of clarification? Want to pour in your suggestions? Want to raise feature requests? We are easily reachable and are all ears, eyes and mind for you on the following channels :

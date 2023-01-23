@@ -1,3 +1,6 @@
+---
+description: Explore the capabilities of Ethereum on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Ethereum and the Zeeve platform.
+---
 # Ethereum Dedicated Node Setup
 
 This section will guide you about different actions you can perform for Ethereum. 

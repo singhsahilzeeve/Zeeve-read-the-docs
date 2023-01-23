@@ -1,3 +1,7 @@
+---
+description: Use Tron with Zeeve's platform through our API and tools. Our documentation provides technical details on authentication, making requests and handling responses for interacting with Tron and the Zeeve platform.
+---
+
 # Tron Dedicated Node Setup
 
 This section will guide you about different actions you can perform for Tron 

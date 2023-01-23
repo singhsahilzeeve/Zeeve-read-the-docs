@@ -49,5 +49,11 @@ module.exports = {
     plugins: {
         '@vuepress/active-header-links': true,
         '@vuepress/back-to-top': true,
+        'seo': {
+            siteTitle: (_, $site) => $site.title,
+            title: $page => $page.title,
+            description: $page => $page.frontmatter.description,
+            robots: $page => $page.frontmatter.robots,
+         }
     }
 }

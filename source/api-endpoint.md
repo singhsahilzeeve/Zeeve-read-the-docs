@@ -1,3 +1,6 @@
+---
+description: Find out how to access and use the API endpoints on Zeeve's platform. Our API documentation provides technical details on authentication, making requests and handling responses for interacting with our platform.
+---
 # API Endpoints
 
 This page has detailed steps on how to

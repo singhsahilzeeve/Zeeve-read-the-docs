@@ -1,3 +1,7 @@
+---
+description: Build decentralized applications using Credits and Zeeve's platform. Our documentation provides technical details on authentication, making requests and handling responses for interacting with Credits and the Zeeve platform.
+---
+
 # Credits Deployment Specifications
 
 ![](./images/network-creation-credits.gif)

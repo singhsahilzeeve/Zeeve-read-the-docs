@@ -1,3 +1,6 @@
+---
+description: Integrate Binance with Zeeve's platform using our API and tools. Our documentation provides technical details on authentication, making requests and handling responses for interacting with Binance and the Zeeve platform.
+---
 # Binance Dedicated Node Setup
 
 This section will guide you about the different features offered by Zeeve for Binance. 

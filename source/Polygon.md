@@ -1,3 +1,7 @@
+---
+description: Integrate Polygon with Zeeve's platform using our API and tools. Our documentation provides technical details on authentication, making requests and handling responses for interacting with Polygon and the Zeeve platform.
+---
+
 # Polygon Dedicated Node Setup
 
 This section will guide you about different actions you can perform for Polygon 

@@ -1,3 +1,6 @@
+---
+description: Learn how to build your first network on Zeeve's platform. Our step-by-step guide provides detailed instructions and resources for setting up and configuring your network infrastructure.
+---
 # How to create my first Network?
 
 Zeeve makes the process of blockchain network deployment from a long time consuming one to just a matter of few clicks whilst taking care of the most important bits.

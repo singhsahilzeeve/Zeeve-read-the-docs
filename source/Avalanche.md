@@ -1,3 +1,6 @@
+---
+description: Learn about Avalanche on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Avalanche and the Zeeve platform.
+---
 # Avalanche Dedicated Node Setup
 
 This section will guide you about the different features offered by Zeeve for Avalanche. 

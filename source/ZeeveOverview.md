@@ -1,3 +1,6 @@
+---
+description: Get the latest documentation and technical details for Zeeve's innovative platform. Explore our API, integrations, and tools for building scalable, reliable applications on the Zeeve platform.
+---
 # Overview
 
 > [Zeeve](https://www.zeeve.io/) is a [Blockchain](./Glossary.html#blockchain) as a Service (BaaS) offering that allows customers to leverage cloud-based solutions to build, host and use their own Blockchain apps, [Smart Contracts](./Glossary.html#smartcontracts) and functions on the blockchain while the cloud-based service provider manages all the necessary tasks and activities to keep the infrastructure agile and operational. It is an interesting development in the blockchain ecosystem that is indirectly aiding the blockchain adoption across businesses. It is based on, and works similar to, the concept of [Software As A Service (SaaS)](https://en.wikipedia.org/wiki/Software_as_a_service) model.

@@ -1,3 +1,6 @@
+---
+description: Discover how to manage subscriptions on Zeeve's platform. Learn how to create, update and cancel subscriptions, as well as how to manage the billing, payments and usage of the resources in our platform.
+---
 # Manage your subscriptions
 
 This section talks about how one can purcahse a subscription of a service. It will also guide how one can view manage their subscriptions.

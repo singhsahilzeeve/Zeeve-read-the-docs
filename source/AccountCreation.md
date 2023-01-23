@@ -1,3 +1,7 @@
+---
+description: Learn how to create a new account on Zeeve's platform. Our step-by-step guide walks you through the process of setting up a secure and reliable account for accessing our API and tools.
+---
+
 # Account Creation
 
 This section speaks about how to create an account on Zeeve after which user can authorize external accounts/platforms on Zeeve.
