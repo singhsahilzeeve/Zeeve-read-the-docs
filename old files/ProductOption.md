@@ -4,18 +4,18 @@
 
     There are two free products available for [[Glossary|Sawtooth]].  Example:- Sawtooth Supply Chain, Sawtooth Tuna Fish.
 
-![](images/ProductPage.JPG)
+![img](./images/ProductPage.JPG)
 
 ## Network Selection
 
   From the **Select the Networks** drop-down user can select the network
 
-![](images/NetworkSelectPage.JPG)
+![img](./images/NetworkSelectPage.JPG)
 
 ## Deployment Logs
 
-![](images/ProductDeploymentLogs.JPG)
+![img](./images/ProductDeploymentLogs.JPG)
 
 ## Product Deployed
 
-![](images/ProductDeployed.JPG)
+![img](./images/ProductDeployed.JPG)

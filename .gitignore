@@ -2,5 +2,3 @@
 venv
 .idea
 node_modules
-node_modules
-.vuepress/dist

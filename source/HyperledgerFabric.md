@@ -1,3 +1,6 @@
+---
+description: Get started with Hyperledger Fabric on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Hyperledger Fabric and the Zeeve platform.
+---
 # Hyperledger Fabric Dedicated Node Setup
 
 Hyperledger Fabric has one of the most exhaustive sets of available configuration parameters. 
@@ -13,7 +16,7 @@ This page would help you a lot to achieve a highly customized fabric network.
 Fabric network creation is spread across 4 sections. Please read further to know about each of them. <br></br>
 On the **Network Configuration** page you will have different cards with different network configurations for Fabric, which looks similar to the image provided below. 
 
-  ![](images/fabricNetworkConfiguration.png)
+  ![img](./images/fabricNetworkConfiguration.png)
 
 ---
 ***NOTE:** These cards can be different for your case. Card configurations totally depend on your purchased subscription.*
@@ -24,10 +27,10 @@ Choose the configuration you want. Click on the card and follow the steps accord
 
 
 1. In the first step choose the **Fabric version** and **Consensus** type. After that click on **Next Step** button.<br></br>
-  ![](images/fabricCreateNetwork-1.png)
+  ![img](./images/fabricCreateNetwork-1.png)
 
 2. A fabric network is made up of a group of organizations wherein an organization is a mere stakeholder(participant) of the network, this group is called a consortium. You can add an organization by pressing the **Add organization** button and after that add a name for this organization.<br></br>
-  ![](images/fabricCreateNetwork-2.png)
+  ![img](./images/fabricCreateNetwork-2.png)
 
     Each organization participate in the network via a few fabric specific pillars namely [orderer](./Glossary.html#orderer), [peer](./Glossary.html#peer) and [certificate authority](./Glossary.html#certificate-authority).<br></br>
 
@@ -37,7 +40,7 @@ Choose the configuration you want. Click on the card and follow the steps accord
     <br></br>So based upon the requirement, select the type of ordering service and just add the number of orderers using the Add Orderer button under the orderer tab of the organization section. 
 
 3. This is the step to configure the channel details.<br></br>
-  ![](images/fabricCreateNetwork-3.png)
+  ![img](./images/fabricCreateNetwork-3.png)
 
    >*  **Batch Timeout** is the amount of time to wait after receiving the first transaction, in order to receive more transactions before cutting a block. In case we decrease this value then we get lower latency but decreasing too much will result in a decrease in throughput, as the block will not fill to its maximum capacity.
     > *   As indicated in the above screenshot `{ "timeout": "2s" }`
@@ -49,7 +52,7 @@ Choose the configuration you want. Click on the card and follow the steps accord
 
 4. This is the last step in creating a network. select the region for the network by clicking on **Select Region**, select the [AWS](./cloud_authorization.md) account you want to use by clicking on **Select Cloud Account**, also choose the instance type as your requirement by clicking on **Select Instance Type**, and then click on the **Create** button. <br></br>
   
-    ![](images/fabricCreateNetwork-4.png)
+    ![img](./images/fabricCreateNetwork-4.png)
 
 > * **Region**: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In the case of AWS, each of its regions has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. [Ref.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
 > * **Cloud Account**: It represents the AWS cloud account that is going to be used for network creation. 
@@ -58,11 +61,11 @@ Choose the configuration you want. Click on the card and follow the steps accord
 ### **View Network**
 1. Click on **Networks** on the left side navigation bar.
 
-    ![](images/sideNavBar.png)
+    ![img](./images/sideNavBar.png)
 
 2. You will be landed on a page similar to the below image. You can view all of your networks listed on this page.
 
-    ![](images/AllNetworks.png)
+    ![img](./images/AllNetworks.png)
 
 ---
 ***NOTE*** This page can be different in your case.
@@ -70,11 +73,11 @@ Choose the configuration you want. Click on the card and follow the steps accord
 ---
 3. Select the Fabric network you want. After clicking on the network card you can view the nodes attached to the selected network. Network Nodes are listed with details - node’s unique ID and cloud provider, an organization it is part of, node’s role(peer, ca, orderer), and node’s deployment region.
 
-    ![](images/fabricViewNetwork.png)
+    ![img](./images/fabricViewNetwork.png)
 
 4. Pipelines are listed with details - pipeline unique ID, the status of the pipeline(completed, in progress, failed), Total Jobs that it holds, and Action (to open up jobs inside it).
 
-    ![](images/fabricPipelines.png)
+    ![img](./images/fabricPipelines.png)
 
 
 
@@ -82,24 +85,24 @@ Choose the configuration you want. Click on the card and follow the steps accord
  A peer can be added to the organization by only following the two steps mentioned below. You just need to choose the type of peer service for each peer you want to go with, it can be either level Db or CouchDB based, and specify whether you want to have a persistent volume for the same.
 
 1. Select the network to which you want to add a node, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.<br></br>
-    ![](images/fabricViewNetwork.png)
+    ![img](./images/fabricViewNetwork.png)
 
 2. Click on **Actions** button and select **Add Peer**.<br></br>
-    ![](images/fabricActions.png)
+    ![img](./images/fabricActions.png)
 
 3. You will get to see a web page similar to the image provided below. Fill the details and click **create** button.<br></br>
-    ![](images/fabricAddPeer.png)
+    ![img](./images/fabricAddPeer.png)
 
 ### **Add organization**
 
 1. Select the network to which you want to add a node, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.<br></br>
-    ![](images/viewNetwork.png)
+    ![img](./images/viewNetwork.png)
 
 2. Click on **Actions** button and select **Add Peer**.<br></br>
-    ![](images/fabricViewNetwork.png)
+    ![img](./images/fabricViewNetwork.png)
   
 3. You will get to see a web page similar to the image provided below. Fill the details and click **create** button.<br></br>
-  ![](images/fabricAddOrg.png)
+  ![img](./images/fabricAddOrg.png)
 
 
 ## **Zeeve CLI**
@@ -131,13 +134,13 @@ Choose the configuration you want. Click on the card and follow the steps accord
      ```
       zeeve fabric chaincode package -f /path/to/chaincode.tar.gz -n 44b28e1f-7296-42a4-8904-e04341edfb27 -c marbles2 -v 1.0 -o org1 <br></br>
       ```
-     ![](images/fabricChaincodePackageHelp.png)
+     ![img](./images/fabricChaincodePackageHelp.png)
 4. Install: runs chaincode install operation on given peer URLs.
     - The install operation can be run on a set of peers in a given org with the peer-URLs option.
     ```
      zeeve fabric chaincode install -n 44b28e1f-7296-42a4-8904-e04341edfb27 -c marbles2 -v 1.0 -o org1 -p peer1.org1.example.fabric.zeeve.net, peer2.org1.example.fabric.zeeve.net
      ```
-    ![](images/fabricChaincodeInstallHelp.png)
+    ![img](./images/fabricChaincodeInstallHelp.png)
 5. Deploy: starts chaincode pod/service in Kubernetes cluster.
     ```
     - zeeve fabric chaincode deploy -n 44b28e1f-7296-42a4-8904-e04341edfb27 -c marbles3 -v 1.0 -o org1 -p peer1.org1.example.fabric.zeeve.net ,peer2.org1.example.fabric.zeeve.net
@@ -146,12 +149,12 @@ Choose the configuration you want. Click on the card and follow the steps accord
     ```
      zeeve fabric chaincode approve -n 44b28e1f-7296-42a4-8904-e04341edfb27 -cc marbles3 -v 1.0 -o org1 -p peer1.org1.example.fabric.zeeve.net, peer2.org1.example.fabric.zeeve.net -ch mychannel -s 1 
     ```
-   ![](images/fabricChaincodeApproveHelp.png)
+   ![img](./images/fabricChaincodeApproveHelp.png)
 7. Commit: runs ‘peer chaincode commit’ and also inits the chaincode with Init method on the given set of peers and organizations in the provided channel.
    ```
     zeeve fabric chaincode commit -n 44b28e1f-7296-42a4-8904-e04341edfb27 -cc marbles3 -v 1.0 -o org1,org2 -p peer1.org1.example.fabric.zeeve.net,peer2.org1.example.fabric.zeeve.net -ch mychannel -s 1 
     ```
-   ![](images/fabricChaincodeCommitHelp.png)
+   ![img](./images/fabricChaincodeCommitHelp.png)
 
 
 
