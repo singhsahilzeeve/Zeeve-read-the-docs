@@ -7,7 +7,7 @@ description: Get the latest documentation and technical details for Zeeve's inno
 
 ## Dashboard
 
-> This is the dashboard page of Zeeve where you can see your Networks, Nodes, deployed product details, [Node](./Glossary.html#node) Disk Usage, Node Statistics, and all activity logs.
+> This is the dashboard page of Zeeve where you can see your Networks, Nodes, deployed product details, [Node](./Glossary.html#node) Disk Usage, Node Statistics, and all activity logs
 
 ## Networks
 
