@@ -329,7 +329,7 @@
     "html-minifier": "^3.5.21",
     "html-tags": "^3.2.0",
     "htmlparser2": "^6.1.0",
-    "http-cache-semantics": "^4.1.0",
+    "http-cache-semantics": "^4.1.1",
     "http-deceiver": "^1.2.7",
     "http-errors": "^2.0.0",
     "http-parser-js": "^0.5.8",
