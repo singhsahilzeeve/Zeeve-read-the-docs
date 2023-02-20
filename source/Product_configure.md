@@ -1,3 +1,7 @@
+---
+description: Learn how to configure your products on Zeeve's platform. Our documentation provides detailed instructions and resources for setting up and customizing your products to meet your specific needs
+---
+
 # Product Configurations
 
 Zeeve allows the user to configure their projects onto the platform, which comes with in-built CI-CD pipelines and let Zeeve do the heavy lifting to make a network compatible for your product. This is ensured with some practices developer shall do in order to make the deployments one click based(mentioned later). There are some benefits to configure your product through Zeeve: 

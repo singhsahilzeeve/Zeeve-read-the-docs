@@ -1,3 +1,7 @@
+---
+description: Learn how to create a new account on Zeeve's platform. Our step-by-step guide walks you through the process of setting up a secure and reliable account for accessing our API and tools.
+---
+
 # Account Creation
 
 This section speaks about how to create an account on Zeeve after which user can authorize external accounts/platforms on Zeeve.
@@ -8,47 +12,47 @@ Zeeve supports multiple options for creating an account. You can choose to creat
 
 1. Click on **with Google** 
 
-    ![](images/SignUpPage.png)
+    ![img](./images/SignUpPage.png)
 
 2. You will be redirected to google account page. Fill the email address, password and click **Next**
 
-    ![](images/siginInGoogle-Email.png)
+    ![img](./images/siginInGoogle-Email.png)
 
-    ![](images/siginInGoogle-Password.png)
+    ![img](./images/siginInGoogle-Password.png)
 
 3. After successful sign in with Google, you will be landed to Zeeve's dashboard.
    
-   ![](images/dashboard.png)
+   ![img](./images/dashboard.png)
 
 ### Signing up with github account
 
 1. Click on **with Google** 
 
-    ![](images/SignUpPage.png)
+    ![img](./images/SignUpPage.png)
 
 2. You will be redirected to github account page. Fill the username/email address, password and click **Sign in**
 
-    ![](images/ssiginInGithub.png)
+    ![img](./images/ssiginInGithub.png)
 
 
 3. After successful sign in with GitHub, you will be landed to Zeeve's dashboard.
    
-   ![](images/dashboard.png)
+   ![img](./images/dashboard.png)
 
 
 ### Signing up with email account
 
 1. Click on **Sign-Up** and fill all the required details. Your email-id will act as your username for login.
 
-    ![](images/SignUpPage.png)
+    ![img](./images/SignUpPage.png)
 
 2. This will give you a account verification email, clicking which will redirect you to zeeve where you can do successful login.
 
-    ![](images/SignInPage.png)
+    ![img](./images/SignInPage.png)
 
 3. After successful login, you will be landed to Zeeve's dashboard.
    
-   ![](images/dashboard.png)
+   ![img](./images/dashboard.png)
 
 
 
