@@ -3,7 +3,7 @@
 This section will guide you about the different features offered by Zeeve for Avalanche. 
 
  1. [Dedicated nodes](#dedicated-nodes)
- 2. [Rpc api endpoints](#rpc-api-endpoints)
+ 2. [Rpc API endpoints](#rpc-api-endpoints)
 
 ## Dedicated nodes
 
@@ -31,12 +31,12 @@ On the **Network Configuration** page you will have different cards with differe
 
 ---
 
-You can Choose **Managed-AWS** (Zeeve's managed hosting) for the infrastructure of your node or you can use your cloud account (AWS/DO) for the hosting of your node.
+You can choose **Managed** (Zeeve's managed hosting) for the infrastructure of your node, or you can use your own cloud account (AWS/DO/GCP/Tencent) for hosting your node.
 
 Choose the configuration you want. Click on the card and follow the steps accordingly.
 
 1. **Network Info** 
-Clicking on the card you will be landed on a page similar to the below image. In this section, we have to provide network-related information for ex- Network Name, Network type, etc.
+Clicking on the card, you will be landed on a page similar to the below image. In this section, we have to provide network-related information, for ex- Network Name, Network type, etc.
 
   ![](images/avalancheCreateNetwork-1.png)
 
@@ -69,20 +69,21 @@ After providing the details click on **Next step** to go to the last step.
 
 This is the step for the configuration of the cloud for your nodes. This step can be different based on your selection of **Network configuration cards**
  
-  1. [Manged - AWS](#managed---aws)
+  1. [Manged](#managed)
   2. [BYOC - AWS](#byoc---aws)
   3. [BYOC - DO](#byoc---do)
-
+  4. [BYOC - GCP](#byoc---gcp)
+  5. [BYOC - Tencent](#byoc---tencent)
 
 ---
-#### Managed - AWS
+#### Managed
 ---
 
-In the case of **Managed - AWS**, you don't have to bother about anything, just select the region for the network by clicking on **Select Region**.<br></br>
+In the case of **Managed**, you don't have to bother about anything, just select the region for the network by clicking on **Select Region**.<br></br>
 
-  ![](images/avalacheCreateNetworkMANAGED-AWS.png)
+  ![](images/avalacheCreateNetworkMANAGED-GCP.png)
 
-> * **Region**: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In the case of AWS, each of its regions has multiple, isolated locations known as Availability Zones. Amazon RDS provides you the ability to place resources, such as instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. [Ref.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
+> * **Region**: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted. In managed, you just need to select the region depending on your case and major area of operations to reduce the latency as much as possible. [Ref.](https://cloud.google.com/compute/docs/regions-zones)
 
 ---
 #### BYOC - AWS
@@ -108,6 +109,22 @@ In the case of **BYOC - AWS**, select the region for the network by clicking on 
 > * **Cloud Account**: It represents the Digital Ocean cloud account that is going to be used for network creation. 
 > *   **Type of Instance**: It defines the combination of CPU cores and memory. Choose the configuration which could handle loads of your network. This parameter is useful for scaling up the network. The type of Instances may vary from cloud to cloud.
 
+---
+#### BYOC - GCP
+---
+In the case of **BYOC - GCP**, select the region for the network by clicking on **Select Region**, select the [GCP](./cloud_authorization.md) account you want to use by clicking on **Select Cloud Account**, also choose the instance type as your requirement by clicking on **Select Instance Type**.<br></br>
+  ![](images/avalacheCreateNetworkBYOC-GCP.png)
+> * **Region**: GCP Compute Engine resources are hosted in multiple locations worldwide. These locations are composed of regions and zones. A region is a specific geographical location where you can host your resources. Regions have three or more zones. For example, the us-west1 region denotes a region on the west coast of the United States that has three zones: us-west1-a, us-west1-b, and us-west1-c. Putting resources in different regions provides an even higher degree of failure independence. This lets you design robust systems with resources spread across different failure domains. [Ref.](https://cloud.google.com/compute/docs/regions-zones)
+> * **Cloud Account**: It represents the GCP cloud account that is going to be used for network creation. 
+> *   **Type of Instance**: Here, you'll get options for different virtual machines (VM). You can select the suitable VM type in Google Cloud Platform (GCP) depending on various factors, including your workload requirements, performance needs, and budget constraints. [Ref.](https://cloud.google.com/compute/docs/machine-resource)
+---
+#### BYOC - TENCENT
+---
+In the case of **BYOC - TENCENT**, select the region for the network by clicking on **Select Region**, select the [TENCENT](./cloud_authorization.md) account you want to use by clicking on **Select Cloud Account**, also choose the instance type as your requirement by clicking on **Select Instance Type**.<br></br>
+  ![](images/avalacheCreateNetworkBYOC-Tencent.png)
+> * **Region**: A region is the physical location of an IDC. In Tencent Cloud, regions are fully isolated from each other, ensuring cross-region stability and fault tolerance. We recommend that you choose the region closest to your end users to minimize access latency and improve access speed. [Ref.](https://www.tencentcloud.com/document/product/213/6091)
+> * **Cloud Account**: It represents the TENCENT cloud account that is going to be used for network creation. 
+> *   **Type of Instance**: Here, each instance type provides different computing, memory, and storage features. You can choose the instance type that suits your application scale. Tencent Cloud provides a range of instance families with varying combinations of CPU, memory, storage, heterogeneous hardware, and network bandwidth. This gives you flexibility in selecting the appropriate mix of resources for your applications. [Ref.](https://www.tencentcloud.com/document/product/213/11518)
 
 3. Click on the **Create** button. A pop-up window will appear similar to the below image, which ensures the successful creation of your network.
 
@@ -174,7 +191,7 @@ This section talks about different actions you can perform in Avalanche RPC API 
 
 This section provides a step-by-step guide for creating avalanche RPC API endpoints.
 
- 1. Click on **Endpoints** on the left side navigation bar and then click on **Add Endpoints**.
+ 1. Click on **RPC API Endpoints** on the left side navigation bar and then click on **Add RPC Endpoint**.
 
     ![](images/sideNavBar.png)
 
