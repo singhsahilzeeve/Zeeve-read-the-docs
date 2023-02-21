@@ -1,11 +1,6 @@
 # Avalanche Dedicated Node Setup
 
-This section will guide you about the different features offered by Zeeve for Avalanche. 
-
- 1. [Dedicated nodes](#dedicated-nodes)
- 2. [Rpc API endpoints](#rpc-api-endpoints)
-
-## Dedicated nodes
+**NOTE** [Purchase](./subscriptions.md) a subscription before proceeding.
 
 1. [Create a network](#create-a-network)
 2. [Add a node](#add-node-to-a-network)
@@ -56,7 +51,6 @@ In this section, you have to fill in the details of the nodes you want to add to
   ![](images/avalancheCreateNetwork-2.png)
 
 > * **Username & Password**: Choose the username and password of your choice. These will be used as RPC API credentials.
-> * **Email**: Fill email of yours.
 > * **Node Name**: To identify your nodes, this field will be used. 
 > *  **Rpc Server**: RPC, which stands for "Remote Procedure Call," is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction. 
     >     * **HTTP**: Uses individual HTTP requests and responses for each call, similar to a RESTful API.
