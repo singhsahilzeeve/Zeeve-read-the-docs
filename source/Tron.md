@@ -59,9 +59,8 @@ In this section, you have to fill in the details of the nodes you want to add to
 
 
 > * **Username & Password**: Choose the username and password of your choice. These will be used as RPC API credentials.
-> * **Email**: Fill email of yours.
 > * **Node Name**: In order to identify your nodes, this field will be used. 
-> *  **Rpc Server**: RPC, which stands for "Remote Procedure Call," is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction. 
+> *  **RPC Server**: RPC, which stands for "Remote Procedure Call," is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction. 
     >     * **HTTP**: Uses individual HTTP requests and responses for each call, similar to a RESTful API.
     >     * **ws**: WebSocket uses a persistent connection that allows the server to push data to the client.
 > * **JSON RPC APIs**: JSON RPC API is a bridge that allows dApps to connect to nodes.
