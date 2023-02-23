@@ -28,6 +28,7 @@ module.exports = {
             '/Corda',
             '/Avalanche',
             '/Binance',
+            '/Coreum',
             '/Dcomm',
             '/Fantom',
             '/Polygon',
