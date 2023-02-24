@@ -17,7 +17,7 @@ This section will provide you with detailed steps for creating a network of **Av
 ---
 
 
-On the **Network Configuration** page you will have different cards with different network configurations for Avalanche, which looks similar to the image provided below. 
+On the **Network Configuration** page, you will have different cards with different network configurations for Avalanche, which look similar to the image provided below. 
 
   ![](images/avlancheNetworkConfiguration.png)
 
@@ -35,7 +35,7 @@ Clicking on the card, you will be landed on a page similar to the below image. I
 
   ![](images/avalancheCreateNetwork-1.png)
 
-> *   **Name of Network**: To uniquely identify your network, this field requires a unique name for it. Unique over here is in terms of the account in which you are creating your network. In case you have created some network earlier, and now you are trying to create with the same name, then the [Zeeve](https://zeeve.io) platform won't allow you to create it.
+> *   **Name of Network**: To uniquely identify your network, this field requires a unique name for it. Unique over here is in terms of the account in which you are creating your network. In case you have created some network earlier, and now you are trying to create one with the same name, then the [Zeeve](https://zeeve.io) platform won't allow you to create it.
 > *  **Deployment Type**: Deployment type
 > *  **Type Of Network**
 >     *   **MainNet**: This will deploy your network on the network mainnet. This is suggested for deploying production-grade avalanche dapps.
@@ -52,7 +52,7 @@ In this section, you have to fill in the details of the nodes you want to add to
 
 > * **Username & Password**: Choose the username and password of your choice. These will be used as RPC API credentials.
 > * **Node Name**: To identify your nodes, this field will be used. 
-> *  **Rpc Server**: RPC, which stands for "Remote Procedure Call," is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction. 
+> *  **RPC Server**: RPC, which stands for "Remote Procedure Call," is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction. 
     >     * **HTTP**: Uses individual HTTP requests and responses for each call, similar to a RESTful API.
     >     * **ws**: WebSocket uses a persistent connection that allows the server to push data to the client.
 > * **JSON RPC APIs**: JSON RPC API is a bridge that allows dApps to connect to nodes.
@@ -63,7 +63,7 @@ After providing the details click on **Next step** to go to the last step.
 
 This is the step for the configuration of the cloud for your nodes. This step can be different based on your selection of **Network configuration cards**
  
-  1. [Manged](#managed)
+  1. [Managed](#managed)
   2. [BYOC - AWS](#byoc---aws)
   3. [BYOC - DO](#byoc---do)
   4. [BYOC - GCP](#byoc---gcp)
@@ -114,7 +114,7 @@ In the case of **BYOC - GCP**, select the region for the network by clicking on 
 ---
 #### BYOC - TENCENT
 ---
-In the case of **BYOC - TENCENT**, select the region for the network by clicking on **Select Region**, select the [TENCENT](./cloud_authorization.md) account you want to use by clicking on **Select Cloud Account**, also choose the instance type as your requirement by clicking on **Select Instance Type**.<br></br>
+In the case of **BYOC - TENCENT**, select the region for the network by clicking on **Select Region**, select the [TENCENT](./cloud_authorization.md) account you want to use by clicking on **Select Cloud Account**, and also choose the instance type as your requirement by clicking on **Select Instance Type**.<br></br>
   ![](images/avalacheCreateNetworkBYOC-Tencent.png)
 > * **Region**: A region is the physical location of an IDC. In Tencent Cloud, regions are fully isolated from each other, ensuring cross-region stability and fault tolerance. We recommend that you choose the region closest to your end users to minimize access latency and improve access speed. [Ref.](https://www.tencentcloud.com/document/product/213/6091)
 > * **Cloud Account**: It represents the TENCENT cloud account that is going to be used for network creation. 
@@ -131,7 +131,7 @@ In the case of **BYOC - TENCENT**, select the region for the network by clicking
 This section will guide you on how you can add a node to a network.
 
 
-1. Select the network to which you want to add a node, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.
+1. Select the network to which you want to add a node, and click on the network card [Ref.](./View_your_network_and_nodes.md) You will get to see similar to the below image.
 
     ![](images/viewNetwork.png)
 
@@ -146,7 +146,7 @@ This section will guide you on how you can add a node to a network.
 
 ### **Delete node in a network**
 
-1. Select the network, in which you want to perform the delete node action, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.
+1. Select the network, in which you want to perform the delete node action, and click on the network card [Ref.](./View_your_network_and_nodes.md) You will get to see similar to the below image.
 
     ![](images/viewNetwork.png)
 
@@ -158,7 +158,7 @@ This section will guide you on how you can add a node to a network.
 ### **Delete a network**
 
 
-1. Select the network you want to delete, and click on the network card[Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.
+1. Select the network you want to delete, and click on the network card [Ref.](./View_your_network_and_nodes.md) You will get to see similar to the below image.
 
     ![](images/viewNetwork.png)
 
@@ -176,9 +176,9 @@ This section will guide you on how you can add a node to a network.
 
 This section talks about different actions you can perform in Avalanche RPC API endpoints. 
 
-  1. [Create endponits](#create-endpoint)
+  1. [Create endpoints](#create-endpoint)
   2. [Edit endpoints](#edit-endpoint)
-  3. [Delete endpoint](#delete-endpoint)
+  3. [Delete endpoints](#delete-endpoint)
 
 
 ### **Create endpoint**
@@ -203,7 +203,7 @@ This section provides a step-by-step guide for creating avalanche RPC API endpoi
     ![](images/avalancheCreateEndpoint-1.png)
 
 
-2. In this step you can check the **Require JWT** and provide JWT public key details and click on **Submit**.
+2. In this step, you can check the **Require JWT** and provide JWT public key details and click on **Submit**.
 
     ![](images/avalancheCreateEndpoint-2.png)
  
