@@ -74,11 +74,13 @@ After which on Zeeve do following steps:-
    
     ![img](./images/addDO.png)
 
-5. Authorize DigitalOcean will redirect you to login page, you can login with your DigitalOcean credentials, once login is successful, Zeeve will be connected to your account.
+5. Authorize DigitalOcean will redirect you to login page, you can add your DigitalOcean credentials and then click on **Add Cloud**.
 
     ![img](./images/DOlogin.png)
+    
+6. After that click on the team which you want to give access and click on **Authorize Application**.
 
-6. After this, you will be asked to allow Zeeve in your cloud account. Make sure you provide both **read and write** access on this page.
+    ![img](./images/DOoauth.png)
 
 ## Tencent Cloud Authorization
 
