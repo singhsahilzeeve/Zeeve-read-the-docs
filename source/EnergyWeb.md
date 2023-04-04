@@ -60,7 +60,7 @@ In the case of **Managed - Cloud**, select the region for the network under **Se
 ![img](./images/EWC/EWCCreateNetworkMANAGED.png)
 &nbsp;
 
-> - **Company/Node Name**: A name to identify your node, this field requires a unique name. Unique means that it should be unique in a network to which you are adding a node.
+> - **Company/Node Name**: This is the name given to the validator node.
 > - **Region**: It indicates the region of the cloud service. These regions are the geographic locations where your network instances are going to be hosted.
 
 ---
@@ -74,7 +74,7 @@ In the case of **BYOC** (AWS/Digital Ocean/GCP/Tencent Cloud), select the region
 ![img](./images/EWC/EWCCreateNetworkBYOC.png)
 &nbsp;
 
-> - **Company/Node Name**: A name to identify your node, this field requires a unique name. Unique means that it should be unique in a network to which you are adding a node.
+> - **Company/Node Name**: This is the name given to the validator node.
 > - **Region**: It indicates the region of cloud service. These regions are the geographic locations where your network instances are going to be hosted.
 > - **Cloud Account**: It represents the cloud account that is going to be used for network creation.
 > - **Type of Instance**: It defines the combination of CPU cores and memory. Choose the configuration which could handle loads of your network. This parameter is useful for scaling up the network. The type of Instances may vary from cloud to cloud.
