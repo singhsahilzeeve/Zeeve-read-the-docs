@@ -168,10 +168,12 @@ This section will guide you on how you can add a node to a network.
 
 
 
- 1. [Create network](#create-a-network)
- 2. [Add a node](#add-node-to-a-network)
- 3. [Delete a node](#delete-node-in-a-network)
- 4. [Delete network](#delete-a-network)
+ 1. [Create network](#create-a-network-2)
+ 2. [Update validator details](#update-validator-details)
+ 3. [Unbound token](#ubound-tokens)
+ 4. [Withdraw rewards](#withdraw-rewards)
+ 5. [Set rewards to a different wallet](#set-rewards-to-a-different-wallet)
+ 6. [Delete network](#delete-a-network-2)
 
 ### **Create a network**
 
@@ -213,6 +215,7 @@ In this section, you have to fill in the details of the nodes you want to add to
 > * **Validator Name**: The name which is visible on the Coreum Explorer. 
 > * **Mnemonic Key**: bip39 mnemonic passphrase of your wallet. 
 > * **Key Ring**: A passprase to access your private key. 
+> * **Email**: Email will be used as a secret identity.
 > * **Delegation Amount**: Amount which you want to delegate/stake. 
 > * **Minimum Delegation Amount**: The minimum delegation amount and must be grater or equal min_self_delegation. 
 > * **Commission Rate**: The initial commission rate percentage. 
@@ -220,6 +223,7 @@ In this section, you have to fill in the details of the nodes you want to add to
 > * **Commission Max. Change Rate**: The maximum commission change rate percentage (per day). 
 > * **Website**: Website you want to be reflected in the. 
 > * **Validator Identity**: The optional identity signature (ex. UPort or Keybase). 
+> * **State Sync**: By enabling state sync your node will download data related to the head or near the head of the chain and verify the data. This leads to drastically shorter times for joining a network [Read more](https://docs.tendermint.com/v0.34/tendermint-core/state-sync.html).
 > * **Username & Password**: Choose the username and password of your choice. These will be used as RPC API credentials.
 > *  **Rpc Server**: RPC, which stands for "Remote Procedure Call," is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction. 
     >     * **HTTP**: Uses individual HTTP requests and responses for each call, similar to a RESTful API.
@@ -277,12 +281,71 @@ In the case of **BYOC - DO**, select the region for the network by clicking on *
 5. Click on **continue** and you will be redirected to a page similar to the below image where you can see the nodes listed you've just added to the network.
 
 
+### **Update Validator Details**
+
+1. Find the Edit button on top right of the screen and click on it to edit and update the prefered validator detail. You will get to see similar to the below image.
+
+    ***Step 01 :***
+
+    * Validator Name
+    > ![img](./images/coreum/update-validator-name.png)
+
+
+    * Commission Rate
+    > ![img](./images/coreum/update-commission-rate.png)
+
+
+    * Email
+    > ![img](./images/coreum/update-email.png)
+
+
+    * Validator Identity
+    > ![img](./images/coreum/update-validator-identity.png)
+
+    
+    ***Step 02 :***
+
+    * Keyring is require in order to update the validator details.
+    > ![img](./images/coreum/update-keyring.png)
+
+### **Ubound tokens**
+
+1. Click on the *Actions* button on the top right, and select the **Unbound Token** option.
+
+    ![img](./images/coreum/validator-actions.png)
+
+2. Enter the amount you want to unbound and the keyring, then click on Unbound button.
+    
+    > ![img](./images/coreum/action-unbound-token.png)
+
+
+### **Withdraw rewards**
+
+1. Click on the *Actions* button on the top right, and select the **Withdraw reward** option.
+
+    ![img](./images/coreum/validator-actions.png)
+
+2. Enter the keyring then click on Withdraw button.
+    
+    > ![img](./images/coreum/action-withdraw-reward.png)
+
+
+### **Set rewards to a different wallet**
+
+1. Click on the *Actions* button on the top right, and select the **Set rewards to a different wallet** option.
+
+    ![img](./images/coreum/validator-actions.png)
+
+2. Enter the wallet address and keyring then click on Set button.
+    
+    > ![img](./images/coreum/action-set-wallet-reward.png)
+
 ### **Delete a network**
 
 
-1. Select the network you want to delete, and click on the network card [Ref.](./View_your_network_and_nodes.md). You will get to see similar to the below image.
+1. Select the network you want to delete, and click on the network card. You will get to see similar to the below image.
 
-    ![img](./images/CoreumDeleteNetwork.png)
+    ![img](./images/coreum/validator-actions.png)
 
 2. Click on the *Actions* button on the top right, and select the **Delete Network** option. A confirmation window will open, click on the **Yes** button, attached to it.
 
