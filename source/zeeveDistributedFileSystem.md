@@ -1,5 +1,9 @@
 ---
 description: Discover Zeeve's distributed file system for storing and managing large amounts of data. Our documentation provides an introduction to the key features and benefits of the Zeeve distributed file system, as well as technical details on how to use it with our platform.
+
+meta:
+    - name: robots
+      content: noindex
 ---
 
 # Zeeve Distributed File System

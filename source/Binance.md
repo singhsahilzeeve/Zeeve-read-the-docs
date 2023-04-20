@@ -1,5 +1,9 @@
 ---
 description: Integrate Binance with Zeeve's platform using our API and tools. Our documentation provides technical details on authentication, making requests and handling responses for interacting with Binance and the Zeeve platform.
+
+meta:
+    - name: robots
+      content: noindex
 ---
 # Binance Dedicated Node Setup
 

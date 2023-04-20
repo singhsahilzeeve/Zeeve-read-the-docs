@@ -1,5 +1,9 @@
 ---
 description: Learn about the different blockchain protocols available on Zeeve's platform. Our documentation provides an overview of the key features, benefits and use cases for Hyperledger Fabric, Ethereum, Corda, and other leading blockchain technologies.
+
+meta:
+    - name: robots
+      content: noindex
 ---
 
 # Major Blockchain Protocols

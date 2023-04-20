@@ -1,5 +1,9 @@
 ---
 description: Integrate Polygon with Zeeve's platform using our API and tools. Our documentation provides technical details on authentication, making requests and handling responses for interacting with Polygon and the Zeeve platform.
+
+meta:
+    - name: robots
+      content: noindex
 ---
 
 # Polygon Dedicated Node Setup
