@@ -6,9 +6,12 @@ description: Use EWC with Zeeve's platform through our API and tools. Our docume
 **NOTE** [Purchase](./subscriptions.md) a subscription before proceeding.
 
 1. [Create a network](#create-a-network)
-2. [Add an additional node](#add-additional-node-to-a-network)
-3. [Delete a node](#delete-node-in-a-network)
-4. [Delete a network](#delete-a-network)
+2. [Withdrawal and Address Change](#withdrawal-and-address-change)
+3. [View Transaction](#view-transaction)
+4. [View On Explorer](#view-on-explorer)
+5. [Analytics](#analytics)
+6. [Alerts Section](#alerts-section)
+7. [Delete a network](#delete-a-network)
 
 ---
 
@@ -92,41 +95,84 @@ In the case of **BYOC** (AWS/Digital Ocean/GCP/Tencent Cloud), select the region
 
 ---
 
-### **Add additional node to a network**
+### **Withdrawal and Address Change**
 
-This section will guide you on how you can add an additional node to a network. As you have already created a network, follow these steps to add more nodes to the network.
+#### Amount Withdraw
 
-1. Visit the network detail page. Click on the _Actions_ button on the top right, and select the **Add Node** option.
+   1. In the case you want to withdraw amount, click on the withdraw button in the Node Address Details panel.
 
-   ![img](./images/EWC/EWCNetworkActions2.png)
-   &nbsp;
+      ![img](./images/EWC/EWCWithdraw&Address.png)
+      &nbsp;
 
-2. You will be redirected to the node setup page. Fill the detail for the company name. Network type and deployment type will be prefilled based on the network configuration. Click on the **Next** button to continue.
+   2. On clicking the **Withdraw** button a pop-up window will open.
 
-   ![img](./images/EWC/EWCAddNode-1.png)
-   &nbsp;
+      ![img](./images/EWC/EWCWthdrawModal.png)
+      &nbsp;
 
-3. Select the instance type for the node, cloud account and region will be prefilled based on the network configuration. Click on the **Create** button and the node will be added.
-   ![img](./images/EWC/EWCAddNode-2.png)
-   &nbsp;
+      > - **Address**: Enter the address where you want to withdraw the amount.
+      > - **Amount**: Enter the amount you want to withdraw. The amount should be more than **0.0015**.
+---
+   3. On clicking the **Submit** button to make the transaction. The amount withrawal will take few minutes to complete the transaction.
+#### Address Change
 
-**_NOTE_** For Zeeve Managed Cloud, the option for selecting the instance type will not be available as it will be selected by [Zeeve](https://zeeve.io).
+   1. In the case you want to change Address, click on the **Change Payout Address** button in the Payout Address Details panel.
 
-**_NOTE_** To become an EWF (Volta/EWC) validator, please proceed with the multi-sig process.
+      ![img](./images/EWC/EWCWithdraw&Address.png)
+      &nbsp;
+
+   2. On clicking the **Change Payout Address** button a pop-up window will open.
+
+      ![img](./images/EWC/EWCAddress.png)
+      &nbsp;
+
+      > - **Address**: Enter the new payout address.
+
+   3. On clicking the **Submit** button the Payout Address will be changed.
 
 ---
 
-### **Delete node in a network**
+### **View Transaction**
+   
+   1. To view all the transaction. Click on the Actions button on the top right, and select the **View Transaction** option.
 
-1. Select the network, in which you want to perform the delete node action, and click on the [network card](./View_your_network_and_nodes.md). You will get to see a page similar to the below image.
+      ![img](./images/EWC/EWCViewTransaction.png)
+      &nbsp;
 
-   ![img](./images/EWC/EWCDeleteNode.png)
-   &nbsp;
+   2. On clicking the **View Transaction** button a pop-up window will open.
 
-2. Click on the delete icon present alongside the node in node operations. A pop-up window will open for the confirmation, click on the **Yes** button to confirm.
+      ![img](./images/EWC/viewTransactionModal.png)
+      &nbsp;
 
-   ![img](./images/EWC/EWCDeleteNodeModal.png)
-   &nbsp;
+---
+
+### **View On Explorer**
+
+   1. To view all Address details on the EWC Explorer. Click on the Actions button on the top right, and select the **View On Explorer** option.
+
+      ![img](./images/EWC/EWCViewTransaction.png)
+      &nbsp;
+
+   2. On clicking the **View On Explorer** button a new tab will open.
+
+---
+
+### **Analytics**
+
+   1. To view network analytics details. Click on the View Analytics button in the Infrastructure Details panel, and click on the **View Analytics**.
+
+      ![img](./images/EWC/viewAnalytics.png)
+      &nbsp;
+
+   2. On clicking the **View Analytics** button a new tab will open with network analytics.
+
+---
+
+### **Alerts Section**
+
+   1. You will see Alerts sections at the bottom of the page. Here you can see the list of Alerts related to you EWC network.
+
+      ![img](./images/EWC/EWCAlerts.png)
+      &nbsp;
 
 ---
 
