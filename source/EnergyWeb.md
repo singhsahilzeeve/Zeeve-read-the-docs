@@ -141,7 +141,20 @@ In the case of **BYOC** (AWS/Digital Ocean/GCP/Tencent Cloud), select the region
 
    2. On clicking the **Download installation summary** button, a PDF will be downloaded with the EWF Node Install information.
 
+      > - **Node Name**.
+      > - **Validator Address**.
+      > - **Enode**.
+      > - **IP Address**.
+
+      &nbsp;
+      This information will be displayed in a format similar to the below image
+
+      &nbsp;
+      ![img](./images/EWC/EWCSummaryInfo.png)
+      &nbsp;
+
 **_NOTE_** Download option will be available when a node is In the Active stage.
+
 ---
 
 ### **View Transaction**
