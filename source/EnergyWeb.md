@@ -6,6 +6,7 @@ description: Use EWC with Zeeve's platform through our API and tools. Our docume
 **NOTE** [Purchase](./subscriptions.md) a subscription before proceeding.
 
 1. [Create a network](#create-a-network)
+2. [Download Installation Summary](#download-installation-summary)
 2. [Withdrawal and Address Change](#withdrawal-and-address-change)
 3. [View Transaction](#view-transaction)
 4. [View On Explorer](#view-on-explorer)
@@ -128,6 +129,31 @@ In the case of **BYOC** (AWS/Digital Ocean/GCP/Tencent Cloud), select the region
       > - **Address**: Enter the new payout address.
 
    3. On clicking the **Submit** button the Payout Address will be changed.
+
+---
+
+### **Download Installation Summary**
+
+   1. To Download Installation Summary. Go to the detail page and click on the **Download installation summary** button.
+
+      ![img](./images/EWC/EWCSummary.png)
+      &nbsp;
+
+   2. On clicking the **Download installation summary** button, a PDF will be downloaded with the EWF Node Install information.
+
+      > - **Node Name**.
+      > - **Validator Address**.
+      > - **Enode**.
+      > - **IP Address**.
+
+      &nbsp;
+      This information will be displayed in a format similar to the below image
+
+      &nbsp;
+      ![img](./images/EWC/EWCSummaryInfo.png)
+      &nbsp;
+
+**_NOTE_** Download option will be available when a node is In the Active stage.
 
 ---
 
