@@ -1,7 +1,7 @@
 ---
 description: Use EWC with Zeeve's platform through our API and tools. Our documentation provides technical details on authentication, making requests and handling responses for interacting with EWC and the Zeeve platform.
 ---
-# EWC Staking Node Setup
+# EWC Validator Node Setup
 
 **NOTE** [Purchase](./subscriptions.md) a subscription before proceeding.
 
