@@ -184,7 +184,7 @@ In the case of **BYOC** (AWS/Digital Ocean/GCP/Tencent Cloud), select the region
 
 ### **Analytics**
 
-   1. To view network analytics details. Click on the View Analytics button in the Infrastructure Details panel, and click on the **View Analytics**.
+   1. To view network analytics and monitoring details, click on the **View Analytics** in the Infrastructure Details panel.
 
       ![img](./images/EWC/viewAnalytics.png)
       &nbsp;
