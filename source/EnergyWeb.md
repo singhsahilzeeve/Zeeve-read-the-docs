@@ -1,7 +1,7 @@
 ---
 description: Use EWC with Zeeve's platform through our API and tools. Our documentation provides technical details on authentication, making requests and handling responses for interacting with EWC and the Zeeve platform.
 ---
-# EWC Staking Node Setup
+# EWC Validator Node Setup
 
 **NOTE** [Purchase](./subscriptions.md) a subscription before proceeding.
 
@@ -22,7 +22,7 @@ This section will provide you detailed steps for creating a network of **EWC**.
 
 On the **Network Configuration** page you will be able to see different configuration cards for EWC, which looks similar to the image provided below.
 
-![img](./images/EWC/EWCNetworkConfiguration.png)
+![img](./images/EWC/ewcNetworkConfiguration.png)
 
 **\*NOTE:** These configuration cards can be different based on your purchased subscriptions.\*
 
