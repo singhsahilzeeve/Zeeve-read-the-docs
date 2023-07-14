@@ -29,6 +29,7 @@ module.exports = {
             '/Binance',
             '/Coreum',
             '/Dcomm',
+            '/EnergyWeb',
             '/Fantom',
             '/Polygon',
             '/Tron',

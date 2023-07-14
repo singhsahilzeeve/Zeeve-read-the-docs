@@ -7,7 +7,7 @@
 
 Pre-requistes Python 3.7 & pip.
 
-Installing virtualenv:-
+Installing virtualenv :-
 
 ```
 $ pip install virtualenv
@@ -15,7 +15,7 @@ $ virtualenv -p /usr/bin/python3.7 venv
 $ source venv/bin/activate
 ```
 
-Making sure that pyhton's virtual environement is being used,
+Making sure that python's virtual environement is being used,
 
 Install all build dependencies:-
 

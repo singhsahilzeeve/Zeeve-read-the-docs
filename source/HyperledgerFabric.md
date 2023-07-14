@@ -1,5 +1,10 @@
 ---
-description: Get started with Hyperledger Fabric on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Hyperledger Fabric and the Zeeve platform.
+description: 
+Get started with Hyperledger Fabric on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Hyperledger Fabric and the Zeeve platform.
+
+meta:
+    - name: robots
+      content: noindex
 ---
 # Hyperledger Fabric Dedicated Node Setup
 
@@ -157,9 +162,42 @@ Choose the configuration you want. Click on the card and follow the steps accord
    ![img](./images/fabricChaincodeCommitHelp.png)
 
 
+## **Multitenant Networks**
 
+Zeeve also supports the creation of Mulitenant networks in Hyperledger Fabric. This means that two or more users may be part of a network and may perform network operations collectively.
 
+### **Inviting A User**
 
+1. Select the network to which you want to add a node, and click on the network card.
+2. Click on the Manage Invites tab and click on Invite New Partner. ![img](./images/fabricInviteNewPartner.png)
+3. Enter the Email Address of the user to invite. ![img](./images/fabricInviteEmail.png)
+4. Select the system channel checkbox if you want the invited user's organization to have orderers or be a part of the consortium. ![img](./images/fabricInviteSystemChannel.png)
+5. Fill in the maximum number of orderers for the new user. ![img](./images/fabricInviteMaxOrderers.png)
+6. Select the consortium checkbox to add the user to consortium. Also fill in the system channel policy for the new organization. ![img](./images/fabricInviteConsortium.png)
+7. Select the application channel checkbox to make the new organization a part of atleast one pre-existing application channel. ![img](./images/fabricInviteApplicationChannelCheckbox.png)
+8. Click on the dropdown and select the channel you want to new organization to be a part of. You can select more than one channels but alteast one application channel is required. ![img](./images/fabricInviteApplicationChannel.png)
+9.  Fill in the channel policy for the application channel.  ![img](./images/fabricInviteApplicationChannelPolicy.png)
+10. Repeat this for all application channels.
+11. When all the details are filled, click on the "Submit" button. This will send an invite to the user.  ![img](./images/fabricInviteSubmit.png)
 
+### **Accepting The Invite**
 
+1. Go to the settings page
+2. Click on the Network Invite tab. <br /> ![img](./images/fabricInvite1.png)
+3. Click on the **View Details** button for the invite. ![img](./images/fabricInvite2.png)
+4. Verify the details and click on approve. ![img](./images/fabricInvite3.png)
+5. Fill in the details of the new organization.
+6. Click on submit to deploy the new organization.
+
+## **Certificate Renewal**
+
+Zeeve supports the ability to renew your fabric certificates at a click of a button. Hyperledger fabric network certificates expire in 365 days. This means that certificates need to be renewed atleast once a year.
+
+### **Renewing Certificates**
+
+1. Click on **Renew Certs** button on actions tab. ![img](./images/fabricCert1.png)
+
+2. You can see the details of the certificate renewal with expiry date. ![img](./images/fabricCert2.png)
+
+3. Select the organizations for which you need to renew the certificates and click on Renew button. ![img](./images/fabricCert3.png)
 

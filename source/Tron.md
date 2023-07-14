@@ -1,3 +1,9 @@
+---
+meta:
+    - name: robots
+      content: noindex
+
+---
 # Tron Dedicated Node Setup
 
 This section will guide you about different actions you can perform for Tron. 

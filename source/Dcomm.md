@@ -1,5 +1,9 @@
 ---
 description: Use Dcomm with Zeeve's platform through our API and tools. Our documentation provides technical details on authentication, making requests and handling responses for interacting with Dcomm and the Zeeve platform.
+
+meta:
+    - name: robots
+      content: noindex
 ---
 # Dcomm Staking Node Setup
 
