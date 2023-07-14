@@ -58,8 +58,7 @@ In this section, you have to fill in the details of the nodes you want to add to
     ![img](./images/CoreumCreateNetwork-2.png)
 
 > * **Username & Password**: Choose the username and password of your choice. These will be used as RPC API credentials.
-> * **Node Name**: To identify your nodes, this field will be used. 
-> * **MonikerId**: A unique ID is required.
+> * **Node Name**: To identify your nodes, this field will be used.
 > *  **Rpc Server**: RPC, which stands for "Remote Procedure Call," is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction. 
     >     * **HTTP**: Uses individual HTTP requests and responses for each call, similar to a RESTful API.
     >     * **ws**: WebSocket uses a persistent connection that allows the server to push data to the client.
@@ -209,9 +208,6 @@ In this section, you have to fill in the details of the nodes you want to add to
 
     ![img](./images/CoreumCreateStakingNetwork-2.png)
 
-> * **Node Name**: To identify your nodes, this field will be used. 
-> * **Node MonikerId**: A custom human readable name for this node.
-> * **Account MonikerId**: Account id.
 > * **Validator Name**: The name which is visible on the Coreum Explorer. 
 > * **Mnemonic Key**: bip39 mnemonic passphrase of your wallet. 
 > * **Key Ring**: A passprase to access your private key. 
@@ -223,11 +219,8 @@ In this section, you have to fill in the details of the nodes you want to add to
 > * **Commission Max. Change Rate**: The maximum commission change rate percentage (per day). 
 > * **Website**: Website you want to be reflected in the. 
 > * **Validator Identity**: The optional identity signature (ex. UPort or Keybase). 
+> * **Description**: The optional description of your validator. 
 > * **State Sync**: By enabling state sync your node will download data related to the head or near the head of the chain and verify the data. This leads to drastically shorter times for joining a network [Read more](https://docs.tendermint.com/v0.34/tendermint-core/state-sync.html).
-> * **Username & Password**: Choose the username and password of your choice. These will be used as RPC API credentials.
-> *  **Rpc Server**: RPC, which stands for "Remote Procedure Call," is a group of protocols and interfaces that let us talk to the blockchain system. Through the RPC interface, we can ask for information about the blockchain (such as block number, blocks, node connection, etc.) and send a request for a transaction. 
-    >     * **HTTP**: Uses individual HTTP requests and responses for each call, similar to a RESTful API.
-    >     * **ws**: WebSocket uses a persistent connection that allows the server to push data to the client.
 
 After providing the details click on **Next step** to go to the last step.
 
@@ -302,7 +295,9 @@ In the case of **BYOC - DO**, select the region for the network by clicking on *
     * Validator Identity
     > ![img](./images/coreum/update-validator-identity.png)
 
-    
+    * Website
+    > ![img](./images/coreum/update-website.png)
+
     ***Step 02 :***
 
     * Keyring is require in order to update the validator details.
@@ -321,11 +316,11 @@ In the case of **BYOC - DO**, select the region for the network by clicking on *
 
 ### **Withdraw rewards**
 
-1. Click on the *Actions* button on the top right, and select the **Withdraw reward** option.
+1. Click on the *Actions* button on the top right, and select the **Withdraw reward and commission** option.
 
     ![img](./images/coreum/validator-actions.png)
 
-2. Enter the keyring then click on Withdraw button.
+2. Select whether you want to withdraw only reward or reward & commission both, Enter the keyring then click on Withdraw button.
     
     > ![img](./images/coreum/action-withdraw-reward.png)
 
