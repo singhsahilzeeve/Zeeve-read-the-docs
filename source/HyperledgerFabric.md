@@ -1,6 +1,5 @@
 ---
-description: 
-Get started with Hyperledger Fabric on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Hyperledger Fabric and the Zeeve platform.
+description: Get started with Hyperledger Fabric on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Hyperledger Fabric and the Zeeve platform.
 
 meta:
     - name: robots
@@ -130,7 +129,7 @@ Choose the configuration you want. Click on the card and follow the steps accord
 
 1. Login with Zeeve CLI using the earlier created keys and add these URLs as well - <br></br>
     ```
-     zeeve login -i < access-key > -s < secret-key > -ae https://app.zeeve.io/auth/cli/login -fe https://app.zeeve.io/fabric-backend/chaincode/
+     zeeve login -i < access-key > -s < secret-key > -ae https://app.zeeve.io/auth/cli/login -fe https://app.zeeve.io/fabric-backend/
     ```
 
 2. Zeeve CLI supports fabric chaincode operations - package, install, deploy, approve and commit. 
