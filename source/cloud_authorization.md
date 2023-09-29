@@ -1,5 +1,5 @@
 ---
-description:Explore the best practices and technical details for managing authorization in Zeeve's cloud-based platform. Learn how to secure your data and control access to resources with our API and tools.
+description: Explore the best practices and technical details for managing authorization in Zeeve's cloud-based platform. Learn how to secure your data and control access to resources with our API and tools.
 ---
 # Cloud Authorizations
 
@@ -402,13 +402,37 @@ arn:aws:iam::aws:policy/AmazonEC2FullAccess
 
 </details>
 
+**Note**: Please provide below IAM permissions to run the Validations/Permissions Check for the AWS account.
+
+```shell
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetPolicyVersion",
+                "iam:GetPolicy",
+                "iam:GetUserPolicy",
+                "iam:ListAttachedUserPolicies",
+                "iam:ListUserPolicies",
+                "iam:GetUser"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
+``` 
+
 To authorize your AWS account on Zeeve:-
 
 1. Hover on **profile** 
 
     ![img](./images/profile.png)
 
-2. Click on **Edit Profile**
+2. Click on **My Account**
  
     ![img](./images/profilemenu.png)
 
@@ -443,7 +467,7 @@ After which on Zeeve do following steps:-
  
     ![img](./images/profile.png)
 
-2. Click on **Edit Profile**
+2. Click on **My Account**
  
     ![img](./images/profilemenu.png)
 
@@ -533,7 +557,7 @@ To authorize your GCP account on Zeeve you'll need to ensure certain things:-
  
     ![img](./images/profile.png)
 
-2. Click on **Edit Profile**
+2. Click on **My Account**
  
     ![img](./images/profilemenu.png)
 
@@ -617,7 +641,7 @@ Before you authorize Tencent Cloud on Zeeve, you will need to add Zeeve's IDP in
  
     ![img](./images/profile.png)
 
-2. Click on **Edit Profile**
+2. Click on **My Account**
  
     ![img](./images/profilemenu.png)
 
