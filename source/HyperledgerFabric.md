@@ -2,8 +2,8 @@
 description: Get started with Hyperledger Fabric on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Hyperledger Fabric and the Zeeve platform.
 
 meta:
-    - name: robots
-      content: noindex
+  - name: robots
+    content: noindex
 ---
 # Hyperledger Fabric Dedicated Node Setup
 

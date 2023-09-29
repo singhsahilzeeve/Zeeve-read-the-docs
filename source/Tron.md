@@ -1,8 +1,7 @@
 ---
 meta:
-    - name: robots
-      content: noindex
-
+  - name: robots
+    content: noindex
 ---
 # Tron Dedicated Node Setup
 
