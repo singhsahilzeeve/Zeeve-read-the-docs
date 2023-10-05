@@ -2,8 +2,8 @@
 description: Discover the power of Corda on Zeeve's platform. Our documentation provides an introduction to the key concepts, tools and techniques for building decentralized applications using Corda and the Zeeve platform.
 
 meta:
-    - name: robots
-      content: noindex
+  - name: robots
+    content: noindex
 ---
 # Corda 
 

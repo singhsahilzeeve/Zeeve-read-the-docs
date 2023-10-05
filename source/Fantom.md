@@ -2,8 +2,8 @@
 description: Build decentralized applications using Fantom and Zeeve's platform. Our documentation provides technical details on authentication, making requests and handling responses for interacting with Fantom and the Zeeve platform.
 
 meta:
-    - name: robots
-      content: noindex
+  - name: robots
+    content: noindex
 ---
 
 # Fantom Dedicated Node Setup
