@@ -20,81 +20,32 @@ Zeeve supports a list of cloud for you to choose from. You can authorize multipl
 
 ## AWS Authorization
 
-Before you authorize your AWS account with Zeeve, you'll need following permissions to deploy a network:
+### Configuration on AWS Portal
 
-<details>
-  <summary><i>Instance Based</i></summary>
+Before you authorize your AWS account with Zeeve, you'll need following provide IAM permissions to deploy a network:
 
-```shell
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "logs:CreateLogStream",
-                "logs:TagLogGroup",
-                "logs:DeleteLogGroup",
-                "logs:TagResource",
-                "logs:PutRetentionPolicy",
-                "logs:CreateLogGroup"
-            ],
-            "Resource": [
-                "arn:aws:logs:*:ACCOUNTID:destination:*",
-                "arn:aws:logs:*:ACCOUNTID:log-group:*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "logs:DeleteDestination",
-                "logs:TagResource"
-            ],
-            "Resource": [
-                "arn:aws:logs:*:ACCOUNTID:log-group:*:log-stream:*",
-                "arn:aws:logs:*:ACCOUNTID:destination:*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "logs:ListTagsLogGroup",
-                "logs:TagResource"
-            ],
-            "Resource": "arn:aws:logs:*:ACCOUNTID:log-group:*:log-stream:*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "logs:DescribeLogGroups",
-                "logs:DescribeDestinations"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:GetRole",
-                "iam:UpdateAssumeRolePolicy",
-                "iam:GetPolicyVersion",
-                "iam:GetPolicy",
-                "iam:DeletePolicy",
-                "iam:AttachRolePolicy",
-                "iam:CreatePolicy",
-                "iam:ListInstanceProfilesForRole",
-                "iam:ListRolePolicies",
-                "iam:GetRolePolicy"
-            ],
-            "Resource": [
-                "arn:aws:iam::ACCOUNTID:policy/*",
-                "arn:aws:iam::ACCOUNTID:role/*"
-            ]
-        }
-    ]
-}
-```
+1. Login into the AWS console, go to IAM service by clicking Security Credential on the upper right corner.
+    
+    ![img](./images/awsconsole.png)
 
-**CloudWatch Permissions**
+2. Select the **User** for which needs to be authorized on the Zeeve platform.
+    
+    ![img](./images/iam.jpg)
+
+3. Click on Add Permissions button, and Create Inline Policy.
+    
+    ![img](./images/permissions.jpg)
+
+4. Copy the **ACCOUNTID** from the upper-right corner (we will need this Account ID in Further Steps).
+    
+    ![img](./images/accountid.png)
+
+5. Click on the JSON button, and add the below mentioned policy, (Please do replace **ACCOUNTID** with your AWS Account ID)
+    
+    ![img](./images/jsonpermissions.jpg)
+
+6. Write the Policy: 
+
 ```shell
 {
    "Version": "2012-10-17",
@@ -124,18 +75,41 @@ Before you authorize your AWS account with Zeeve, you'll need following permissi
                "logs:DescribeDestinations"
            ],
            "Resource": "*"
-       }
+       },
+       {
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetPolicyVersion",
+                "iam:GetPolicy",
+                "iam:GetUserPolicy",
+                "iam:ListAttachedUserPolicies",
+                "iam:ListUserPolicies",
+                "iam:GetUser"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
    ]
 }
 ```
 
-**Other Policy ARN**
-arn:aws:iam::aws:policy/AmazonEC2FullAccess
+7. Name this policy as **Zeeve-IAM-Policy**, and click Save.
 
-</details>
+8. Grant AWS Managed EC2 Permissions:AmazonEC2FullAccess.
+    a. Click on **Add Permissions -> Add Permissions**
+    
+    b. Click on Attach Policies Directly and Search for **AmazonEC2FullAccess**.
+        
+    ![img](./images/fullEC2.png)
+    
+    c. Select the permission and Click on Next.
+    
+    d. On the Review Page, Review the Policy and Click on Add Permissions.
+        
+    ![img](./images/confirmperms.png)
 
-<details>
-  <summary><i>Zeeve K8</i></summary>
+9. *(Only Permissive Protocol)* Grant below permissions for Permissive protocols.
 
 ```shell
 {
@@ -229,47 +203,9 @@ arn:aws:iam::aws:policy/AmazonEC2FullAccess
 }
 ```
 
-**Cloudwatch IAM Permissions**
-```shell
-{
-   "Version": "2012-10-17",
-   "Statement": [
-       {
-           "Effect": "Allow",
-           "Action": [
-               "logs:CreateLogStream",
-               "logs:TagLogGroup",
-               "logs:DeleteLogGroup",
-               "logs:TagResource",
-               "logs:PutRetentionPolicy",
-               "logs:CreateLogGroup",
-               "logs:DeleteDestination",
-               "logs:TagResource",
-               "logs:ListTagsLogGroup"
-           ],
-           "Resource": [
-               "arn:aws:logs:*:ACCOUNTID:destination:*",
-               "arn:aws:logs:*:ACCOUNTID:log-group:*"
-           ]
-       },
-       {
-           "Effect": "Allow",
-           "Action": [
-               "logs:DescribeLogGroups",
-               "logs:DescribeDestinations"
-           ],
-           "Resource": "*"
-       }
-   ]
-}
-```
-**Other Policy ARN**
-arn:aws:iam::aws:policy/AmazonEC2FullAccess
+10. Follow steps 5-7, and Name this Policy as **Zeeve-Permissive-Protocol-Policy**.
 
-</details>
-
-<details>
-  <summary><i>DMZ Corda</i></summary>
+11. *(Only Corda Enterprise)* Grant below permissions for Corda Enterprise.
 
 ```shell
 {
@@ -397,34 +333,9 @@ arn:aws:iam::aws:policy/AmazonEC2FullAccess
 }
 ```
 
-**Other Policy ARN**
-arn:aws:iam::aws:policy/AmazonEC2FullAccess
+12. Follow steps 5-7, and Name this Policy as **Zeeve-Corda-Enterprise-Policy**.
 
-</details>
-
-**Note**: Please provide below IAM permissions to run the Validations/Permissions Check for the AWS account.
-
-```shell
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:GetPolicyVersion",
-                "iam:GetPolicy",
-                "iam:GetUserPolicy",
-                "iam:ListAttachedUserPolicies",
-                "iam:ListUserPolicies",
-                "iam:GetUser"
-            ],
-            "Resource": [
-                "*"
-            ]
-        }
-    ]
-}
-``` 
+### Configuration on Zeeve Portal
 
 To authorize your AWS account on Zeeve:-
 
@@ -491,11 +402,40 @@ After which on Zeeve do following steps:-
 ## GCP Cloud Authorization
 
 To authorize your GCP account on Zeeve you'll need to ensure certain things:-
- 
-> User must have an account with enough permissions to create - 
-> * Compute Services
-> * Service Account
-> * Kubernetes service.
+
+### Configuration on GCP Portal
+
+Enable Below APIs from Google Cloud Platform: 
+
+- Compute Engine API
+- Kubernetes Engine API
+
+Steps to enable APIs on GCP Platform
+
+1. Go to Google Cloud console: https://console.cloud.google.com/
+
+2. Select the project, in which you need to enable APIs.
+
+    ![img](./images/gcpdash.png)
+
+3. Click on **APIs and services** from the navigation bar and click **Enabled APIs and services**
+
+    ![img](./images/navbargcp.png)
+
+4. Click on **+ Enable API and Services**
+
+5. Search **Compute Engine API** in search bar.
+
+    ![img](./images/gcpsearch.png)
+
+6. Click on **Compute Engine API** -> **Enable/Manage** Option
+
+    ![img](./images/gcpenable.png)
+
+7. Follow 5-6 step for enabling **Kubernetes Engine API**.
+
+8. User must have an account with enough permissions to create - 
+
 > * Specific Permissions in GCP Account:
 >     * 'compute.globalOperations.get'
 >     * 'compute.machineTypes.get'
@@ -552,6 +492,8 @@ To authorize your GCP account on Zeeve you'll need to ensure certain things:-
 >     * 'storage.objects.get'
 >     * 'storage.objects.list'
 >     * 'iam.serviceAccounts.signBlob'
+
+### Configuration on Zeeve Portal
 
 1. Hover on **profile** 
  
