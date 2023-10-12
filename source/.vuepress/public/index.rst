@@ -23,6 +23,7 @@ Welcome to Zeeve's documentation!
    ../Corda.md
    ../Avalanche.md
    ../Binance.md
+   ../Besu.md,
    ../Coreum.md
    ../Dcomm.md
    ../EnergyWeb.md

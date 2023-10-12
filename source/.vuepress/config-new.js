@@ -29,6 +29,7 @@ module.exports = {
             '/Avalanche',
             '/Binance',
             '/Coreum',
+            '/Besu',
             '/Dcomm',
             '/EnergyWeb',
             '/Fantom',
