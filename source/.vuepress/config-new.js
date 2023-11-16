@@ -21,6 +21,7 @@ module.exports = {
             '/AccountCreation',
             '/cloud_authorization',
             '/subscriptions',
+            '/rollups',
             '/api-endpoint',
             '/Howtocreatemyfirstnetwork',
             '/HyperledgerFabric',
