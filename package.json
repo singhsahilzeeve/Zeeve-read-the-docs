@@ -11,10 +11,10 @@
     "url": "git+https://github.com/Zeeve-App/Zeeve-read-the-docs.git"
   },
   "scripts": {
-    "start": "git pull origin production && vuepress build source && cp -r /home/zeeve-prod/Zeeve-read-the-docs/source/.vuepress/dist/* /home/zeeve-prod/Zeeve-read-the-docs/source/.vuepress/public/ && npm run dev",
-    "dev": "vuepress dev source",
-    "build": "vuepress build source",
-    "prod": "git pull origin production && vuepress build source && cp -r /home/zeeve-prod/Zeeve-read-the-docs/source/.vuepress/dist/* /home/zeeve-prod/public_html/docs/"
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && git pull origin production && vuepress build source && cp -r /home/zeeve-prod/Zeeve-read-the-docs/source/.vuepress/dist/* /home/zeeve-prod/Zeeve-read-the-docs/source/.vuepress/public/ && npm run dev",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress dev source",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress build source",
+    "prod": "export NODE_OPTIONS=--openssl-legacy-provider && git pull origin production && vuepress build source && cp -r /home/zeeve-prod/Zeeve-read-the-docs/source/.vuepress/dist/* /home/zeeve-prod/public_html/docs/"
   },
   "license": "MIT",
   "devDependencies": {
