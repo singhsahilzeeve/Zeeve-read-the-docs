@@ -1,4 +1,4 @@
-# ⚙ Setup zkSync Hyperchain
+# ⚙️ Setup zkSync Hyperchain
 
 Follow the below steps to create a zkSync Hyperchain through the Zeeve platform:
 
@@ -6,7 +6,7 @@ Follow the below steps to create a zkSync Hyperchain through the Zeeve platform:
 
 **Step 2: zkSync Hyperchain** - Select **zkSync Hyperchain.**
 
-**Step 3: Create a New zkSync Hyperchain** - Click on the **Deploy Sandbox** card or button at the topmost right**.**
+**Step 3: Create a New zkSync Hyperchain** - Click on the **Deploy Sandbox** card or button at the topmost righ&#x74;**.**
 
 **Step 4: General Configurations** - Enter **Hyperchain name** and **Hyperhain ID** and select any of the **Workspace** that you have. Click on the **Next** button for **Blockchain Configurations**.
 
