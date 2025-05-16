@@ -2,17 +2,17 @@
 
 You can manage your Polygon CDK network by following the below steps:
 
-**Step 1: Zeeve Dashboard -** On the Zeeve platform dashboard click on the **Polygon CDK** option available in the left sidebar**.** This will show your deployed Polygon CDK network
+**Step 1: Zeeve Dashboard -** On the Zeeve platform dashboard click on the **Polygon CDK** option available in the left sideba&#x72;**.** This will show your deployed Polygon CDK network
 
 **Step 2: Deployed Polygon CDK Networks -** Click on View.
 
 **Step 3: Polygon CDK Overview Page -** Click on the **Explorers** button to open L1 Explorer or L2 Explorer.
 
-**Step 4: Blockchain Configuration -** To view blockchain configuration click the Blockchain Config tab on the overview page. On the blockchain configuration page, you can view the blockchain configurations**.** You can also download the Genesis file by clicking on the **Download Genesis File i**con**.**
+**Step 4: Blockchain Configuration -** To view blockchain configuration click the Blockchain Config tab on the overview page. On the blockchain configuration page, you can view the blockchain configuration&#x73;**.** You can also download the Genesis file by clicking on the **Download Genesis File i**co&#x6E;**.**
 
 **Step 5: Bridge -** To view the bridge click on the **Bridge** tab on the overview page. Open the bridge by clicking on the icon next to the bridge URL. This will open the Polygon CDK Bridge page where you can perform bridge operations.
 
-**Step 6: My Nodes -** To view nodes click on the **My Nodes** Tab. To view the **Node Details Page** click on the **View Details** icon under **Actions.** To view details about other nodes simply click on the tab for that node**.**
+**Step 6: My Nodes -** To view nodes click on the **My Nodes** Tab. To view the **Node Details Page** click on the **View Details** icon under **Actions.** To view details about other nodes simply click on the tab for that nod&#x65;**.**
 
 **Step 7: My Wallets -** To view wallet information click on the **My Wallets** tab on the overview page. You can view the wallets on Explorers by clicking on the links provided against each of wallet.
 

@@ -6,7 +6,7 @@ Follow the below steps to create a Polygon CDK network through the Zeeve platfor
 
 **Step 2: Polygon CDK** - Select **Polygon CDK.**
 
-**Step 3: Create a New Polygon CDK Chain** - Click on the **Deploy Sandbox** card or button at the topmost right**.**
+**Step 3: Create a New Polygon CDK Chain** - Click on the **Deploy Sandbox** card or button at the topmost righ&#x74;**.**
 
 **Step 4: General Configurations** - Enter **CDK Chain name** and **Chain ID** and select any of the Workspace that you have. Click on the **Next** button for **Blockchain Configurations**.
 
@@ -14,7 +14,7 @@ Follow the below steps to create a Polygon CDK network through the Zeeve platfor
 
 **Step 6: zkEVM Configurations** - Fill the **Aggregator Configuration, Synchronizer Configuration, and** **Sequencer Configuration.** To fill any sub-configuration under **Sequencer Configuration** click on the "+" icon available. You can also use the default values for all the configurations. Click on **Next.**
 
-**Step 7: RPC Configurations** - Enter **RPC Node Name**. Enable HTTPS or WSS by ticking the checkboxes available. Enter RPC **Username** and **Password** if you have enabled HTTPS or WSS. Select the APIs you want to enable for Layer 2 RPC calls. Enter Advance Configurations details or use the default values that are already present. Click on the **Next** button**.**
+**Step 7: RPC Configurations** - Enter **RPC Node Name**. Enable HTTPS or WSS by ticking the checkboxes available. Enter RPC **Username** and **Password** if you have enabled HTTPS or WSS. Select the APIs you want to enable for Layer 2 RPC calls. Enter Advance Configurations details or use the default values that are already present. Click on the **Next** butto&#x6E;**.**
 
 **Step 8: Infrastructure Configurations** - Select the **Region** in which you want Polygon CDK to be deployed. Click on the **Next** button.
 
